@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ubunture.github.io/site/sitemap.xml
