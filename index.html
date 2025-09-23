@@ -11,4 +11,13 @@
 <body>
   <p>Redirecting to <a href="./ja/index.html">Ubunture 日本語サイト</a>...</p>
 </body>
+  <script>
+  const lang = navigator.language || navigator.userLanguage;
+  if (lang.startsWith('ja')) {
+    window.location.href = './ja/index.html';
+  } else {
+    window.location.href = './en/index.html';
+  }
+</script>
+
 </html>
