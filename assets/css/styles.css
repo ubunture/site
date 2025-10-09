@@ -162,7 +162,60 @@
     const open = nav.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(open));
     });
+
+    /* ===== Crowdfunding (Support) ===== */
+    .section-lead{ color:#666; max-width:68ch; }
+    .support.cf{ background:#efefef; }
+    .cf-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:26px; }
+    @media (max-width:1080px){ .cf-grid{ grid-template-columns:repeat(2, 1fr);} }
+    @media (max-width:600px){ .cf-grid{ grid-template-columns:1fr; } }
     
+    
+    .cf-card{
+      position:relative; background:#fff; border:1px solid #ececec; border-radius:16px;
+      box-shadow:var(--shadow-1); overflow:hidden; padding:0; /* ← 20px → 0 */
+      display:flex; flex-direction:column;
+    }
+    .cf-card .price{ display:flex; align-items:baseline; gap:6px; font-weight:900; }
+    .cf-card .price .amt{ font-size:22px; }
+    .cf-card .price .per{ font-size:12px; color:#777; font-weight:800; letter-spacing:.04em; }
+    .cf-list{ margin:0; padding-left:18px; color:#555; }
+    .cf-list li{ margin:6px 0; }
+    .cf-cta{ align-self:flex-start; margin-top:auto; }
+    .cf-card.popular{ outline:2px solid #111; }
+    .cf-badge{ position:absolute; top:12px; right:12px; background:#111; color:#fff; font-weight:900; border-radius:999px; font-size:10px; padding:6px 10px; letter-spacing:.16em; }
+    .cf-actions{ margin-top:18px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+    .cf-secondary{ background:#fff; color:#111; border-color:#ddd; }
+    .cf-note{ color:#777; }
+    .cf-hd{
+      background:#3d3d3d; color:#fff; padding:18px 20px;
+    }
+    /* 見出し（互換のため .cf-name でも .cf-plan でも可） */
+    .cf-name, .cf-plan{ margin:0; font-size:18px; font-weight:900; letter-spacing:.2px; }
+    .cf-desc{ margin:6px 0 0; color:#eee; font-size:14px; }
+        /* 下の白い本文 */
+    .cf-body{ padding:20px; background:#fff; }
+    
+    
+    /* ===== Sponsors ===== */
+    .sponsors{ background:#111; color:#f3f3f3; }
+    .sponsors .section-lead{ color:#cfcfcf; }
+    .spon-tier{ margin-top:24px; }
+    .tier-title{ margin:4px 0 10px; font-size:18px; letter-spacing:.04em; color:#e0e0e0; font-weight:800; }
+    .logo-grid{ list-style:none; margin:0; padding:0; display:grid; gap:18px; grid-template-columns:repeat(6, 1fr); align-items:center; }
+    .logo-grid li{ background:#1b1b1d; border:1px solid rgba(255,255,255,.06); border-radius:12px; display:flex; align-items:center; justify-content:center; aspect-ratio: 5 / 2; padding:10px; box-shadow:var(--shadow-1); }
+    .logo-grid img{ max-width:90%; height:auto; filter: grayscale(100%); opacity:.9; transition:.25s ease; }
+    .logo-grid img:hover{ filter:none; opacity:1; }
+    
+    
+    /* size caps */
+    .logo-lg img{ max-height:64px; }
+    .logo-md img{ max-height:48px; }
+    .logo-sm img{ max-height:34px; }
+    
+    
+    @media (max-width:1180px){ .logo-grid{ grid-template-columns:repeat(4, 1fr);} }
+    @media (max-width:720px){ .logo-grid{ grid-template-columns:repeat(2, 1fr);} }
     
     // ===== Active link on scroll =====
     const sectionIds = ['about','project','team','news','support','sponsors']; // ← sponsors を追加
