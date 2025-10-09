@@ -168,121 +168,105 @@ section{ padding:100px 0; scroll-margin-top: calc(var(--nav-h) + 24px); }
 @media (max-width:980px){ .news-grid{ grid-template-columns:1fr 1fr; } }
 @media (max-width:640px){ .news-grid{ grid-template-columns:1fr; } }
 
-/* ===== Support (READABLE / LIGHT THEME) =====
-   section: <section id="support" class="support stacked readable"> … */
-:root{
-  --accent: #0ea5e9;            /* ブランド色（視認性◎） */
-  --support-bg: #f6f7f9;        /* Supportの地色：薄いグレー */
-  --support-border: #e5e7eb;    /* 罫線色 */
+/* ===== Support (STACKED: 上=支援の種類＋Contact、下=クラファン6プラン) ===== */
+
+/* セクション全体（背景が黒なので周囲の文字は白） */
+.support.stacked{ background:#0f0f10; color:#fff; }
+.support.stacked .section-lead{ color:#d7d7d7; }
+.support-block + .support-block{ margin-top:42px; }
+
+/* ========== A) 企業・団体向け：支援の種類（3カード） ========== */
+.support-block.org .support-cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:24px;
+  margin-top:26px;
+}
+@media (max-width:980px){
+  .support-block.org .support-cards{ grid-template-columns:1fr; }
 }
 
-/* セクション配色とリード文 */
-.support.stacked.readable{ background: var(--support-bg); color: var(--ink); }
-.support.stacked.readable .section-lead{ color: #444; }
-
-/* ブロック間の余白 */
-.support-block + .support-block{ margin-top: 40px; }
-
-/* === A) 企業・団体向け：支援の種類 ===================== */
-.support.stacked.readable .support-cards{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 22px;
-}
-@media (min-width: 980px){
-  /* デスクトップでは3枚を横並びにしてスクロール短縮 */
-  .support.stacked.readable .support-cards{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-}
-
-.support.stacked.readable .support-card{
+/* 白カード（中は白地なので可読性のため文字は濃色に） */
+.support-card{
   background:#fff; color:#333;
-  border:1px solid var(--support-border);
-  border-radius:16px; overflow:hidden; box-shadow: var(--shadow-1);
+  border-radius:16px; overflow:hidden;
+  box-shadow:var(--shadow-1); border:1px solid #ececec;
   display:flex; flex-direction:column;
 }
-.support.stacked.readable .support-card .hd{
-  background: var(--accent);
-  color:#fff; padding:16px 18px;
-  font-weight:900; font-size:18px; line-height:1.2;
+.support-card .hd{
+  background:#3b3b3d; color:#fff;
+  padding:18px 20px; font-weight:900; font-size:20px;
 }
-.support.stacked.readable .support-card .hd small{
-  display:block; opacity:.95; font-weight:800; margin-top:6px; font-size:12px;
-}
-.support.stacked.readable .support-card .bd{ padding:18px; color:#4a4a4a; }
+.support-card .hd small{ display:block; opacity:.9; font-weight:800; margin-top:6px; }
+.support-card .bd{ padding:18px 20px; color:#555; }
 
-/* Contact us（中央配置・アクセント色） */
-.support.stacked.readable .center-cta{
-  margin-top:16px; display:flex; flex-direction:column; align-items:center; gap:8px;
+/* Contact us（中央に大きめCTA。背景黒×テキスト白のまま） */
+.center-cta{
+  margin-top:18px; display:flex; flex-direction:column;
+  align-items:center; gap:8px; text-align:center;
 }
-.support.stacked.readable .contact-btn{
-  background: var(--accent); color:#fff;
-  border:1px solid transparent; border-radius:999px; padding:12px 20px;
-  font-weight:800; box-shadow: var(--shadow-1); text-decoration:none;
+.contact-btn{
+  background:#ffffff; color:#111; border:1px solid #ddd;
+  padding:14px 22px; border-radius:999px; font-weight:800;
+  text-decoration:none; box-shadow:var(--shadow-1);
 }
-.support.stacked.readable .center-cta small{ color:#555; }
+.center-cta small{ color:#cfcfcf; }
 
-/* === B) 個人向け：クラファン（3×2=6プラン） ============ */
-.support.stacked.readable .subhead{ margin:8px 0 6px; font-size:20px; font-weight:900; color:#111; }
+/* ========== B) 個人向け：クラファン6プラン（3列×2段） ========== */
+.support-block.cf .subhead{ margin:6px 0 4px; font-size:20px; font-weight:900; color:#fff; }
 
-.support.stacked.readable .cf-grid{
-  display:grid; grid-template-columns: repeat(3, minmax(0,1fr));
-  gap:20px; margin-top:16px; align-items:stretch;
+.cf-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:24px;
+  margin-top:18px;
+  align-items:stretch;   /* 各カード高さを揃える */
 }
-@media (max-width:1080px){ .support.stacked.readable .cf-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
-@media (max-width:640px){  .support.stacked.readable .cf-grid{ grid-template-columns: 1fr; } }
+@media (max-width:1080px){ .cf-grid{ grid-template-columns:repeat(2, 1fr); } }
+@media (max-width:600px){ .cf-grid{ grid-template-columns:1fr; } }
 
-/* 料金カード（明るいヘッダー＋白ボディ＋高さ揃え） */
-.support.stacked.readable .cf-card{
-  background:#fff; border:1px solid var(--support-border); border-radius:16px;
-  box-shadow: var(--shadow-1); overflow:hidden;
+/* プランカード：上ダーク帯＋白ボディ／高さ揃え */
+.cf-card{
+  position:relative; background:#fff; border:1px solid #ececec; border-radius:16px;
+  box-shadow:var(--shadow-1); overflow:hidden;
   display:flex; flex-direction:column; height:100%;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cf-card:hover{ transform: translateY(-2px); box-shadow:0 10px 34px rgba(0,0,0,.16); }
+
+.cf-hd{
+  background:#3b3b3d; color:#fff; padding:18px 20px;
+  min-height:112px; /* 説明文の長短に左右されないようヘッダー高さを固定 */
+}
+.cf-plan{ margin:0; font-size:18px; font-weight:900; letter-spacing:.2px; }
+.cf-desc{ margin:6px 0 0; color:#eee; font-size:14px; line-height:1.5; }
+
+.cf-body{
+  padding:20px; background:#fff; display:flex; flex-direction:column; gap:12px;
+  color:#333; flex:1 1 auto;   /* CTAを最下部に寄せるため */
+}
+.price{ display:flex; align-items:baseline; gap:8px; font-weight:900; color:#111; }
+.price .amt{ font-size:32px; line-height:1; }
+.price .unit, .price .per{ font-size:14px; color:#777; font-weight:800; letter-spacing:.04em; }
+
+.cf-list{ margin:0; padding:0; list-style:none; color:#555; }
+.cf-list li{ margin:8px 0; padding-left:24px; position:relative; }
+.cf-list li::before{
+  content:"✔"; position:absolute; left:0; top:0; transform:translateY(2px);
+  font-weight:900; font-size:14px; color:#111;
 }
 
-.support.stacked.readable .cf-hd{
-  background: linear-gradient(180deg,#f7fbff 0%, #eef6fb 100%);
-  color:#111; padding:16px 18px; border-bottom:1px solid var(--support-border);
-  min-height: 96px; display:flex; flex-direction:column; justify-content:center;
-}
-.support.stacked.readable .cf-plan{ margin:0; font-size:18px; font-weight:900; letter-spacing:.2px; color:#111; }
-.support.stacked.readable .cf-desc{ margin:6px 0 0; color:#555; font-size:14px; }
+/* CTAはカード下端に固定っぽく見せる */
+.cf-cta{ margin-top:auto; align-self:flex-start; }
 
-.support.stacked.readable .cf-body{
-  padding:18px; display:flex; flex-direction:column; gap:12px; flex:1 1 auto;
-}
+/* 人気プランの強調（上帯をより濃く） */
+.cf-card.popular .cf-hd{ background:#111; }
 
-.support.stacked.readable .price{
-  display:flex; align-items:baseline; gap:8px; font-weight:900; color:#111;
-}
-.support.stacked.readable .price .amt{ font-size:34px; line-height:1; }
-.support.stacked.readable .price .unit, 
-.support.stacked.readable .price .per{ font-size:13px; color:#6b7280; font-weight:800; letter-spacing:.04em; }
+/* まとめ入力等の下部アクション */
+.cf-actions{ margin-top:18px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.cf-secondary{ background:#fff; color:#111; border-color:#ddd; }
+.cf-note{ color:#b9b9b9; }
 
-.support.stacked.readable .cf-list{ margin:0; padding:0; list-style:none; color:#444; }
-.support.stacked.readable .cf-list li{ margin:8px 0; padding-left:22px; position:relative; }
-.support.stacked.readable .cf-list li::before{
-  content:""; position:absolute; left:0; top:6px; width:12px; height:12px; border-radius:50%;
-  border:2px solid var(--accent);
-}
-
-.support.stacked.readable .cf-cta{
-  margin-top:auto; align-self:flex-start;
-  background: var(--accent); color:#fff; border:1px solid transparent;
-  border-radius:999px; padding:12px 18px; font-weight:800; text-decoration:none; box-shadow: var(--shadow-1);
-}
-.support.stacked.readable .cf-card.popular .cf-hd{
-  background: linear-gradient(180deg,#e8f7ff 0%, #dff2ff 100%);
-}
-
-/* 補助ボタン */
-.support.stacked.readable .cf-actions{
-  margin-top:16px; display:flex; align-items:center; gap:12px; flex-wrap:wrap;
-}
-.support.stacked.readable .cf-secondary{
-  background:#fff; color:#111; border:1px solid var(--support-border);
-  border-radius:999px; padding:12px 18px; font-weight:800; text-decoration:none; box-shadow: var(--shadow-1);
-}
-.support.stacked.readable .cf-note{ color:#666; }
 
 
 
