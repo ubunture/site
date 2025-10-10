@@ -262,29 +262,19 @@ section{ padding:100px 0; scroll-margin-top: calc(var(--nav-h) + 24px); }
 /* 人気プランの強調（上帯をより濃く） */
 .cf-card.popular .cf-hd{ background:#111; }
 
-/* まとめフォームのボタンを中央寄せ */
-.cf-actions{
-  margin: 26px auto 0;
-  display: flex;
-  justify-content: center;  /* ← 中央寄せ */
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  text-align: center;
-}
-
+/* まとめフォーム（支援申込フォーム）を中央寄せに固定 */
 .support-block.cf > .cf-actions{
   margin:28px 0 0;
   display:grid;
-  place-items:center;   /* 水平・垂直ど真ん中 */
+  place-items:center;   /* 水平・垂直 ど真ん中 */
   width:100%;
   text-align:center;
 }
 
-.support-block.cf .cf-actions .btn{
-  justify-self:center;  /* Safari等の個体差吸収 */
+/* 念のためボタン自身も中央に吸着（Safari 対策） */
+.support-block.cf > .cf-actions .btn{
+  justify-self:center;
 }
-
 
 
 /* ===== Sponsors (light) ===== */
