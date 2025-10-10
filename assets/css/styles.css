@@ -262,10 +262,16 @@ section{ padding:100px 0; scroll-margin-top: calc(var(--nav-h) + 24px); }
 /* 人気プランの強調（上帯をより濃く） */
 .cf-card.popular .cf-hd{ background:#111; }
 
-/* まとめ入力等の下部アクション */
-.cf-actions{ margin-top:18px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
-.cf-secondary{ background:#fff; color:#111; border-color:#ddd; }
-.cf-note{ color:#b9b9b9; }
+/* まとめフォームのボタンを中央寄せ */
+.cf-actions{
+  margin: 26px auto 0;
+  display: flex;
+  justify-content: center;  /* ← 中央寄せ */
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  text-align: center;
+}
 
 
 
