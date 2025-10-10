@@ -273,6 +273,17 @@ section{ padding:100px 0; scroll-margin-top: calc(var(--nav-h) + 24px); }
   text-align: center;
 }
 
+.support-block.cf > .cf-actions{
+  margin:28px 0 0;
+  display:grid;
+  place-items:center;   /* 水平・垂直ど真ん中 */
+  width:100%;
+  text-align:center;
+}
+
+.support-block.cf .cf-actions .btn{
+  justify-self:center;  /* Safari等の個体差吸収 */
+}
 
 
 
