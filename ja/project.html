@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ubunture｜プロジェクト詳細 — 南アフリカでのアンプラグドICT教育</title>
+  <meta name="description" content="Ubuntureの南アフリカ・ヨハネスブルグにおけるアンプラグドICT教育の詳細。背景・目標・カリキュラム・教員研修・評価設計・準備状況・予算・スケジュール・FAQまで網羅。">
+  <link rel="canonical" href="https://ubunture.github.io/site/ja/project.html"/>
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="ja" href="https://ubunture.github.io/site/ja/project.html">
+  <link rel="alternate" hreflang="en" href="https://ubunture.github.io/site/en/project.html">
+  <link rel="alternate" hreflang="x-default" href="https://ubunture.github.io/site/ja/project.html">
+
+  <!-- Favicons -->
+  <link rel="icon" href="https://ubunture.github.io/site/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ubunture" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:title" content="Ubunture｜プロジェクト詳細 — 南アフリカでのアンプラグドICT教育" />
+  <meta property="og:description" content="背景・目標・カリキュラム・教員研修・評価・準備状況・予算・スケジュールを掲載。" />
+  <meta property="og:url" content="https://ubunture.github.io/site/ja/project.html" />
+  <meta property="og:image" content="https://ubunture.github.io/site/assets/og/ubunture-og.jpg" />
+  <meta property="og:image:alt" content="Ubunture — アンプラグドICT教育の学習風景" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ubunture" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Page-only styles (最小限) -->
+  <style>
+    /* Hero */
+    .doc-hero{ position:relative; min-height:48svh; display:flex; align-items:center; color:#fff; overflow:hidden; }
+    .doc-hero::before{ content:""; position:absolute; inset:0; background:url('../assets/img/project-hero.jpg') center/cover no-repeat; filter:brightness(.75); }
+    .doc-hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.45)); }
+    .doc-hero .inner{ position:relative; z-index:1; }
+    .breadcrumbs{ margin-top:12px; font-size:13px; opacity:.9; }
+    .breadcrumbs a{ color:#fff; text-decoration:none; opacity:.85; }
+    .breadcrumbs span{ opacity:.85; }
+
+    /* Reading blocks */
+    .details{ background:#fff; color:var(--ink); }
+    .details .section{ padding:56px 0; }
+    .lead-xl{ font-size: clamp(16px, 2.4vw, 20px); color:#333; }
+
+    /* TOC */
+    .toc{ background:#f7f7f8; border:1px solid #ececec; border-radius:16px; padding:16px; box-shadow:var(--shadow-1); }
+    .toc h4{ margin:0 0 8px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:#666; }
+    .toc ul{ margin:0; padding-left:18px; columns:2; column-gap:24px; }
+    .toc li{ margin:6px 0; }
+    .toc a{ color:#111; text-decoration:none; }
+    @media (max-width:720px){ .toc ul{ columns:1;} }
+
+    /* KPI */
+    .kpi-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:16px; }
+    .kpi{ background:#fff; border:1px solid #ececec; border-radius:16px; padding:18px; box-shadow:var(--shadow-1); }
+    .kpi .num{ font-weight:900; font-size: clamp(22px,4vw,28px); line-height:1; }
+    .kpi .label{ font-weight:800; margin-top:6px; }
+    .kpi small{ color:var(--ink-weak); }
+    @media (max-width:980px){ .kpi-grid{ grid-template-columns:1fr 1fr; } }
+    @media (max-width:520px){ .kpi-grid{ grid-template-columns:1fr; } }
+
+    /* Cards & lists */
+    .cardish{ background:#fff; border:1px solid #ececec; border-radius:16px; padding:18px; box-shadow:var(--shadow-1); }
+    .grid-2x{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .grid-3x{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    @media (max-width:980px){ .grid-2x, .grid-3x{ grid-template-columns:1fr; } }
+    .nice-list{ margin:0; padding-left:18px; }
+    .nice-list li{ margin:8px 0; }
+    .checklist{ list-style:none; padding:0; margin:0; }
+    .checklist li{ position:relative; padding-left:28px; margin:10px 0; }
+    .checklist li::before{ content:"✔"; position:absolute; left:0; top:0; transform:translateY(2px); font-weight:900; color:#0a0a0a; }
+
+    /* Figures */
+    figure{ margin:0; }
+    .fig{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow-1); background:#ddd center/cover no-repeat; aspect-ratio:16/9; }
+    .cap{ font-size:13px; color:#666; margin-top:8px; }
+
+    /* Tables */
+    .budget-table{
+      width:100%; border-collapse:separate; border-spacing:0; overflow:hidden;
+      border:1px solid #ececec; border-radius:16px; box-shadow:var(--shadow-1); background:#fff;
+    }
+    .budget-table th, .budget-table td{ padding:12px 14px; border-bottom:1px solid #f0f0f0; }
+    .budget-table thead th{ background:#f7f7f8; text-align:left; font-weight:900; }
+    .budget-table tfoot th{ background:#f7f7f8; }
+    .budget-table .num{ text-align:right; font-variant-numeric: tabular-nums; }
+
+    /* CTA band */
+    .cta-band{ background:#efefef; border:1px solid #ececec; border-radius:16px; padding:22px; display:flex; align-items:center; justify-content:space-between; gap:16px; box-shadow:var(--shadow-1); }
+    .cta-band p{ margin:0; color:#333; }
+    .btn-light{ background:#fff; color:#111; border:1px solid #ddd; border-radius:999px; padding:12px 18px; font-weight:800; text-decoration:none; }
+
+    /* Minor */
+    .eyebrow{ color:#999; }
+    .h2-sub{ margin:8px 0 0; color:#444; font-weight:600; }
+    .muted{ color:#666; }
+    .mono{ font-variant-numeric: tabular-nums; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PM9GZ20LV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-7PM9GZ20LV');
+  </script>
+</head>
+
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <div class="site">
+
+    <!-- Header -->
+    <header>
+      <nav class="nav" aria-label="Primary">
+        <div class="brand-wrap">
+          <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
+          <div class="lang-switch" role="group" aria-label="Language switch">
+            <a class="lang-btn" href="../ja/project.html" role="button" aria-pressed="true">JP</a>
+            <a class="lang-btn" href="../en/project.html" role="button" aria-pressed="false">EN</a>
+          </div>
+        </div>
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+        <ul id="menu" role="menubar">
+          <li role="none"><a role="menuitem" href="./index.html#about">About</a></li>
+          <li role="none"><a role="menuitem" href="./index.html#project" class="active">Project</a></li>
+          <li role="none"><a role="menuitem" href="./index.html#team">Team</a></li>
+          <li role="none"><a role="menuitem" href="./index.html#news">News</a></li>
+          <li role="none"><a role="menuitem" href="./index.html#support">Support</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main id="main">
+      <section class="doc-hero">
+        <div class="container inner">
+          <div class="eyebrow">Project Details</div>
+          <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">南アフリカでのアンプラグドICT教育</h1>
+          <p class="lead-xl">電気もPCも要らないICT学習で、論理的思考と将来の選択肢を広げる。授業×教員研修で「自走化」をめざします。</p>
+          <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> プロジェクト詳細</div>
+        </div>
+      </section>
+
+      <!-- 内容 -->
+      <section class="details">
+        <div class="container">
+
+          <!-- TOC -->
+          <div class="section">
+            <div class="toc">
+              <h4>Contents</h4>
+              <ul>
+                <li><a href="#about">私たちについて</a></li>
+                <li><a href="#why">なぜアンプラグドICTか</a></li>
+                <li><a href="#goals">目標とKPI</a></li>
+                <li><a href="#activities">活動内容（生徒/教員）</a></li>
+                <li><a href="#curriculum">カリキュラム詳細</a></li>
+                <li><a href="#evaluation">評価設計</a></li>
+                <li><a href="#readiness">現在の準備状況</a></li>
+                <li><a href="#budget">資金の使い道</a></li>
+                <li><a href="#schedule">スケジュール</a></li>
+                <li><a href="#risks">リスクと対応</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 1. About -->
+          <div id="about" class="section">
+            <div class="eyebrow">About</div>
+            <h2>私たちについて</h2>
+            <p>Ubuntureは、ICT教育を通じて「学びの自由」と「夢を見る力」を世界中の子どもたちに広げる東京大学発の学生団体です。Ubuntu（「あなたがいるから私がいる」）の理念にFuture（未来）を重ね、多様な人が「持ち寄って」現場に役立つ学びを共創する姿勢を名前に込めました。</p>
+            <p>今回、現地の連携パートナーと協力しながら、南アフリカ・ヨハネスブルグでアンプラグドICT教育を届けます。</p>
+            <div class="grid-2x" style="margin-top:18px;">
+              <figure>
+                <div class="fig" style="background-image:url('../assets/img/details-hero.jpg')"></div>
+                <figcaption class="cap">過去の取り組み（サンプル写真）</figcaption>
+              </figure>
+              <figure>
+                <div class="fig" style="background-image:url('../assets/img/details-media.jpg')"></div>
+                <figcaption class="cap">活動紹介／メディア掲載の例（差替推奨）</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- 2. Why -->
+          <div id="why" class="section">
+            <div class="eyebrow">Why</div>
+            <h2>今回のプロジェクト『アンプラグドICT教育』について</h2>
+            <p>南アフリカでは、<strong>電力・設備・教員研修</strong>の三重格差によりICT教育が都市内でも偏在しています。自宅固定回線の普及や教員のICT研修受講率の低さなど、<em>接続できるか</em>と<em>授業で活かせるか</em>の二重の壁が子どもを置き去りにしています。</p>
+            <p>そこで私たちは、コンピュータや電力を用いない「アンプラグドICT教育」で、手順化・条件分岐・反復・検証といったコンピュテーショナル・シンキングの基礎を、体験から学べる授業と教員研修をセットで実施します。</p>
+            <div class="kpi-grid">
+              <div class="kpi"><div class="num">120</div><div class="label">対象児童</div><small>現地4日間で実施</small></div>
+              <div class="kpi"><div class="num">40</div><div class="label">対象教員</div><small>ToTで自走化</small></div>
+              <div class="kpi"><div class="num">4日間</div><div class="label">授業＋研修</div><small>学校現場で検証</small></div>
+              <div class="kpi"><div class="num">50%</div><div class="label">女子参加率目標</div><small>包摂性を担保</small></div>
+            </div>
+          </div>
+
+          <!-- 3. Activities -->
+          <div id="activities" class="section">
+            <div class="eyebrow">Activities</div>
+            <h2>活動内容（生徒／教員の両面から）</h2>
+            <div class="grid-2x">
+              <article class="cardish">
+                <h3>生徒への活動（直接支援）</h3>
+                <ul class="nice-list">
+                  <li>対象：貧困校の小学校高学年〜中学生</li>
+                  <li>学年別に<strong>全4種類（各2バリエーション）</strong>の授業を設計</li>
+                  <li>教材例：紙教材・指示カード・そろばん・身近な道具・簡易カード</li>
+                  <li>狙い：手を動かす体験 → 論理的思考の土台づくり</li>
+                </ul>
+              </article>
+              <article class="cardish">
+                <h3>教員への活動（ToT：教員研修）</h3>
+                <ul class="nice-list">
+                  <li>2部構成：①アンプラグド授業研修／②教科横断研修</li>
+                  <li>子ども向けワークの<strong>視察・体験</strong>＋授業デザイン演習</li>
+                  <li>評価設計・教材管理・年間計画（継続運用の仕組み化）</li>
+                  <li>目的：<strong>日本人が不在でも継続できる自走化</strong></li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <!-- 4. Curriculum -->
+          <div id="curriculum" class="section">
+            <div class="eyebrow">Curriculum</div>
+            <h2>カリキュラム詳細（例）</h2>
+            <div class="grid-3x">
+              <article class="cardish">
+                <h3>Module A：そろばん×アルゴリズム</h3>
+                <ul class="nice-list">
+                  <li>内容：分解と合成／手順化ゲーム（条件分岐）</li>
+                  <li>対象：小5–中1｜45–60分×2回</li>
+                  <li>教材：そろばん、ワークシート、指示カード</li>
+                  <li>成果：計算手順の形式化・反復の理解</li>
+                </ul>
+              </article>
+              <article class="cardish">
+                <h3>Module B：絵本で学ぶICT思考</h3>
+                <ul class="nice-list">
+                  <li>内容：ストーリーから手順を抽出 → 疑似コード化</li>
+                  <li>対象：小4–小6｜45分</li>
+                  <li>教材：絵本シート、疑似コードカード</li>
+                  <li>成果：抽象化・構造化・協働学習</li>
+                </ul>
+              </article>
+              <article class="cardish">
+                <h3>Module C：スマホでロジック体験</h3>
+                <ul class="nice-list">
+                  <li>内容：オフライン操作アプリで条件分岐ゲーム</li>
+                  <li>対象：中1–中3｜45–60分</li>
+                  <li>教材：スマホ（少数台でローテ）、紙ベース手順カード</li>
+                  <li>成果：現実課題への適用イメージ獲得</li>
+                </ul>
+              </article>
+            </div>
+            <p class="muted" style="margin-top:8px;">※現地事情に合わせて柔軟に差し替え・多言語化対応します。</p>
+          </div>
+
+          <!-- 5. Evaluation -->
+          <div id="evaluation" class="section">
+            <div class="eyebrow">Evaluation</div>
+            <h2>評価設計と公開</h2>
+            <ul class="nice-list">
+              <li><strong>事前・事後テスト</strong>（論理的思考／学習意欲の簡易尺度）</li>
+              <li>授業観察ルーブリック（参加・協働・課題解決過程）</li>
+              <li>教員向けアンケート（導入容易性／継続意欲／改善点）</li>
+              <li>結果は<strong>実施報告書（A4約20p）</strong>および詳細版（約50p）として公開</li>
+            </ul>
+          </div>
+
+          <!-- 6. Readiness -->
+          <div id="readiness" class="section">
+            <div class="eyebrow">Readiness</div>
+            <h2>現在の準備状況</h2>
+            <ul class="checklist">
+              <li>日本での試行：<strong>下北沢盆踊りで工作教室</strong>（2日で100名超）</li>
+              <li>現地協力：学校／教育機関と実施場所を調整、大学生パートナーと連携</li>
+              <li>教材：専門家FBを反映して最終化中／翻訳準備</li>
+              <li>体制：教材班／評価班／広報班で役割分担と進捗管理</li>
+            </ul>
+            <div class="grid-3x" style="margin-top:16px;">
+              <figure><div class="fig" style="background-image:url('../assets/img/readiness-1.jpg')"></div><figcaption class="cap">はんだごてでライト準備（例）</figcaption></figure>
+              <figure><div class="fig" style="background-image:url('../assets/img/readiness-2.jpg')"></div><figcaption class="cap">当日の様子（例）</figcaption></figure>
+              <figure><div class="fig" style="background-image:url('../assets/img/readiness-3.jpg')"></div><figcaption class="cap">教材サンプル（例）</figcaption></figure>
+            </div>
+          </div>
+
+          <!-- 7. Budget -->
+          <div id="budget" class="section">
+            <div class="eyebrow">Budget</div>
+            <h2>資金の使い道</h2>
+            <p>得られた資金は<strong>①教材開発費 → ②現地滞在費 → ③渡航費補助</strong>の優先度で使用します。</p>
+            <table class="budget-table" aria-label="予算内訳">
+              <thead><tr><th>項目</th><th class="num">金額（円）</th></tr></thead>
+              <tbody>
+                <tr><td>渡航費（5人）</td><td class="num mono">861,000</td></tr>
+                <tr><td>宿泊費（6泊/5人）</td><td class="num mono">100,000</td></tr>
+                <tr><td>教材制作費</td><td class="num mono">200,000</td></tr>
+                <tr><td>報告会・広報費（リターン含む）</td><td class="num mono">120,000</td></tr>
+                <tr><td>予備費</td><td class="num mono">50,000</td></tr>
+              </tbody>
+              <tfoot><tr><th>合計</th><th class="num mono">1,331,000</th></tr></tfoot>
+            </table>
+          </div>
+
+          <!-- 8. Schedule -->
+          <div id="schedule" class="section">
+            <div class="eyebrow">Schedule</div>
+            <h2>スケジュール</h2>
+            <ol class="nice-list">
+              <li><strong>2025年10月：</strong>教材最終化</li>
+              <li><strong>2025年11月：</strong>日本での試験実施</li>
+              <li><strong>2025年12月：</strong>現地 授業・研修・調査（12/9–12/13）</li>
+              <li><strong>2026年1月：</strong>報告会準備・現地教員の継続サポート</li>
+              <li><strong>2026年2月：</strong>物的リターン履行完了</li>
+              <li><strong>2026年3月：</strong>最終報告会（都内／ハイブリッド）</li>
+            </ol>
+          </div>
+
+          <!-- 9. Risks -->
+          <div id="risks" class="section">
+            <div class="eyebrow">Risks</div>
+            <h2>想定リスクと対応</h2>
+            <div class="grid-2x">
+              <article class="cardish">
+                <h3>実務・運営</h3>
+                <ul class="nice-list">
+                  <li>ビザ・安全配慮：現地パートナーのガイドライン遵守／移動計画の事前承認</li>
+                  <li>停電・通信障害：<strong>アンプラグド前提</strong>のため授業実施に支障なし</li>
+                  <li>休校・ストライキ：代替日程・会場の事前調整</li>
+                </ul>
+              </article>
+              <article class="cardish">
+                <h3>資金・ガバナンス</h3>
+                <ul class="nice-list">
+                  <li>受取口座は現在代表個人名義：<strong>収支は団体で管理・年次レポート公開</strong></li>
+                  <li>領収書／請求書の発行（個人名義）で透明性を担保</li>
+                  <li>支出は承認フローと証憑管理、公開レポートで説明責任</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <!-- 10. FAQ -->
+          <div id="faq" class="section">
+            <div class="eyebrow">FAQ</div>
+            <h2>よくあるご質問</h2>
+            <div class="grid-2x">
+              <article class="cardish">
+                <h3>Q. アンプラグドICTとは？</h3>
+                <p>A. PCや電源に依存せず、カード・紙・具体物で<strong>手順化</strong>や<strong>条件分岐</strong>などを学ぶ方法です。理解が定着した後にデジタルへ橋渡しします。</p>
+              </article>
+              <article class="cardish">
+                <h3>Q. 成果は公開されますか？</h3>
+                <p>A. はい。事前事後テストの要約と授業観察の所見をまとめ、<strong>実施報告書（20p）／詳細版（50p）</strong>として公開します。</p>
+              </article>
+              <article class="cardish">
+                <h3>Q. 現地の先生は継続できますか？</h3>
+                <p>A. 研修で配布する教材パック・進行表・評価観点により、現地のみでの継続実施を想定しています。</p>
+              </article>
+              <article class="cardish">
+                <h3>Q. 支援方法は？</h3>
+                <p>A. <a href="./index.html#support">ご支援の方法</a>をご覧ください。<a href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">申込フォーム</a>からも受付しています。</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="section">
+            <div class="cta-band">
+              <p><strong>この取り組みを一緒に前へ。</strong> ご支援・協働のご相談はお気軽にどうぞ。</p>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="btn btn-primary" href="./index.html#support">ご支援ページへ</a>
+                <a class="btn-light" href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20プロジェクト連携のご相談">Contact us</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div class="cta">
+            <h3>CONTACT</h3>
+            <p>
+              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
+              代表：澤近大地
+            </p>
+          </div>
+        </div>
+
+        <div class="foot-bottom">
+          <div style="display:flex; align-items:center; gap:10px; color:#d0d0d0;">
+            <img src="../assets/img/logo.png" alt="Ubunture logo" width="22" height="22" />
+            Ubunture © 2025
+          </div>
+          <nav class="foot-nav" aria-label="Footer">
+            <a href="./index.html#about">About</a>
+            <a href="./index.html#project">Projects</a>
+            <a href="./index.html#news">News</a>
+            <a href="./index.html#support">Support</a>
+            <a href="#top">Top</a>
+          </nav>
+          <div class="social-links" style="display:flex; gap:14px;">
+            <a href="https://note.com/ubunture" target="_blank"><img src="../assets/img/note.webp" alt="Note" width="40" height="40" /></a>
+            <a href="https://medium.com/@ubunture.tokyo" target="_blank"><img src="../assets/img/medium.png" alt="Medium" width="40" height="40" /></a>
+            <a href="https://x.com/ubunture" target="_blank"><img src="../assets/img/x.png" alt="X" width="40" height="40" /></a>
+            <a href="https://instagram.com/ubunture" target="_blank"><img src="../assets/img/instagram.webp" alt="Instagram" width="40" height="40" /></a>
+            <a href="https://linkedin.com/company/ubunture" target="_blank"><img src="../assets/img/linkedin.png" alt="LinkedIn" width="40" height="40" /></a>
+            <a href="https://facebook.com/ubunture" target="_blank"><img src="../assets/img/facebook.webp" alt="Facebook" width="40" height="40" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
