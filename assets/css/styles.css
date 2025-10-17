@@ -509,3 +509,31 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   #message .mini-card:nth-child(3){ background-position: bottom right; }
   #message .mini-card:nth-child(4){ background-position: bottom left; }
 }
+
+/* ===== About（モバイル最適化：画像サイズ↓＋順序を揃える） ===== */
+@media (max-width: 980px){
+  /* 画像を少し小さく＆中央トリミング */
+  .about .ph{
+    width: 100%;
+    aspect-ratio: 16/10;
+    max-height: clamp(160px, 44vw, 220px);  /* ← ここで“もう少し小さく” */
+    background-size: cover;
+    background-position: center center;     /* 右寄りに見えるのを防ぐ */
+    border-radius: var(--radius-lg);
+    margin: 6px 0;                           /* 余白を少しだけ */
+  }
+
+  /* 代表メッセージ内の各ブロックを縦積みに変更 */
+  #message article.grid{
+    display: flex !important;
+    flex-direction: column;      /* デフォルトは本文→画像の順 */
+    gap: 14px;
+    align-items: stretch !important;
+  }
+
+  /* 図が先頭に来ているブロック（=PCで“右画像”だったやつ）は順序を反転
+     → モバイルでも必ず「本文の下」に画像が来る */
+  #message article.grid:has(> figure.ph:first-child){
+    flex-direction: column-reverse;
+  }
+}
