@@ -572,3 +572,24 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   #message .mini-card:nth-child(3){ background-position: bottom right; }
   #message .mini-card:nth-child(4){ background-position: bottom left; }
 }
+
+/* ===== 高校の四つの挑戦：背景が明るい時でも文字を読めるように ===== */
+#message .mini-card .overlay{
+  /* オーバーレイを強める（既存指定を上書き） */
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,.30) 0%,
+    rgba(0,0,0,.62) 70%,
+    rgba(0,0,0,.78) 100%
+  ) !important;
+}
+
+/* 文字を白＆影でコントラスト確保 */
+#message .mini-card h4,
+#message .mini-card p{
+  color:#fff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.6), 0 0 1px rgba(0,0,0,.8);
+}
+
+/* 文章が長いときの可読性微調整（行間を少し広げる） */
+#message .mini-card p{ line-height:1.75; }
