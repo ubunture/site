@@ -487,19 +487,18 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
     flex-direction: column-reverse;
   }
 }
-/* ===== 高校の四つの挑戦（PC 2×2＆サイズ調整） ===== */
+/* ===== 高校の四つの挑戦（PC 2×2：サイズを少しだけ拡大） ===== */
 @media (min-width: 981px){
-  /* 2×2 グリッドに固定 */
   #message .cards{
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
   }
 
-  /* カードの高さを控えめに（既存 aspect-ratio を無効化） */
+  /* ここを少し大きめに */
   #message .mini-card{
-    aspect-ratio: auto;                         /* 既存の 16/9 を打ち消し */
-    height: clamp(180px, 22vw, 260px);          /* ＝小さめに統一 */
+    aspect-ratio: auto;
+    height: clamp(200px, 24vw, 300px); /* ← 180–260px から“ちょい大きめ” */
     background-size: cover;
     background-position: center center;
   }
