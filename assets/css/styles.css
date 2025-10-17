@@ -649,3 +649,41 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   .profile .photo{ max-width: 220px; margin: 0 auto; }
 }
 
+/* ===== 代表紹介 見出し帯 ===== */
+.page-title-band{
+  position: relative;
+  background: #0f0f10;                    /* ページ基調色に合わせる */
+  padding: clamp(32px, 6vw, 72px) 0 clamp(10px, 2vw, 16px);
+}
+
+/* 下に太めのアクセントライン */
+.page-title-band::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255,255,255,.85), rgba(255,255,255,.25));
+  opacity:.9;
+}
+
+.page-title{
+  margin: 0;
+  font-size: clamp(36px, 6vw, 72px);      /* デカめ */
+  line-height: .98;
+  font-weight: 900;
+  letter-spacing: .02em;
+  color: #fff;
+  text-shadow: 0 6px 28px rgba(0,0,0,.45); /* ほんのりグローで“バン” */
+}
+
+.page-title-sub{
+  margin: 6px 0 0;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #bdbdbd;
+  opacity: .9;
+  font-size: clamp(11px, 1.6vw, 12px);
+}
+
+/* 直下のプロフィールとの間隔（重なり防止） */
+#profile{ padding-top: clamp(24px, 3vw, 32px); }
