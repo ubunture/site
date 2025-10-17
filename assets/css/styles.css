@@ -689,55 +689,55 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 #profile{ padding-top: clamp(24px, 3vw, 32px); }
 
 /* ===== Coordinator section ===== */
-#coordinator .co-name{
-  margin:0 0 6px;
-  font-size: clamp(22px, 3.6vw, 34px);
-  font-weight: 900;
-  line-height: 1.1;
-}
-#coordinator .co-name .en{
-  font-size:.58em; font-weight:700; opacity:.85; margin-left:.35em;
-}
-#coordinator .co-lead{
-  margin: 4px 0 14px;
-  color:#d6d6d6; font-weight:800;
+/* ===== #coordinator を“白いセクション”に上書き ===== */
+#coordinator{
+  background:#fff;          /* 背景を白に */
+  color:#111;               /* 基本文字色を濃色に */
 }
 
-#coordinator .co-sub{
-  margin: 14px 0 6px;
-  font-size: clamp(15px, 2.2vw, 18px);
-  font-weight: 900; letter-spacing:.02em; color:#f0f0f0;
-}
+/* 見出し・テキスト色を濃色系に統一 */
+#coordinator h2,
+#coordinator h3,
+#coordinator .co-name,
+#coordinator .co-sub{ color:#111; }
+#coordinator p,
+#coordinator li{ color:#444; }
+#coordinator .co-lead{ color:#333; }
 
-#coordinator .list-check{
-  margin:0; padding-left:0; list-style:none; color:#d0d0d0; line-height:1.8;
-}
-#coordinator .list-check li{
-  position:relative; padding-left:1.4em; margin:4px 0;
-}
+/* Eyebrow(小見出し)も白背景用の色味に */
+#coordinator .eyebrow{ color:#6b7280; }
+#coordinator .eyebrow::before{ background: currentColor; opacity:.35; }
+
+/* チェックリストはアクセントカラーで視認性UP */
 #coordinator .list-check li::before{
-  content:"✔"; position:absolute; left:0; top:0.15em; font-weight:900; opacity:.9;
+  content:"✔";
+  position:absolute; left:0; top:.15em;
+  font-weight:900; color:#0ea5e9;
 }
 
+/* 引用ボックス：白地用の淡グレー */
 #coordinator .voice{
   margin:10px 0 0;
   padding:12px 14px;
-  border-left:4px solid rgba(255,255,255,.12);
-  background: linear-gradient(90deg, rgba(255,255,255,.06), rgba(255,255,255,0));
-  color:#eaeaea; border-radius:10px;
+  background:#f7f7f8;
+  border-left:4px solid #0ea5e9;
+  color:#333;
+  border-radius:10px;
 }
 
-/* 画像の見え方は About 共通ルールを流用（中央トリミング＆比率統一） */
+/* 写真は白地で馴染むように弱めの影＋薄い枠線 */
 #coordinator .ph{
-  margin:0; width:100%;
-  aspect-ratio: 16/10; max-height: 360px;
-  background-size: cover; background-position: center;
-  border-radius: var(--radius-lg); box-shadow: var(--shadow-2); overflow:hidden;
+  border:1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  background-position:center; background-size:cover;
+  border-radius: var(--radius-lg); overflow:hidden;
 }
 
-/* モバイル：縦積み＆画像少し小さめ（既存の挙動と整合） */
+/* リンク色（白背景用） */
+#coordinator a{ color:#0ea5e9; }
+
+/* モバイルは既存の縦積み挙動のまま */
 @media (max-width:980px){
   #coordinator article.grid{ display:flex !important; flex-direction:column; gap:14px; }
-  #coordinator .ph{ max-height: 260px; }
+  #coordinator .ph{ max-height:260px; }
 }
-
