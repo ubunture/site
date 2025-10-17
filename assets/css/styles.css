@@ -794,7 +794,7 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 /* A. ph-portrait クラスを付けた場合（推奨） */
 #about .ph-portrait{
   aspect-ratio: 3 / 4;         /* 縦長で収める */
-  max-height: 520px;           /* ちょい大きめに */
+  max-height: 300px;           /* ちょい大きめに */
   background-size: cover;
   background-position: 50% 20%;/* 顔の位置をやや上に */
   border-radius: var(--radius-lg);
