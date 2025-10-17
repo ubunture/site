@@ -169,20 +169,24 @@
         </article>
     
         <!-- 2) 代表の想い：画像左／テキスト右（代表の顔写真を表示） -->
+        <!-- 2) 代表の想い：画像左／テキスト右 -->
         <article class="grid reveal" style="align-items:center; margin-top:36px;">
-          <!-- 左：代表写真（差し替える場合はパスだけ変更） -->
-          <div class="ph" aria-hidden="true"
-               style="background-image:url('../assets/img/me.png');"></div>
-    
+          <!-- 左：代表写真 -->
+          <div class="ph ph-portrait" aria-hidden="true"
+               style="background-image:url('../assets/img/profile.jpg');"></div>
+        
           <div>
             <h3 style="margin:0 0 10px;">代表の想い</h3>
             <p>自然は正直で、試すほど手応えが返る。私は「ただ使う」を越えて仕組みを掴み、仮説→実験→修正で一歩ずつ前に進む学びを大切にしてきました。Ubuntureはその姿勢をICTに結び直し、電源や端末がなくても子どもと先生が「つくって試せる」場を届けます。</p>
-    
-            <div class="actions" style="margin-top:14px;">
-              <a class="btn btn-primary" href="../ja/about.html#message" aria-label="代表メッセージの詳細へ">More</a>
-            </div>
+            <!-- ▼この「More」ブロックは削除してOK（下でまとめて1つにするため） -->
+            <!-- <div class="actions" ...>...</div> -->
           </div>
         </article>
+        <!-- About全体のまとめCTA（1つだけ） -->
+        <div class="about-cta-bottom">
+          <a class="btn btn-primary" href="../ja/about.html" aria-label="Aboutページへ">More</a>
+        </div>
+
       </div>
     </section>
 
