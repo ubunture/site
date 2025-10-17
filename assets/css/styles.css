@@ -593,3 +593,59 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 
 /* 文章が長いときの可読性微調整（行間を少し広げる） */
 #message .mini-card p{ line-height:1.75; }
+
+/* ===== Profile (About top) ===================================== */
+.profile .head{
+  display:grid;
+  grid-template-columns: .9fr 1.1fr; /* 左写真 / 右テキスト */
+  gap: clamp(24px,4vw,40px);
+  align-items: center;
+}
+.profile .photo{
+  width:100%;
+  max-width: 360px;                 /* 写真の最大幅（必要なら調整） */
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-lg);
+  overflow:hidden;
+  box-shadow: var(--shadow-2);
+  background:#333;
+}
+.profile .photo img{
+  width:100%; height:100%; object-fit: cover; display:block;
+}
+.profile .name{
+  margin: 0 0 4px;
+  font-size: clamp(24px, 4vw, 40px);
+  line-height: 1.1;
+  font-weight: 900;
+}
+.profile .name .en{
+  font-size: .55em; font-weight: 700; opacity:.8; margin-left:.3em;
+}
+.profile .lead{
+  margin: 6px 0 14px;
+  color:#d6d6d6; font-weight:700;
+}
+
+/* 所属などの行を2カラム風にきれいに並べる */
+.profile .meta{
+  display:grid; grid-template-columns: 1fr; gap:10px;
+  margin: 0 0 12px; padding:0;
+}
+.profile .meta > div{ display:grid; grid-template-columns: 72px 1fr; gap:10px; }
+.profile .meta dt{ margin:0; color:#bdbdbd; font-weight:800; letter-spacing:.02em; }
+.profile .meta dd{ margin:0; color:#eaeaea; }
+.profile .meta a{ color:#fff; text-decoration: underline; text-underline-offset:3px; }
+
+/* 略歴の箇条書き */
+.profile .bio{
+  margin:12px 0 0; padding-left:18px; color:#d0d0d0;
+}
+.profile .bio li{ margin:6px 0; }
+
+/* モバイル：縦積み＋中央寄せ、写真は少し小さめ */
+@media (max-width: 880px){
+  .profile .head{ grid-template-columns: 1fr; text-align:left; }
+  .profile .photo{ max-width: 220px; margin: 0 auto; }
+}
+
