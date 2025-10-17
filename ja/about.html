@@ -154,40 +154,72 @@
       </ol>
     </nav>
     <!-- Profile (quick bio) -->
-    <section id="profile" class="about profile" aria-labelledby="profile-title">
+    <!-- ===== Profile (expanded) ===== -->
+    <section id="profile" class="about profile profile--expanded" aria-labelledby="profile-title">
       <div class="container head">
         <figure class="photo" aria-hidden="true">
-          <!-- 顔写真：このパスは about.html から見た相対パス -->
-          <img src="../assets/img/me.png" alt="澤近 大地の顔写真">
+          <img src="../assets/img/profile.jpg" alt="澤近 大地の顔写真">
         </figure>
     
         <div class="txt">
           <div class="eyebrow">Profile</div>
-          <h2 id="profile-title" class="name">澤近 大地 <small class="en">Daichi Sawachika</small></h2>
-          <p class="lead">Ubunture 代表 / 東京大学 教養学部</p>
+          <h2 id="profile-title" class="name">
+            澤近 大地 <small class="en">Daichi Sawachika</small>
+          </h2>
+          <p class="lead">Ubunture 代表／東京大学 教養学部 理科一類 1年</p>
     
-          <!-- 所属など（必要に応じて編集） -->
           <dl class="meta">
-            <div><dt>所属</dt><dd>Ubunture（代表） / SHIMOKITA COLLEGE</dd></div>
-            <div><dt>関心</dt><dd>アンプラグドICT教育 / ロボティクス / 探究学習</dd></div>
+            <div><dt>所属</dt><dd>東京大学 教養学部 理科一類（1年）</dd></div>
+            <div><dt>関心</dt><dd>アンプラグドICT教育、探究学習の設計、ロボティクス、数理モデリング、量子光学</dd></div>
+            <div><dt>出身</dt><dd>愛媛県愛南町</dd></div>
+            <div><dt>活動拠点</dt><dd>SHIMOKITA COLLEGE／Ubunture</dd></div>
             <div><dt>連絡</dt><dd><a href="mailto:ubunture.tokyo@gmail.com">ubunture.tokyo@gmail.com</a></dd></div>
-            <div><dt>SNS</dt><dd>
+            <div><dt>Link</dt><dd>
               <a href="https://x.com/ubunture" target="_blank" rel="noopener">X</a> /
               <a href="https://instagram.com/ubunture" target="_blank" rel="noopener">Instagram</a> /
-              <a href="https://note.com/ubunture" target="_blank" rel="noopener">note</a>
+              <a href="https://note.com/ubunture" target="_blank" rel="noopener">note</a> /
+              <a href="https://medium.com/@ubunture.tokyo" target="_blank" rel="noopener">Medium</a>
             </dd></div>
           </dl>
     
-          <!-- 略歴（3–5行程度が見やすい） -->
-          <ul class="bio">
-            <li>愛媛・愛南町出身。自然から「試して確かめる」姿勢を学ぶ。</li>
-            <li>高校でロボット・数理・防災デザインに挑戦、全国/世界で受賞。</li>
-            <li>大学では探究学習ゼミ立ち上げ、現場と理論の往復を実践。</li>
-            <li>電源や端末に依存しないアンプラグドICT教育を南アフリカで展開。</li>
+          <!-- ハイライト（2×2） -->
+          <div class="highlights">
+            <article class="hl">
+              <h3>「生き物から学ぶ」ロボット開発</h3>
+              <p>甲殻類の歩行を参照し、軽量化・関節配置・歩容最適化を統合。遺伝的アルゴリズムで滑らかな歩行を再現し、無線LANによる遠隔操作も実装。日本学生科学賞 一等入賞。</p>
+            </article>
+            <article class="hl">
+              <h3>Math A-lympiad（国際数学コンテスト）</h3>
+              <p>英語でのデータ解析・シミュレーション・レポート作成を主導。日本大会で世界大会権を獲得、世界大会では救急搬送の最適化をテーマに議論を牽引し第4位。</p>
+            </article>
+            <article class="hl">
+              <h3>防災×ICTデザイン</h3>
+              <p>全国6県13市町を調査し、住民インタビュー・災害遺構の記録を踏まえ、ピクトグラム13種とWebマップコミュニティ「Mapunity」を試作。自由すぎる研究EXPO 企業金賞。</p>
+            </article>
+            <article class="hl">
+              <h3>プレゼン甲子園・教育研究</h3>
+              <p>「Well-beingと未来社会」をテーマに決勝進出・複数受賞。日本の教育の課題を比較研究し、新しい教育モデルを提案。大学では探究学習ゼミを主宰。</p>
+            </article>
+          </div>
+    
+          <!-- 略歴（長文） -->
+          <div class="bio-long">
+            <p>愛媛・愛南町で育ち、自然の中で「試して確かめる」姿勢を身につけた。高校では教育格差に関心を持ち、国際的な比較研究を実施して国内大会で受賞。現在は能登地域でNPO法人や学生団体とともに、現場の課題をほどき直しながら教育格差の縮減に向けた活動に携わっている。自らも子ども向け探究学習イベントを企画・実施し、大学では探究学習の理論と実践を往復するゼミを主宰している。</p>
+            <p>同時に、ICTを「共通作業台」と捉え、ロボット開発やデジタル技術を用いた数理的課題解決に挑戦。甲殻類型ロボットの研究では、ハードとソフトを同時に更新し続け、歩容の最適化と遠隔運用まで含めた体系に発展させた。Math A-lympiad では英語でのモデリングと合意形成を鍛え、世界大会4位を経験。防災プロジェクトでは調査と設計・実装をつなぎ、地域の知見を可視化する仕組みを提案した。最近は量子光学の文献読みと小実験も進め、科学技術と教育を横断する視点を磨いている。</p>
+            <p>こうした経験を束ね、電源や端末に依存せず「つくって試す」学びに到達できるアンプラグドICT教育を推進。Ubunture の代表として、南アフリカでの授業・教員研修・国際協働を準備し、子どもたちに“生きる力”と“他者を理解する知性”を届けることを目指している。</p>
+          </div>
+    
+          <!-- 受賞・成果 -->
+          <ul class="badges">
+            <li>日本学生科学賞 一等入賞（甲殻類型ロボット）</li>
+            <li>Math A-lympiad 世界大会 第4位</li>
+            <li>自由すぎる研究EXPO 企業金賞（防災×ICT）</li>
+            <li>プレゼン甲子園 決勝・企業賞／奨励賞</li>
           </ul>
         </div>
       </div>
     </section>
+
 
     <!-- 代表メッセージ -->
     <section id="message" class="about stacked" aria-labelledby="message-title">
