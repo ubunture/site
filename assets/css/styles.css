@@ -800,9 +800,20 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 }
 
 /* デスクトップでは「代表の想い」ブロックの左カラムを細くする */
-@media (min-width: 981px){
-  #about article.grid:nth-of-type(2){
-    grid-template-columns: .8fr 1.2fr; /* 左（写真）を細く、右（文）を広く */
-    gap: 40px;
+/* ===== モバイル：代表写真を小さく（index の About 2本目だけ） ===== */
+@media (max-width: 880px){
+  /* .ph-portrait を付けている前提。付けていない場合は下の代替も使えます */
+  #about .ph-portrait{
+    aspect-ratio: 4 / 5 !important;   /* 横長から縦長にして“ドアップ”を防ぐ */
+    max-height: 220px !important;     /* 高さをぎゅっと */
+    background-size: cover;           /* 収まりよくトリミング */
+    background-position: 50% 18%;     /* 少し上寄せ（額が切れにくい） */
+    margin-inline: auto;
   }
+
+  /* テキストとの間隔を少し詰める */
+  #about .container > article:nth-of-type(2){ gap: 16px; }
 }
+
+/* さらに小さくしたい場合は上の max-height を 200px などに */
+
