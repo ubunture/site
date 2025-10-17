@@ -351,28 +351,34 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   border: 1px solid #ddd;
 }
 
-/* --- About: 代表メッセージの画像の高さを統一 --- */
-#message article.grid .ph{
-  /* 画面幅に応じて 220〜340px の範囲で可変 */
-  height: clamp(220px, 32vw, 340px);
+/* About（代表メッセージ）内の画像だけサイズを揃える */
+#message .ph{
+  /* まず既存の比率指定を無効化（←ここが肝） */
+  padding: 0 !important;
+  min-height: 0 !important;
+
+  /* 要素自身で比率を決める */
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 24px; /* 既存と揃える用。不要なら削除OK */
+  border-radius: 24px;
 }
 
-/* 行内のアイテムがバラつかないように */
-#message .grid{
-  align-items: start; /* 画像だけ伸びて見えるのを抑える */
-  gap: 32px;
-}
+/* 行内の上下センタリング指定を無効化（inline styleを上書き）*/
+#message article.grid{ align-items: start !important; }
 
-/* モバイルは少し低めに */
+/* モバイル時は少し低めに */
 @media (max-width: 640px){
-  #message article.grid .ph{
-    height: clamp(180px, 46vw, 240px);
+  #message .ph{
+    aspect-ratio: 16 / 11;
+    max-height: 280px;
   }
 }
+
 /* --- About hero background --- */
 .hero.hero--about{
   position: relative;
