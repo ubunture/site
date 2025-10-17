@@ -351,16 +351,16 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   border: 1px solid #ddd;
 }
 
-/* About（代表メッセージ）内の画像だけサイズを揃える */
+/* ===== About: 代表メッセージ内の画像を統一・疑似要素を無効化 ===== */
 #message .ph{
-  /* まず既存の比率指定を無効化（←ここが肝） */
+  /* 既存の比率指定を完全に打ち消す */
   padding: 0 !important;
   min-height: 0 !important;
+  height: auto !important;
 
-  /* 要素自身で比率を決める */
-  aspect-ratio: 16 / 10;
+  /* ここで統一比率＆上限高さを与える */
+  aspect-ratio: 16/10;
   width: 100%;
-  height: auto;
   max-height: 360px;
 
   background-size: cover;
@@ -368,16 +368,26 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   border-radius: 24px;
 }
 
-/* 行内の上下センタリング指定を無効化（inline styleを上書き）*/
+/* 比率用の ::before や ::after を殺す（これが残っていると伸びます） */
+#message .ph::before,
+#message .ph::after{
+  content: none !important;
+  display: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 行揃えで高さが釣られないように */
 #message article.grid{ align-items: start !important; }
 
-/* モバイル時は少し低めに */
+/* モバイルは少し低め */
 @media (max-width: 640px){
   #message .ph{
-    aspect-ratio: 16 / 11;
+    aspect-ratio: 16/11;
     max-height: 280px;
   }
 }
+
 
 /* --- About hero background --- */
 .hero.hero--about{
