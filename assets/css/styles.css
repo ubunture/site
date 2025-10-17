@@ -498,7 +498,7 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   /* ここを少し大きめに */
   #message .mini-card{
     aspect-ratio: auto;
-    height: clamp(200px, 24vw, 400px); /* ← 180–260px から“ちょい大きめ” */
+    height: clamp(200px, 24vw, 450px); /* ← 180–260px から“ちょい大きめ” */
     background-size: cover;
     background-position: center center;
   }
