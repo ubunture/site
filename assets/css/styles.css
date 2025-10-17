@@ -409,3 +409,53 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 .hero.hero--about .inner{
   padding-block: clamp(56px, 12vw, 140px);
 }
+
+/* ====== Aboutページ：レイアウト＆画像のズレ修正（貼り付け用） ====== */
+
+/* PC：左右カラムを等分にしてバランス改善 */
+.about .grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;   /* 1.15fr/.85fr を廃止 */
+  gap: clamp(28px, 4vw, 48px);
+  align-items: start;               /* 文字量に釣られて上下ズレるのを防ぐ */
+}
+.about .grid > *{ min-width:0; }    /* はみ出し防止 */
+
+/* 画像カード：右寄り・サイズ不一致を解消（全セクション共通） */
+.about .ph{
+  margin:0;
+  width:100%;
+  justify-self: stretch;            /* 列幅いっぱいに広げる */
+  align-self: start;
+  place-self: auto;
+
+  aspect-ratio: 16/10;              /* 統一比率 */
+  max-height: 360px;
+  background-size: cover;
+  background-position: center center;/* 右寄りに見えるのを防ぐ */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  overflow:hidden;
+}
+
+/* 代表メッセージ内の強制上書き（inline styleや疑似要素を殺す） */
+#message article.grid{ align-items:start !important; }
+#message .ph{
+  padding:0 !important;
+  min-height:0 !important;
+  height:auto !important;
+}
+#message .ph::before,
+#message .ph::after{
+  content:none !important;
+  display:none !important;
+}
+
+/* モバイル：1カラム化＆右寄り防止 */
+@media (max-width:980px){
+  .about .grid{ grid-template-columns: 1fr; }
+  .about .ph{
+    max-height: 280px;
+    justify-self: stretch;          /* 余白で右に寄らないように */
+  }
+}
