@@ -388,6 +388,50 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   }
 }
 
+/* ===== About（代表メッセージ）画像を完全に同サイズに ===== */
+#message{
+  /* ここで一括して高さを決める（好みで数値だけ調整） */
+  --about-photo-h: clamp(260px, 28vw, 340px);
+}
+
+#message .grid{
+  /* 列幅を完全に同じにする */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start !important;
+}
+
+#message .ph{
+  /* 既存の比率指定を無効化（padding/min-height/疑似要素） */
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: var(--about-photo-h) !important;
+  width: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+}
+#message .ph::before,
+#message .ph::after{
+  content: none !important;
+  display: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* モバイル時は1カラムにして高さも少し下げる */
+@media (max-width: 640px){
+  #message{
+    --about-photo-h: clamp(200px, 45vw, 260px);
+  }
+  #message .grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 
 /* --- About hero background --- */
 .hero.hero--about{
