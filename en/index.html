@@ -146,14 +146,52 @@
       <div class="container">
         <div class="eyebrow">About</div>
         <h2 id="about-title">About Us</h2>
-        <div class="grid">
+
+        <!-- 1) Mission: text left / image right (keep current .ph background) -->
+        <article class="grid reveal" style="align-items:center">
           <div>
-            <h3 style="margin:0 0 10px;">“Creating the future together” — Ubunture</h3>
-            <p>“Ubunture” is a coined term that blends the South African philosophy <em>Ubuntu</em> (“I am because you are,” compassion for others) with “Future.” The name embodies our strong commitment to creating the future together.</p>
-            <p>Centered on students from the University of Tokyo and SHIMOKITA COLLEGE, members with diverse backgrounds work to reduce educational disparities. In particular, we implement “unplugged ICT education” that can be conducted even where electricity or devices are limited, rolling it out in schools in Johannesburg, South Africa, and building systems that enable students and teachers to keep learning sustainably.</p>
+            <h3 style="margin:0 0 10px;">“Creating the future, together” — Ubunture</h3>
+
+            <p>Ubunture is a student organization from the University of Tokyo that expands children’s <strong>freedom to learn</strong> and their <strong>power to dream</strong> through ICT education.</p>
+
+            <p><em>Ubuntu</em> is a Zulu word meaning “I am because you are,” a philosophy of care and mutual support. We paired this with <em>Future</em> to form <strong>Ubunture</strong>, reflecting our stance of bringing diverse people together to co-create learning that truly helps in the field.</p>
+
+            <blockquote class="org-mission">
+              Through ICT, we expand children’s freedom to learn and their power to dream around the world.
+            </blockquote>
+
+            <div class="actions" style="margin-top:14px;">
+              <a class="btn btn-primary" href="../en/about.html#vision" aria-label="Read more about our mission">More</a>
+            </div>
           </div>
+
+          <!-- Right: existing background image (uses .about .ph styles) -->
           <div class="ph" aria-hidden="true"></div>
+        </article>
+
+        <!-- 2) Representative's Message: image left / text right (show portrait) -->
+        <article class="grid reveal" style="align-items:center; margin-top:36px;">
+          <!-- Left: portrait -->
+          <div class="ph ph-portrait" aria-hidden="true"
+               style="background-image:url('../assets/img/me.png');"></div>
+
+          <div>
+            <h3 style="margin:0 0 10px;">Message from the Representative</h3>
+            <p>
+              I grew up in a small town surrounded by mountains and sea in Ehime Prefecture, learning survival skills from my grandfather. While those days were joyful, I began to feel <strong>limited</strong> by the smallness of my world. What broadened it was the <strong>internet and computers</strong>. Through programming, I discovered the joy of <strong>turning ideas into reality</strong>.
+              <br><br>
+              One day, a friend studying in South Africa told me about the local <strong>ICT education gap</strong>—a lack of materials, electricity, and teacher training that <strong>deprives many children of learning opportunities</strong>. As ICT once changed my life, I felt compelled to <strong>bring that power to others</strong>. Together with like‑minded peers, we launched the student group <strong>Ubunture</strong>.
+              <br><br>
+              I believe many conflicts arise from <strong>not knowing the other</strong>. The ability to understand people and the world is indispensable—and it should be <strong>fun</strong>. Especially in difficult times, rather than shutting ourselves in, we can use ICT to <strong>open up the world</strong>. This project is the <strong>first step</strong> toward that dream.
+            </p>
+          </div>
+        </article>
+
+        <!-- Single consolidated CTA for About -->
+        <div class="about-cta-bottom">
+          <a class="btn btn-primary" href="../en/about.html" aria-label="Go to About page">More</a>
         </div>
+
       </div>
     </section>
 
@@ -294,17 +332,225 @@
 
 
     <!-- Support -->
-    <section id="support" class="support" aria-labelledby="support-title">
+    <section id="support" class="support stacked" aria-labelledby="support-title">
       <div class="container">
-        <div class="eyebrow" data-i18n="eyebrow.support">Support — Get Involved</div>
-        <h2 id="support-title" class="h-section" data-i18n="support.title">There are many ways to support us</h2>
-        <div class="support-cards">
-          <article class="support-card reveal"><div class="hd"><span data-i18n="support.card1.h">People & Networks</span><small data-i18n="support.card1.s">People & Connections</small></div><div class="bd"><p data-i18n="support.card1.p">Placeholder text: local partnerships, network sharing, etc.</p></div></article>
-          <article class="support-card reveal" style="transition-delay:.05s"><div class="hd"><span data-i18n="support.card2.h">Expert Support</span><small data-i18n="support.card2.s">Knowledge & Advice</small></div><div class="bd"><p data-i18n="support.card2.p">Placeholder text: advice on education, ICT, and operations.</p></div></article>
-          <article class="support-card reveal" style="transition-delay:.1s"><div class="hd"><span data-i18n="support.card3.h">Financial Support</span><small data-i18n="support.card3.s">Financial Support</small></div><div class="bd"><p data-i18n="support.card3.p">Placeholder text: donations, sponsorships, etc.</p></div></article>
+        <div class="eyebrow">Support — How to Support</div>
+        <h2 id="support-title" class="h-section">Ways to Support</h2>
+        <p class="section-lead">We welcome support from both individuals and organizations.</p>
+
+        <!-- A. Organizations (types of support) -->
+        <div class="support-block org">
+          <div class="support-cards">
+            <article class="support-card reveal">
+              <div class="hd">
+                <span>People & Connections</span>
+                <small>Networking Support</small>
+              </div>
+              <div class="bd">
+                <p>Please help bridge us with schools, education departments, NPOs, and universities in South Africa. Introductions to local partners, coordination, access to pilot sites, and event collaborations are powerful forms of support.</p>
+              </div>
+            </article>
+
+            <article class="support-card reveal" style="transition-delay:.05s">
+              <div class="hd">
+                <span>Knowledge & Advice</span>
+                <small>Expert Support</small>
+              </div>
+              <div class="bd">
+                <p>We seek advisors for unplugged ICT curriculum/materials, teacher‑training design, learning assessment & data analysis, ICT/education, PR, legal, accounting, and fundraising. Both one‑off advice and ongoing mentorship are welcome.</p>
+              </div>
+            </article>
+
+            <article class="support-card reveal" style="transition-delay:.1s">
+              <div class="hd">
+                <span>Financial Support</span>
+                <small>Donations & Sponsorships</small>
+              </div>
+              <div class="bd">
+                <p>Donations and sponsorships fund materials, printing, teacher training, and field pilots. Organizations receive returns such as logo display, activity reports, and invitations to on‑site/online briefings.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Contact us CTA -->
+          <div class="center-cta">
+            <a class="btn btn-light contact-btn"
+              href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20Partnership%20Inquiry&body=Your%20name:%0D%0AOrganization:%0D%0ADetails:%0D%0A">
+              Contact us (open email)
+            </a>
+          </div>
+        </div>
+
+        <!-- B. Individuals (crowdfunding‑style plans) -->
+        <div class="support-block cf">
+          <div class="cf-grid">
+          
+            <!-- ¥3,000 | Bronze Plan -->
+            <article class="cf-card reveal" data-plan="Bronze" data-amount="3000">
+              <div class="cf-hd">
+                <h4 class="cf-plan">¥3,000 | Bronze Plan</h4>
+              </div>
+              <div class="cf-body">
+                <div class="price"><span class="amt">3,000</span><span class="unit">JPY</span></div>
+                <ul class="cf-list">
+                  <li>Thank‑you email</li>
+                  <li>Exclusive desktop/mobile wallpapers (activity photos + Ubunture icon)</li>
+                  <li>Activity report PDF (A4 / 2 pages)</li>
+                  <li>Invite to supporter open chat (LINE/Discord) — through Mar 2026</li>
+                </ul>
+                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
+              </div>
+            </article>
+          
+            <!-- ¥5,000 | Silver Plan -->
+            <article class="cf-card reveal" data-plan="Silver" data-amount="5000" style="transition-delay:.05s">
+              <div class="cf-hd">
+                <h4 class="cf-plan">¥5,000 | Silver Plan</h4>
+              </div>
+              <div class="cf-body">
+                <div class="price"><span class="amt">5,000</span><span class="unit">JPY</span></div>
+                <ul class="cf-list">
+                  <li>Everything in lower plans</li>
+                  <li>Access to a private photo album (safety‑screened)</li>
+                  <li>Mini activity kit (PDF) for unplugged learning at home</li>
+                  <li>Voting right for the next teaching‑material theme</li>
+                </ul>
+                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
+              </div>
+            </article>
+          
+            <!-- ¥10,000 | Gold Plan (recommended) -->
+            <article class="cf-card reveal" data-plan="Gold (Recommended)" data-amount="10000" style="transition-delay:.1s">
+              <div class="cf-hd">
+                <h4 class="cf-plan">¥10,000 | Gold Plan</h4>
+                <p class="cf-desc">Recommended</p>
+              </div>
+              <div class="cf-body">
+                <div class="price"><span class="amt">10,000</span><span class="unit">JPY</span></div>
+                <ul class="cf-list">
+                  <li>Everything in lower plans</li>
+                  <li>Personalized supporter certificate (PDF)</li>
+                  <li>Small‑group online briefing (≈60 min; multiple dates; Q&A)</li>
+                  <li>Your name on the Supporters Wall (small size, 1 year; optional / nickname OK)</li>
+                  <li>Implementation report (A4 ~20 pages)</li>
+                  <li>Limited activity journal (behind‑the‑scenes; note & medium)</li>
+                  <li>Two children’s teaching materials of your choice (from 4 types)</li>
+                  <li>Set of 5 project postcards</li>
+                </ul>
+                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
+              </div>
+            </article>
+          
+            <!-- ¥30,000 | Platinum Plan (limit 20) -->
+            <article class="cf-card reveal" data-plan="Platinum (Limit 20)" data-amount="30000" style="transition-delay:.15s">
+              <div class="cf-hd">
+                <h4 class="cf-plan">¥30,000 | Platinum Plan</h4>
+                <p class="cf-desc">*Limited to 20</p>
+              </div>
+              <div class="cf-body">
+                <div class="price"><span class="amt">30,000</span><span class="unit">JPY</span></div>
+                <ul class="cf-list">
+                  <li>Everything in lower plans (except small‑size name on Supporters Wall)</li>
+                  <li>One‑on‑one online briefing (60 min; select from proposed dates)</li>
+                  <li>Invitation to the final annual briefing (Mar 2026; Tokyo + online)</li>
+                  <li>Your name on the Supporters Wall (medium size, 1 year)</li>
+                  <li>Your name in the acknowledgments of the report (optional; one‑time)</li>
+                  <li>Detailed implementation report (incl. South Africa education analysis & lesson plans; PDF ~50 pages)</li>
+                  <li>All four children’s teaching materials</li>
+                </ul>
+                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
+              </div>
+            </article>
+          
+            <!-- ¥50,000 | Diamond Plan (limit 10) -->
+            <article class="cf-card reveal" data-plan="Diamond (Limit 10)" data-amount="50000" style="transition-delay:.2s">
+              <div class="cf-hd">
+                <h4 class="cf-plan">¥50,000 | Diamond Plan</h4>
+                <p class="cf-desc">*Limited to 10</p>
+              </div>
+              <div class="cf-body">
+                <div class="price"><span class="amt">50,000</span><span class="unit">JPY</span></div>
+                <ul class="cf-list">
+                  <li>Everything in lower plans (except small/medium name display)</li>
+                  <li>Your name (small) printed at the end of teaching materials (limited period; placement designated by the team)</li>
+                  <li>Name introduction during briefings</li>
+                  <li>Your name on the Supporters Wall (large size, 1 year)</li>
+                  <li>One online guest lesson (60 min; schools/organizations; Japanese/English)</li>
+                </ul>
+                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
+              </div>
+            </article>
+          
+            <!-- ¥100,000 | Crown Plan (limit 5) -->
+            <article class="cf-card reveal" data-plan="Crown (Limit 5)" data-amount="100000" style="transition-delay:.25s">
+              <div class="cf-hd">
+                <h4 class="cf-plan">¥100,000 | Crown Plan</h4>
+                <p class="cf-desc">*Limited to 5</p>
+              </div>
+              <div class="cf-body">
+                <div class="price"><span class="amt">100,000</span><span class="unit">JPY</span></div>
+                <ul class="cf-list">
+                  <li>Everything in lower plans (excludes Supporters Wall display, name in materials, and the one online lesson)</li>
+                  <li>Small‑size display on the Sponsors page (1 year)</li>
+                  <li>Thank‑you post on official SNS (Instagram) with your name</li>
+                  <li>One in‑person guest lesson (or three online lessons, 60 min each)<br>
+                      <small>*For schools/organizations; Japanese/English. For in‑person sessions, please cover actual transportation costs from Tokyo.</small></li>
+                </ul>
+                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
+              </div>
+            </article>
+          
+          </div>
+
+          <div class="cf-actions">
+            <a class="btn cf-secondary" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support application form</a>
+          </div>
         </div>
       </div>
     </section>
+
+<!-- 
+    <section id="sponsors" class="sponsors" aria-labelledby="sponsors-title">
+      <div class="container">
+        <div class="eyebrow">Sponsors</div>
+        <h2 id="sponsors-title" class="h-section">Partner Companies</h2>
+        <p class="section-lead">Below are sample logo slots. Place images under <code>../assets/img/sponsors/</code> and fill <em>alt</em> with the official names.</p>
+        
+        <div class="spon-tier">
+          <h3 class="tier-title">Large</h3>
+          <ul class="logo-grid logo-lg">
+            <li><img src="../assets/img/sponsors/large-1.png" alt="Company A" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/large-2.png" alt="Company B" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/large-3.png" alt="Company C" loading="lazy"></li>
+          </ul>
+        </div>
+        
+        
+        <div class="spon-tier">
+          <h3 class="tier-title">Medium</h3>
+          <ul class="logo-grid logo-md">
+            <li><img src="../assets/img/sponsors/medium-1.png" alt="Company D" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/medium-2.png" alt="Company E" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/medium-3.png" alt="Company F" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/medium-4.png" alt="Company G" loading="lazy"></li>
+          </ul>
+        </div>
+        
+        
+        <div class="spon-tier">
+          <h3 class="tier-title">Small</h3>
+          <ul class="logo-grid logo-sm">
+            <li><img src="../assets/img/sponsors/small-1.png" alt="Company H" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/small-2.png" alt="Company I" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/small-3.png" alt="Company J" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/small-4.png" alt="Company K" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/small-5.png" alt="Company L" loading="lazy"></li>
+            <li><img src="../assets/img/sponsors/small-6.png" alt="Company M" loading="lazy"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+-->
 
     <!-- Footer -->
     <footer>
