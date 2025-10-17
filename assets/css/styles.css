@@ -373,4 +373,25 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
     height: clamp(180px, 46vw, 240px);
   }
 }
+/* --- About hero background --- */
+.hero.hero--about{
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: clamp(48svh, 64vh, 76vh);
+}
+
+/* 文字の可読性向上のための薄いオーバーレイ */
+.hero.hero--about::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45));
+  pointer-events:none;
+}
+
+/* ヒーロー内の上下余白（必要なら） */
+.hero.hero--about .inner{
+  padding-block: clamp(56px, 12vw, 140px);
+}
 
