@@ -771,3 +771,30 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   #org .grid{ grid-template-columns:1fr !important; }
   #org .ph{ max-height:260px; }
 }
+
+/* ===== Top About summary (index) ===== */
+.about-summary .h3{
+  margin:0 0 8px; font-size: clamp(18px,2.6vw,22px); font-weight:900;
+}
+.about-summary p{ color:#d0d0d0; }
+.about-summary .feat-list{
+  margin:12px 0 0; padding-left:0; list-style:none; color:#d0d0d0;
+}
+.about-summary .feat-list li{
+  position:relative; padding-left:1.4em; margin:6px 0;
+}
+.about-summary .feat-list li::before{
+  content:"✔"; position:absolute; left:0; top:.1em; font-weight:900; opacity:.9;
+}
+.lead-quote{
+  margin:12px 0 0; padding:12px 14px;
+  border-left:4px solid rgba(255,255,255,.15);
+  background: linear-gradient(90deg, rgba(255,255,255,.07), rgba(255,255,255,0));
+  color:#fff; border-radius:10px; font-weight:800; letter-spacing:.02em;
+}
+.about-cta{ margin-top:14px; }
+
+/* モバイル：1カラムで縦積み */
+@media (max-width:980px){
+  .about-summary{ grid-template-columns: 1fr !important; gap:16px !important; }
+}
