@@ -800,20 +800,28 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 }
 
 /* デスクトップでは「代表の想い」ブロックの左カラムを細くする */
-/* ===== モバイル：代表写真を小さく（index の About 2本目だけ） ===== */
+/* ===== Mobile: index #about の「代表の想い」だけ調整 ===== */
 @media (max-width: 880px){
-  /* .ph-portrait を付けている前提。付けていない場合は下の代替も使えます */
-  #about .ph-portrait{
-    aspect-ratio: 4 / 5 !important;   /* 横長から縦長にして“ドアップ”を防ぐ */
-    max-height: 220px !important;     /* 高さをぎゅっと */
-    background-size: cover;           /* 収まりよくトリミング */
-    background-position: 50% 18%;     /* 少し上寄せ（額が切れにくい） */
-    margin-inline: auto;
+  /* 2つ目のブロック（= 代表の想い）を縦並びにして順序を入れ替え */
+  #about .container > article:nth-of-type(2){
+    display: flex !important;
+    flex-direction: column;
+    gap: 14px;
   }
-
-  /* テキストとの間隔を少し詰める */
-  #about .container > article:nth-of-type(2){ gap: 16px; }
+  /* 本文を先、写真を後ろに */
+  #about .container > article:nth-of-type(2) > div:not(.ph){ order: 1; }
+  #about .container > article:nth-of-type(2) > .ph{
+    order: 2;
+    /* 正方形＆小さめ、中央寄せ */
+    width: clamp(200px, 62vw, 320px);
+    aspect-ratio: 1 / 1;
+    max-height: none;
+    margin: 6px auto 0;
+    background-size: cover;
+    background-position: 50% 24%; /* 顔を少し上寄せに */
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-2);
+  }
 }
 
-/* さらに小さくしたい場合は上の max-height を 200px などに */
 
