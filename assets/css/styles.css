@@ -746,7 +746,7 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 #org{ background:#0f0f10; color:#f3f3f3; }
 #org h2{ margin:0 0 10px; font-size:clamp(24px,4vw,44px); line-height:1.2; }
 #org p{ color:#d0d0d0; }
-#org .org-mission{
+.org-mission{
   margin:14px 0 0;
   padding:12px 16px;
   border-left:4px solid rgba(255,255,255,.18);
