@@ -553,16 +553,16 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 
 /* 高校の四つの挑戦：4枚の背景画像を個別指定（Aboutページ内だけ） */
 #message .cards .mini-card:nth-child(1){ 
-  background-image: url('../assets/img/story4-1.png') !important; 
+  background-image: url('../img/story4-1.png') !important; 
 }
 #message .cards .mini-card:nth-child(2){ 
-  background-image: url('../assets/img/story4-2.png') !important; 
+  background-image: url('../img/story4-2.png') !important; 
 }
 #message .cards .mini-card:nth-child(3){ 
-  background-image: url('../assets/img/story4-3.png') !important; 
+  background-image: url('../img/story4-3.png') !important; 
 }
 #message .cards .mini-card:nth-child(4){ 
-  background-image: url('../assets/img/story4-4.png') !important; 
+  background-image: url('../img/story4-4.png') !important; 
 }
 
 /* 2×2のときのトリミング位置（上右／上左／下右／下左） */
