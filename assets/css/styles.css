@@ -410,4 +410,22 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   padding-block: clamp(56px, 12vw, 140px);
 }
 
+/* 2段目（#message 内、2つ目の article.grid）の画像だけ右に寄せる */
+#message article.grid:nth-of-type(2) .ph{
+  transform: translateX(clamp(12px, 2.2vw, 32px));
+}
+
+/* 背景ではなく <img> を使っている場合も効かせる */
+#message article.grid:nth-of-type(2) .ph-img{
+  display:block;
+  transform: translateX(clamp(12px, 2.2vw, 32px));
+}
+
+/* モバイルではずらし無しにする（任意） */
+@media (max-width: 640px){
+  #message article.grid:nth-of-type(2) .ph,
+  #message article.grid:nth-of-type(2) .ph-img{
+    transform: none;
+  }
+}
 
