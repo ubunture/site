@@ -146,50 +146,43 @@
         <div class="eyebrow">About</div>
         <h2 id="about-title">わたしたちについて</h2>
     
-        <div class="grid about-summary" style="align-items:start">
-          <!-- 左：団体概要 -->
-          <article>
-            <h3 class="h3">団体概要</h3>
-            <p>
-              私たち Ubunture は、ICT教育を通じて
-              <strong>「学びの自由」</strong>と<strong>「夢を見る力」</strong>を
-              世界中の子どもたちに広げる活動を行う、東京大学発の学生団体です。
-            </p>
-            <p>
-              <em>Ubuntu</em>（「あなたがいるから私がいる」）の哲学に
-              <em>Future</em>（未来）を重ね、多様な人が“持ち寄って”関わり、
-              社会課題の現場に役立つ学びを共に創る姿勢を名前に込めました。
-            </p>
-            <ul class="feat-list">
-              <li>電源や端末がなくても学べる <b>アンプラグドICT教育</b></li>
-              <li>先生が続けられる <b>教員研修</b> と教材提供</li>
-              <li>日本×南アの <b>国際協働</b>・交流プロジェクト</li>
-            </ul>
-          </article>
+        <!-- 1) 団体理念：テキスト左／画像右（画像は今のまま .ph の背景） -->
+        <article class="grid reveal" style="align-items:center">
+          <div>
+            <h3 style="margin:0 0 10px;">「共に未来をつくる」—— Ubunture</h3>
     
-          <!-- 右：代表の想い（抜粋） -->
-          <article>
-            <h3 class="h3">代表の想い（抜粋）</h3>
-            <p>
-              自然から学んだのは「<b>試して確かめる</b>」姿勢でした。
-              電源や端末に頼れなくても、子どもと先生が自分の手で
-              「わからない」を「わかった！」に変えられる。
-              その瞬間を増やすために、私たちは現場とともに学びを
-              つくっていきます。
-            </p>
-            <blockquote class="lead-quote">
-              ICTは、人と社会をつなぎ問いを前に進めるための
-              <b>共通作業台</b>だと考えています。
+            <p>私たちUbuntureは、ICT教育を通じて「学びの自由」と「夢を見る力」を世界中の子供たちに広げる活動を行う東京大学発の学生団体です。</p>
+    
+            <p>Ubuntu（ウブントゥ）はズールー語で「あなたがいるから私がいる」という、思いやりと相互扶助の哲学を持つ言葉。この理念にFuture（未来）を重ね、多様な人が「持ち寄って」関わり、社会課題の現場に役立つ学びを共に創る——その姿勢を名前に込めました。</p>
+    
+            <blockquote class="org-mission">
+              ICTを通じて、世界中の子どもたちに「学ぶ自由」と「夢を見る力」を広げていきます。
             </blockquote>
     
-            <!-- More ボタン -->
-            <div class="about-cta">
-              <a class="btn btn-primary" href="../ja/about.html" aria-label="詳しく（Aboutページへ）">
-                More
-              </a>
+            <div class="actions" style="margin-top:14px;">
+              <a class="btn btn-primary" href="../ja/about.html#vision" aria-label="団体理念の詳細へ">More</a>
             </div>
-          </article>
-        </div>
+          </div>
+    
+          <!-- 右：そのまま既存の背景画像（.about .ph の設定を使用） -->
+          <div class="ph" aria-hidden="true"></div>
+        </article>
+    
+        <!-- 2) 代表の想い：画像左／テキスト右（代表の顔写真を表示） -->
+        <article class="grid reveal" style="align-items:center; margin-top:36px;">
+          <!-- 左：代表写真（差し替える場合はパスだけ変更） -->
+          <div class="ph" aria-hidden="true"
+               style="background-image:url('../assets/img/me.png');"></div>
+    
+          <div>
+            <h3 style="margin:0 0 10px;">代表の想い</h3>
+            <p>自然は正直で、試すほど手応えが返る。私は「ただ使う」を越えて仕組みを掴み、仮説→実験→修正で一歩ずつ前に進む学びを大切にしてきました。Ubuntureはその姿勢をICTに結び直し、電源や端末がなくても子どもと先生が「つくって試せる」場を届けます。</p>
+    
+            <div class="actions" style="margin-top:14px;">
+              <a class="btn btn-primary" href="../ja/about.html#message" aria-label="代表メッセージの詳細へ">More</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
