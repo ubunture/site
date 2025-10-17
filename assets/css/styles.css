@@ -350,3 +350,27 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   color: #111;
   border: 1px solid #ddd;
 }
+
+/* --- About: 代表メッセージの画像の高さを統一 --- */
+#message article.grid .ph{
+  /* 画面幅に応じて 220〜340px の範囲で可変 */
+  height: clamp(220px, 32vw, 340px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 24px; /* 既存と揃える用。不要なら削除OK */
+}
+
+/* 行内のアイテムがバラつかないように */
+#message .grid{
+  align-items: start; /* 画像だけ伸びて見えるのを抑える */
+  gap: 32px;
+}
+
+/* モバイルは少し低めに */
+@media (max-width: 640px){
+  #message article.grid .ph{
+    height: clamp(180px, 46vw, 240px);
+  }
+}
+
