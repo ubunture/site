@@ -826,4 +826,25 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 
 .story a, .grid a { overflow-wrap:anywhere; }
 
+/* このセクションだけ横並びを強制 */
+.story-row{
+  display: grid !important;  /* flex指定を確実に打ち消す */
+  grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+  gap: clamp(16px, 2vw, 24px);
+  align-items: center;
+}
+.story-row > *{ min-width: 0; } /* 長文/リンクで横幅が突っ張るのを防ぐ */
+.story-row a{ overflow-wrap:anywhere; } /* 日本語の長いリンクがあっても折り返す */
+
+.story-img{
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+}
+
+/* モバイルでは縦並びに */
+@media (max-width: 900px){
+  .story-row{ grid-template-columns: 1fr; }
+}
 
