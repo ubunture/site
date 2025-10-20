@@ -824,20 +824,6 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   }
 }
 
-.story-sa{
-  display:grid;
-  grid-template-columns: 1.2fr 1fr;   /* 横並びを強制 */
-  gap:clamp(16px,2vw,24px);
-  align-items:center;
-}
-.story-sa .ph{
-  aspect-ratio:16/9;                  /* 比率を固定 */
-  background-size:cover;
-  background-position:center;
-  border-radius:16px;
-}
-/* モバイルでは縦並びに落としたい場合は閾値を調整 */
-@media (max-width: 720px){
-  .story-sa{ grid-template-columns:1fr; }
-}
+.story a, .grid a { overflow-wrap:anywhere; }
+
 
