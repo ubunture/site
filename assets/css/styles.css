@@ -839,3 +839,11 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
     margin-top: clamp(16px, 4vw, 28px);
   }
 }
+/* 高校の四つの挑戦グリッドの下にゆとり */
+#message .cards{
+  margin-bottom: clamp(32px, 6vw, 72px);
+}
+/* #message 内の article / .cards が続くときの上下間隔を統一 */
+#message .container > :where(article, .cards) + :where(article, .cards){
+  margin-top: clamp(32px, 5vw, 72px);
+}
