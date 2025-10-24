@@ -400,3 +400,46 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   .voices .sigline .affil{ color:#94a3b8; }
 }
 @media (prefers-reduced-motion:reduce){ .voices-track{ transition:none; } }
+
+/* ===== Supporter Voices: blue -> black / grayscale ===== */
+.voices-spotlight{
+  background:#fff;                    /* 白ベース */
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+.ph-round{ box-shadow:0 8px 30px rgba(0,0,0,.10); }  /* アバターの影も青味を除去 */
+.quote::before{ color:rgba(0,0,0,.18); }             /* 左上の “ の色を黒系に */
+
+.voices-btn{
+  border:1px solid rgba(0,0,0,.20);
+  background:#fff;
+  color:#111;
+}
+.voices-btn:hover{ background:#f6f6f7; }
+
+.voices-dots [role="tab"]{ background:#d1d5db; }     /* ページネーション（薄灰） */
+.voices-dots [role="tab"][aria-selected="true"]{
+  background:#111;                                    /* 選択時は黒で強調 */
+  width:22px;
+}
+
+.sigline{ color:#111; }          /* 署名を黒系に */
+.sigline .affil{ color:#555; }   /* 所属はやや薄め */
+
+/* --- Dark mode調整（青禁止のまま可読性を維持） --- */
+@media (prefers-color-scheme: dark){
+  .voices-spotlight{
+    background:#0f0f10;
+    border-bottom-color:rgba(255,255,255,.08);
+  }
+  .quote::before{ color:rgba(255,255,255,.28); }
+  .voices-btn{
+    background:#0f0f10;
+    color:#e5e7eb;
+    border-color:rgba(255,255,255,.24);
+  }
+  .voices-btn:hover{ background:#171717; }
+  .voices-dots [role="tab"]{ background:#475569; }
+  .voices-dots [role="tab"][aria-selected="true"]{ background:#fff; }
+  .sigline{ color:#e5e7eb; }
+  .sigline .affil{ color:#cbd5e1; }
+}
