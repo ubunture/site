@@ -329,117 +329,115 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   }
 }
 
-/* ========== Voices (Supporter slider) ========== */
-.voices-spotlight{ background:var(--card); padding:clamp(16px,3vw,36px) 0; border-bottom:1px solid rgba(0,0,0,.06); }
-.voices{ position:relative; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:8px; }
-.voices-viewport{ overflow:hidden; outline:none; }
-.voices-track{ display:flex; will-change:transform; transition:transform .5s ease; }
-.voice-slide{ flex:0 0 100%; display:grid; grid-template-columns:auto 1fr; align-items:start; gap:clamp(14px,3vw,28px); padding:clamp(6px,1vw,10px) 2px; }
-.avatar{ width:min(280px,36vw); aspect-ratio:1/1; background-size:cover; background-position:center; }
-.ph-round{ border-radius:9999px; box-shadow:0 8px 30px rgba(2,132,199,.15); }
+/* ========== Voices (Supporter slider) — cleaned ========== */
 
-/* Voices: 装飾引用符を和文カギ括弧に、位置ズレ解消 */
-.quote{
+/* container & layout */
+.voices-spotlight{
+  background: var(--card);
+  padding: clamp(16px, 3vw, 36px) 0;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.voices{
   position: relative;
-  padding-left: 22px;         /* 本文と衝突しない余白 */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+.voices-viewport{ overflow: hidden; outline: none; }
+.voices-track{ display: flex; will-change: transform; transition: transform .5s ease; }
+.voice-slide{
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: clamp(14px, 3vw, 28px);
+  padding: clamp(6px, 1vw, 10px) 2px;
 }
 
+/* avatar */
+.avatar{ width: min(280px, 36vw); aspect-ratio: 1/1; background-size: cover; background-position: center; }
+.ph-round{ border-radius: 9999px; box-shadow: 0 8px 30px rgba(0,0,0,.10); }
+
+/* quote text */
+.quote{
+  position: relative;
+  margin: 0;
+  font-size: clamp(15px, 2.1vw, 18px);
+  line-height: 1.75;
+  padding-left: 22px;                 /* “ と本文が重ならない余白 */
+}
+.quote p{ margin: 0 0 .75em; }
+.quote p:last-child{ margin-bottom: 0; }
+
+/* decorative opening quote “ */
 .quote::before{
-  content: "\201C";           /* “ 開きダブルクォート */
+  content: "\201C";
   position: absolute;
   left: 0;
-  top: .10em;                 /* 行高に追従して自然に */
-  transform: translateY(-.08em);  /* 微調整（Safari対策） */
-  font-size: 2em;             /* 本文に対する見栄えの比率 */
+  top: .10em;
+  transform: translateY(-.08em);
+  font-size: 2em;
   line-height: 1;
   font-weight: 800;
-  /* ← ここで欧文フォントに固定（Noto Sans JP等に落ちない） */
-  font-family: Manrope, Inter, -apple-system, "Segoe UI",
-               Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: rgba(2,132,199,.28);
+  font-family: Manrope, Inter, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: rgba(0,0,0,.18);             /* 黒系に統一 */
   pointer-events: none;
   z-index: 0;
 }
 .quote p{ position: relative; z-index: 1; }
 
-/* モバイルは装飾を外すなら（任意） */
-@media (max-width: 860px){
-  .quote{ padding-left: 0; }
-  .quote::before{ content: none; }
+/* signature (right aligned under the quote) */
+.voices .sigline{
+  grid-column: 2;
+  justify-self: end;
+  text-align: right;
+  margin-top: 12px;
+  color: #111;
+  font-weight: 800;
+  letter-spacing: .02em;
 }
+.voices .sigline .affil{ color: #555; }
 
-
-.quote p{ margin:0 0 .75em; position:relative; z-index:1; }
-.quote p:last-child{ margin-bottom:0; }
-
-.voices .sigline{ grid-column:2; justify-self:end; text-align:right; margin-top:12px; color:#374151; font-weight:800; letter-spacing:.02em; }
-.voices .sigline .affil{ color:#475569; }
-
-.voices-btn{ display:inline-grid; place-items:center; width:40px; height:40px; border-radius:999px; border:1px solid rgba(2,132,199,.25); background:#fff; color:#0369a1; cursor:pointer; transition:transform .12s ease, background .2s; }
-.voices-btn:hover{ transform:translateY(-1px); background:#f0f9ff; }
-.voices-btn:active{ transform:translateY(0); }
-.voices-btn[disabled]{ opacity:.4; cursor:default; }
-
-.voices-dots{ display:flex; gap:8px; justify-content:center; margin-top:12px; }
-.voices-dots [role="tab"]{ width:8px; height:8px; border-radius:999px; background:#bae6fd; border:0; padding:0; cursor:pointer; }
-.voices-dots [role="tab"][aria-selected="true"]{ background:#0284c7; width:22px; }
-
-@media (max-width:860px){
-  .voice-slide{ grid-template-columns:1fr; }
-  .avatar{ width:160px; margin:0 auto; }
-  .quote::before{ left:-8px; top:-12px; font-size:1.8em; }
-  .voices .sigline{ grid-column:1; }
-}
-@media (prefers-color-scheme:dark){
-  .voices-spotlight{ background:#0b1220; border-bottom-color:rgba(14,165,233,.2); }
-  .voices-btn{ background:#0b1220; color:#e0f2fe; border-color:rgba(14,165,233,.3); }
-  .voices-btn:hover{ background:#0b172a; }
-  .voices-dots [role="tab"]{ background:#164e63; }
-  .voices-dots [role="tab"][aria-selected="true"]{ background:#67e8f9; }
-  .voices .sigline{ color:#e2e8f0; }
-  .voices .sigline .affil{ color:#94a3b8; }
-}
-@media (prefers-reduced-motion:reduce){ .voices-track{ transition:none; } }
-
-/* ===== Supporter Voices: blue -> black / grayscale ===== */
-.voices-spotlight{
-  background:#fff;                    /* 白ベース */
-  border-bottom:1px solid rgba(0,0,0,.08);
-}
-.ph-round{ box-shadow:0 8px 30px rgba(0,0,0,.10); }  /* アバターの影も青味を除去 */
-.quote::before{ color:rgba(0,0,0,.18); }             /* 左上の “ の色を黒系に */
-
+/* arrows */
 .voices-btn{
-  border:1px solid rgba(0,0,0,.20);
-  background:#fff;
-  color:#111;
+  display: inline-grid;
+  place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.20);
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  transition: transform .12s ease, background .2s;
 }
-.voices-btn:hover{ background:#f6f6f7; }
+.voices-btn:hover{ transform: translateY(-1px); background: #f6f6f7; }
+.voices-btn:active{ transform: translateY(0); }
+.voices-btn[disabled]{ opacity: .4; cursor: default; }
 
-.voices-dots [role="tab"]{ background:#d1d5db; }     /* ページネーション（薄灰） */
-.voices-dots [role="tab"][aria-selected="true"]{
-  background:#111;                                    /* 選択時は黒で強調 */
-  width:22px;
+/* dots */
+.voices-dots{ display: flex; gap: 8px; justify-content: center; margin-top: 12px; }
+.voices-dots [role="tab"]{ width: 8px; height: 8px; border-radius: 999px; background: #d1d5db; border: 0; padding: 0; cursor: pointer; }
+.voices-dots [role="tab"][aria-selected="true"]{ background: #111; width: 22px; }
+
+/* responsive */
+@media (max-width: 860px){
+  .voice-slide{ grid-template-columns: 1fr; }
+  .avatar{ width: 160px; margin: 0 auto; }
+  .quote{ padding-left: 16px; }       /* 余白だけ少し控えめに */
+  .voices .sigline{ grid-column: 1; }
 }
 
-.sigline{ color:#111; }          /* 署名を黒系に */
-.sigline .affil{ color:#555; }   /* 所属はやや薄め */
-
-/* --- Dark mode調整（青禁止のまま可読性を維持） --- */
+/* dark mode */
 @media (prefers-color-scheme: dark){
-  .voices-spotlight{
-    background:#0f0f10;
-    border-bottom-color:rgba(255,255,255,.08);
-  }
-  .quote::before{ color:rgba(255,255,255,.28); }
-  .voices-btn{
-    background:#0f0f10;
-    color:#e5e7eb;
-    border-color:rgba(255,255,255,.24);
-  }
-  .voices-btn:hover{ background:#171717; }
-  .voices-dots [role="tab"]{ background:#475569; }
-  .voices-dots [role="tab"][aria-selected="true"]{ background:#fff; }
-  .sigline{ color:#e5e7eb; }
-  .sigline .affil{ color:#cbd5e1; }
+  .voices-spotlight{ background: var(--bg-dark); border-bottom-color: rgba(255,255,255,.08); }
+  .voices-btn{ background: var(--bg-dark); color: #e5e7eb; border-color: rgba(255,255,255,.24); }
+  .voices-btn:hover{ background: #171717; }
+  .voices-dots [role="tab"]{ background: #475569; }
+  .voices-dots [role="tab"][aria-selected="true"]{ background: #fff; }
+  .voices .sigline{ color: #e5e7eb; }
+  .voices .sigline .affil{ color: #cbd5e1; }
 }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){ .voices-track{ transition: none; } }
