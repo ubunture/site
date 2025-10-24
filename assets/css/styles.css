@@ -338,10 +338,34 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 .avatar{ width:min(280px,36vw); aspect-ratio:1/1; background-size:cover; background-position:center; }
 .ph-round{ border-radius:9999px; box-shadow:0 8px 30px rgba(2,132,199,.15); }
 
-.quote{ font-size:clamp(15px,2.1vw,18px); line-height:1.75; margin:0; position:relative; padding-left:14px; }
+/* Voices: 装飾引用符を和文カギ括弧に、位置ズレ解消 */
+.quote{
+  padding-left: 24px;     /* 余白を広げて被り防止 */
+  position: relative;
+}
+.quote::before{
+  content: "\300C";       /* 「 （和文のかぎカッコ）*/
+  position: absolute;
+  left: 0;
+  top: .15em;             /* 行高依存のズレを吸収 */
+  font-size: 1.6em;       /* 大きすぎる滲みを抑える */
+  line-height: 1;
+  font-weight: 800;
+  color: rgba(2,132,199,.28);
+  pointer-events: none;
+  z-index: 0;
+}
+.quote p{ position: relative; z-index: 1; }
+
+/* モバイルは装飾を外すなら（任意） */
+@media (max-width: 860px){
+  .quote{ padding-left: 0; }
+  .quote::before{ content: none; }
+}
+
+
 .quote p{ margin:0 0 .75em; position:relative; z-index:1; }
 .quote p:last-child{ margin-bottom:0; }
-.quote::before{ content:"“"; position:absolute; left:0; top:-6px; font-size:2.2em; color:rgba(2,132,199,.25); font-weight:800; z-index:0; }
 
 .voices .sigline{ grid-column:2; justify-self:end; text-align:right; margin-top:12px; color:#374151; font-weight:800; letter-spacing:.02em; }
 .voices .sigline .affil{ color:#475569; }
