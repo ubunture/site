@@ -238,17 +238,55 @@ section{ padding:100px 0; scroll-margin-top:calc(var(--nav-h) + 24px); }
 .support-block.cf > .cf-actions .btn{ justify-self:center; }
 
 /* ========== Sponsors (light) ========== */
+/* ===== Sponsors (サイズ差 + 中央揃え) ===== */
 .sponsors{ background:var(--bg-light); color:var(--ink); }
 .sponsors .section-lead{ color:#666; }
-.spon-tier{ margin-top:24px; }
+.spon-tier{ margin-top:24px; text-align:center; }
 .tier-title{ margin:4px 0 10px; font-size:18px; letter-spacing:.04em; color:#333; font-weight:800; }
-.logo-grid{ list-style:none; margin:0; padding:0; display:grid; gap:18px; grid-template-columns:repeat(6, 1fr); align-items:center; }
-.logo-grid li{ background:#fff; border:1px solid #ececec; border-radius:12px; display:flex; align-items:center; justify-content:center; aspect-ratio:5/2; padding:10px; box-shadow:var(--shadow-1); }
+
+/* 中央揃えしやすいよう、Grid → Flexに */
+.logo-grid{
+  list-style:none; margin:0; padding:0;
+  display:flex; flex-wrap:wrap; gap:18px;
+  justify-content:center;           /* 全体を中央揃え */
+  align-items:center;
+}
+
+/* 共通のカード見た目 */
+.logo-grid li{
+  background:#fff; border:1px solid #ececec; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  aspect-ratio: 5 / 2;              /* 横長カード */
+  padding:10px;
+  box-shadow:var(--shadow-1);
+  width:var(--cell-w);               /* ← 幅でサイズ差を出す */
+}
+
+/* 画像は段ごとに高さを変える（実ロゴの見た目差） */
 .logo-grid img{ max-width:90%; height:auto; filter:grayscale(100%); opacity:.9; transition:.25s ease; }
 .logo-grid img:hover{ filter:none; opacity:1; }
-.logo-lg img{ max-height:64px; } .logo-md img{ max-height:48px; } .logo-sm img{ max-height:34px; }
-@media (max-width:1180px){ .logo-grid{ grid-template-columns:repeat(4, 1fr); } }
-@media (max-width:720px){ .logo-grid{ grid-template-columns:repeat(2, 1fr); } }
+
+/* ---- 段別サイズ（PC）---- */
+.logo-grid.logo-lg{ --cell-w: 320px; }
+.logo-grid.logo-md{ --cell-w: 240px; }
+.logo-grid.logo-sm{ --cell-w: 180px; }
+
+.logo-lg img{ max-height:72px; }     /* 大きめ */
+.logo-md img{ max-height:54px; }     /* 中 */
+.logo-sm img{ max-height:40px; }     /* 小 */
+
+/* ---- レスポンシブ ---- */
+@media (max-width:1180px){
+  .logo-grid.logo-lg{ --cell-w: 280px; }
+  .logo-grid.logo-md{ --cell-w: 220px; }
+  .logo-grid.logo-sm{ --cell-w: 170px; }
+}
+@media (max-width:720px){
+  .logo-grid.logo-lg,
+  .logo-grid.logo-md,
+  .logo-grid.logo-sm{ --cell-w: min(300px, 44vw); } /* 2列中心・中央揃えのまま */
+}
+
 
 /* ========== Footer ========== */
 footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
