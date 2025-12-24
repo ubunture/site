@@ -654,4 +654,53 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   .logo-grid li strong{ color: #f3f4f6; }
   .logo-grid img{ opacity: .95; }
 }
-```
+/* ===== Sponsors fix: 見出しの右寄り/改行 & カードの中央揃え崩れを修正 ===== */
+
+/* 1) セクション上部（eyebrow / h2 / lead）は必ず左揃えに固定 */
+.sponsors .eyebrow,
+.sponsors .h-section,
+.sponsors .section-lead{
+  text-align: left !important;
+}
+
+/* eyebrow は inline-flex なので中身も左に寄せる */
+.sponsors .eyebrow{
+  justify-content: flex-start !important;
+}
+
+/* 2) tier 見出しは中央に（ここは中央が自然） */
+.sponsors .tier-title{
+  text-align: center;
+}
+
+/* 3) ロゴ/名前の “塊” 自体を中央に寄せて、間延びを防ぐ */
+.sponsors .logo-grid{
+  width: min(980px, 100%);      /* ← ここが効く：幅いっぱいに広がるのを止める */
+  margin-inline: auto;
+  justify-content: center;
+}
+
+/* 4) li が縮んだり伸びたりしてズレるのを防ぐ（flexの癖を殺す） */
+.sponsors .logo-grid li{
+  flex: 0 0 var(--cell-w);      /* ← widthだけだと縮む/伸びることがある */
+  max-width: 100%;
+}
+
+/* 5) “1枚だけの行” が変に右に寄る事故を防止 */
+.sponsors .logo-grid{
+  justify-content: center !important;
+  align-content: center;
+}
+
+/* 6) モバイルでのカード幅を少し扱いやすく */
+@media (max-width:720px){
+  .sponsors .logo-grid{
+    width: 100%;
+  }
+  .sponsors .logo-grid.logo-lg,
+  .sponsors .logo-grid.logo-md,
+  .sponsors .logo-grid.logo-sm{
+    --cell-w: min(320px, 90vw); /* 1〜2列で気持ちよく */
+  }
+}
+
