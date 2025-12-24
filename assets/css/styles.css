@@ -545,3 +545,113 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   line-height: 1.6;
   color: var(--muted-fg, #6b7280);
 }
+```css
+/* ========== Sponsors Section ========== */
+.sponsors{
+  background: var(--bg-light);
+  color: var(--ink);
+}
+.sponsors .section-lead{ color: var(--ink-weak); }
+
+/* Tier block */
+.spon-tier{
+  margin-top: 26px;
+  text-align: center;
+}
+.tier-title{
+  margin: 6px 0 12px;
+  font-size: 18px;
+  letter-spacing: .04em;
+  color: #333;
+  font-weight: 800;
+}
+
+/* Grid (Flex) */
+.logo-grid{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.logo-grid li{
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 5 / 2;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-1);
+  width: var(--cell-w);
+}
+
+/* Text label (when no image logo) */
+.logo-grid li strong{
+  font-weight: 900;
+  color: #111;
+  letter-spacing: .02em;
+  font-size: 16px;
+}
+
+/* Logo image */
+.logo-grid img{
+  max-width: 90%;
+  height: auto;
+  max-height: var(--logo-h);
+  filter: grayscale(100%);
+  opacity: .92;
+  transition: .25s ease;
+}
+.logo-grid img:hover{
+  filter: none;
+  opacity: 1;
+}
+
+/* Size presets */
+.logo-grid.logo-lg{ --cell-w: 320px; --logo-h: 72px; }
+.logo-grid.logo-md{ --cell-w: 240px; --logo-h: 54px; }
+.logo-grid.logo-sm{ --cell-w: 180px; --logo-h: 40px; }
+
+/* Responsive */
+@media (max-width:1180px){
+  .logo-grid.logo-lg{ --cell-w: 280px; }
+  .logo-grid.logo-md{ --cell-w: 220px; }
+  .logo-grid.logo-sm{ --cell-w: 170px; }
+}
+@media (max-width:720px){
+  .logo-grid.logo-lg,
+  .logo-grid.logo-md,
+  .logo-grid.logo-sm{
+    --cell-w: min(300px, 44vw); /* 2列ベース */
+  }
+}
+@media (max-width:420px){
+  .logo-grid.logo-lg,
+  .logo-grid.logo-md,
+  .logo-grid.logo-sm{
+    --cell-w: 100%;            /* 1列 */
+  }
+}
+
+/* Dark mode (prefers-color-scheme) */
+@media (prefers-color-scheme: dark){
+  .sponsors{ background: var(--bg-dark); color: #e5e7eb; }
+  .sponsors .section-lead{ color: #cbd5e1; }
+  .tier-title{ color: #e5e7eb; }
+
+  .logo-grid li{
+    background: rgba(255,255,255,.06);
+    border-color: rgba(255,255,255,.14);
+    box-shadow: none;
+  }
+  .logo-grid li strong{ color: #f3f4f6; }
+  .logo-grid img{ opacity: .95; }
+}
+```
