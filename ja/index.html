@@ -119,11 +119,12 @@
         </div>
         <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
-          <li role="none"><a role="menuitem" href="#about" data-i18n="nav.about">About</a></li>
-          <li role="none"><a role="menuitem" href="#project" data-i18n="nav.project">Project</a></li>
-          <li role="none"><a role="menuitem" href="#team" data-i18n="nav.team">Team</a></li>
-          <li role="none"><a role="menuitem" href="#news" data-i18n="nav.news">News</a></li>
-          <li role="none"><a role="menuitem" href="#support" data-i18n="nav.support">Support</a></li>
+          <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="./about.html" data-i18n="nav.about">About</a></li>
+          <li role="none"><a role="menuitem" href="./project.html" data-i18n="nav.project">Project</a></li>
+          <li role="none"><a role="menuitem" href="./team.html" data-i18n="nav.team">Team</a></li>
+          <li role="none"><a role="menuitem" href="./news.html" data-i18n="nav.news">News</a></li>
+          <li role="none"><a role="menuitem" href="./support.html" data-i18n="nav.support">Support</a></li>
         </ul>
       </nav>
     </header>
@@ -144,63 +145,32 @@
     <section id="about" class="about" aria-labelledby="about-title">
       <div class="container">
         <div class="eyebrow">About</div>
-        <h2 id="about-title">わたしたちについて</h2>
-    
-        <!-- 1) 団体理念：テキスト左／画像右（画像は今のまま .ph の背景） -->
-        <article class="grid reveal" style="align-items:center">
-          <div>
-            <h3 style="margin:0 0 10px;">「共に未来をつくる」—— Ubunture</h3>
-    
+        <h2 id="about-title" class="h-section">わたしたちについて</h2>
+        
+        <!-- 1) 団体理念 -->
+        <div class="teaser-grid reveal">
+          <div class="txt">
+            <h3>「共に未来をつくる」—— Ubunture</h3>
             <p>私たちUbuntureは、ICT教育を通じて「学びの自由」と「夢を見る力」を世界中の子供たちに広げる活動を行う東京大学発の学生団体です。</p>
-    
             <p>Ubuntu（ウブントゥ）はズールー語で「あなたがいるから私がいる」という、思いやりと相互扶助の哲学を持つ言葉。この理念にFuture（未来）を重ね、多様な人が「持ち寄って」関わり、社会課題の現場に役立つ学びを共に創る——その姿勢を名前に込めました。</p>
-    
-            <blockquote class="org-mission">
-              ICTを通じて、世界中の子どもたちに「学ぶ自由」と「夢を見る力」を広げていきます。
-            </blockquote>
-    
-            <div class="actions" style="margin-top:14px;">
-              <a class="btn btn-primary" href="../ja/about.html#vision" aria-label="団体理念の詳細へ">More</a>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./about.html" aria-label="団体理念の詳細へ">More</a>
             </div>
           </div>
-    
-          <!-- 右：そのまま既存の背景画像（.about .ph の設定を使用） -->
-          <div class="ph" aria-hidden="true"></div>
-        </article>
-    
-        <!-- 2) 代表の想い：画像左／テキスト右（代表の顔写真を表示） -->
-        <!-- 2) 代表の想い：画像左／テキスト右 -->
-        <article class="grid reveal" style="align-items:center; margin-top:36px;">
-          <!-- 左：代表写真 -->
-          <div class="ph ph-portrait" aria-hidden="true"
-               style="background-image:url('../assets/img/me.png');"></div>
-        
-          <div>
-            <h3 style="margin:0 0 10px;">代表の想い</h3>
-            <p>
-              私は愛媛県の自然豊かな小さな町で育ち、祖父からサバイバルの知恵を学びながら過ごしてきました。
-              山や海で遊ぶ毎日は楽しかったものの、町の小ささに<strong>物足りなさ</strong>を感じるようになりました。
-              そんな私の世界を広げてくれたのが、<strong>インターネットとコンピュータ</strong>です。
-              プログラミングに出会い、<strong>自分のアイデアを形にできる喜び</strong>を知りました。
-              <br><br>
-              ある日、南アフリカに留学していた友人から、現地の<strong>ICT教育格差</strong>の話を聞きました。
-              教材や電力、教員研修の不足により、<strong>多くの子どもたちが学ぶ機会を奪われている</strong>。
-              その現実に触れ、かつてICTが私の人生を変えてくれたように、<strong>今度は私がその力を届けたい</strong>と思いました。
-              思いを同じくする仲間とともに、学生団体「<strong>Ubunture</strong>」を立ち上げました。
-              <br><br>
-              私はこう考えています。<strong>戦争や対立の多くは「相手の世界を知らないこと」から生まれる</strong>。
-              人や世界を知る力は、生きる上で欠かせない。そしてそれは本来、<strong>楽しいこと</strong>でもあります。
-              困難なときにこそ、自分の世界に閉じこもらず、<strong>ICTで世界を広げる力</strong>を、次の世代に届けたい。
-              この活動は、その<strong>夢への最初の一歩</strong>です。
-            </p>
-          </div>
-
-        </article>
-        <!-- About全体のまとめCTA（1つだけ） -->
-        <div class="about-cta-bottom">
-          <a class="btn btn-primary" href="../ja/about.html" aria-label="Aboutページへ">More</a>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/about.jpg')"></div>
         </div>
 
+        <!-- 2) 代表の想い -->
+        <div class="teaser-grid teaser-grid--reverse reveal" style="margin-top: clamp(32px, 6vw, 72px);">
+          <div class="txt">
+            <h3>代表の想い</h3>
+            <p>私は愛媛県の自然豊かな小さな町で育ち、インターネットやコンピュータを通じて世界を広げる喜びを知りました。南アフリカでのICT教育格差を知ったとき、かつて私に可能性をくれたテクノロジーの力を今度は自分が届けたいと決意し、Ubuntureを立ち上げました。戦争や対立のない未来へ、世界を広げる力を次の世代へ届けます。</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./about.html" aria-label="代表メッセージの詳細へ">More</a>
+            </div>
+          </div>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/me.png')"></div>
+        </div>
       </div>
     </section>
 
@@ -210,34 +180,16 @@
       <div class="container">
         <div class="eyebrow">Project</div>
         <h2 id="project-title" class="h-section">主な活動</h2>
-        <div class="cards">
-          <!-- UNPLUGGED ICT Education -->
-          <article class="hero-card reveal">
-            <div class="overlay"><div>
-              <h3>UNPLUGGED ICT Education</h3>
-              <p>コンピュータなしで学ぶ。そろばんやカード、身近な道具を使って、アルゴリズムや論理的思考を育むアンプラグド型ICT教育を展開します。</p>
-            </div></div>
-          </article>
-          <div class="grid-2">
-            <!-- TEACHER TRAINING -->
-            <article class="mini-card reveal">
-              <div class="overlay">
-                <div>
-                  <h4>TEACHER TRAINING</h4>
-                  <p style="color:#fff;max-width:46ch;">先生が教え続けられる仕組み。現地教員向けの研修を行い、自校の授業にICT教育を取り入れられる力を育てます。</p>
-                </div>
-              </div>
-            </article>
-            <!-- GLOBAL EXCHANGE -->
-            <article class="mini-card reveal" style="transition-delay:.05s">
-              <div class="overlay">
-                <div>
-                  <h4>GLOBAL EXCHANGE</h4>
-                  <p style="color:#fff;max-width:46ch;">文化をつなぎ、学びを広げる。日本と南アフリカの学生・児童・地域が交流し、多様な価値観を学び合う国際協力活動を進めます。</p>
-                </div>
-              </div>
-            </article>
+        
+        <div class="teaser-grid reveal">
+          <div class="txt">
+            <h3>電気のない教室から広がる可能性</h3>
+            <p>コンピュータや電力がない環境でも論理的思考力を育む「アンプラグドICT教育」の開発や、現地の教育を持続可能にする「教員研修」、そして日本と南アフリカの子どもたちを繋ぐ「国際交流」を展開しています。</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./project.html" aria-label="活動一覧へ">More</a>
+            </div>
           </div>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/project-1.jpg')"></div>
         </div>
       </div>
     </section>
@@ -246,65 +198,18 @@
     <section id="team" class="team" aria-labelledby="team-title">
       <div class="container">
         <div class="eyebrow" data-i18n="eyebrow.team">Team</div>
-
-        <!-- Members (7 slots) -->
-        <div class="group members-group">
-          <h2 class="subhead" data-i18n="team.members">Members</h2>
-          <div class="members-7">
-            <article class="member reveal">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-1.png')"></div>
-              <div class="txt"><div class="name-ja">澤近 大地</div><div class="name-en">Daichi Sawachika</div><p class="desc" data-i18n="team.member.placeholder1"><strong>所属：</strong>東京大学教養学部理科一類１年<br><strong>経歴：</strong>高校時代、教育格差に関心を持ち、国際的な比較研究を行い、その論文で国内大会にて受賞した。現在は能登地域でNPO法人や学生団体のもとで教育格差解消に向けた活動に参加している。さらに自身でも子供向け探究学習イベントを企画・実施し、大学では探究学習の理論と実践を考えるゼミを主宰している。一方でICT分野にも関心を持ち、ロボット開発やデジタル技術を活用した数理的課題解決に取り組み、国内外の大会で成績を残すなど、科学技術と教育を横断する活動を展開している。</p></div>
-            </article>
-            <article class="member reveal">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/supporter-1.png')"></div>
-              <div class="txt"><div class="name-ja">笠井 凜心</div><div class="name-en">Riko Kasai</div><p class="desc" data-i18n="team.member.placeholder9"><strong>所属：</strong>African Leadership Academy / The School for Ethics and Global Leadership<br><strong>経歴：</strong>中学生のときに日本代表として参加したFuture Scientists Summer Campで10カ国の学生と過ごした経験から、アフリカやアジアの子どもを取り巻く社会課題が、友達の困難なストーリーになり、国際協力に興味を持った。8月よりヨハネスブルグにあるAfrican Leadership Academyに全額奨学金でアジア人として初めて留学をする。Rise Global Fellow、The Mercedes-Benz Fellowとして5カ国の教育プロジェクトに関わっている。アフリカの学生や現地団体とUbuntureのコラボレーションを担当。</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.05s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-2.png')"></div>
-              <div class="txt"><div class="name-ja">檜野 夏希</div><div class="name-en">Natsuki Hino</div><p class="desc" data-i18n="team.member.placeholder2"><strong>所属：</strong>東京大学教養学部理科一類２年<br><strong>経歴：</strong>大学までの7年間の外来種研究と2本の査読論文を含む複数の理系研究経験から東大の研究支援プログラムで高校、大学生のサポートを行う。また、ケンブリッジとシドニーでの1年間のボランティア経験や海外への複数の派遣経験から海外での教育、交流活動に関心が高い。</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.1s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-3.png')"></div>
-              <div class="txt"><div class="name-ja">三谷 愛利亜</div><div class="name-en">Aria Mitani</div><p class="desc" data-i18n="team.member.placeholder3"><strong>所属：</strong>東京大学教養学部文科一類１年<br><strong>経歴：</strong>高校1年時に交換留学でアメリカのシカゴで10ヶ月間交換留学をし、ホストファミリー、難民問題や貧困等の社会課題の当事者を含む他国の留学生、多様なバックグラウンドを持つ現地の友人達と関わる中で、国際協力や国際政治に興味を持つ。大学では、都市・農業での開発と貧困をテーマにしたフィリピンでの国際研修に参加。国際交流を目的に、ボストンと東京で学生会議を企画する学生団体で活動している。</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.15s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-4.png')"></div>
-              <div class="txt"><div class="name-ja">片倉 宏海</div><div class="name-en">Hiromi Katakura</div><p class="desc" data-i18n="team.member.placeholder4"><strong>所属：</strong>東京大学教養学部理科一類１年<br><strong>経歴：</strong>高校時代は航空機に関心を持ち、事故調査やパイロット訓練について調べた。また、国際関係の英語弁論大会で全国優勝を経験。現在は東大でハーバード生と交流するサークルHUAPに所属し、副代表としてメンバーを統率し、企画立案や渉外を担う。そして、Ubuntureでも渉外を担当する。現在、CBTAを軸にしたパイロット訓練を複数企業の協力のもと研究しており、論文等も執筆している。</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.2s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-5.png')"></div>
-              <div class="txt"><div class="name-ja">一高 学仁</div><div class="name-en">Manato Ichitaka</div><p class="desc" data-i18n="team.member.placeholder5"><strong>所属：</strong>東京大学教養学部統合自然科学科 物質基礎科学コース<br><strong>経歴：</strong>インターナショナルスクールや、アメリカの学校に通っていたときに、各国の子供達と肩を並べて学んだ経験や、高校時代から模擬国連などの活動を通して、外交や国際開発に興味を持った。模擬国連では日本代表に選出され、世界大会で最優秀賞を獲得。TICADのサイドイベントである模擬アフリカ連合大会で最優秀賞を取り、その時に南アフリカのエンジニアや、駐日全権大使と会談した経験から、彼らの南アフリカという国に対する情熱に触れ、南アフリカへの関心を抱く。</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.25s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-6.png')"></div>
-              <div class="txt"><div class="name-ja">嘉数 萌乃</div><div class="name-en">Moeno Kakazu</div><p class="desc" data-i18n="team.member.placeholder6"><strong>経歴：</strong>東京在住の大学4年生。デジタル探究教室を運営し、オンライン・オフラインの両面から教育カリキュラムを企画・提供している。国際開発や国際協力にも関心を持ち、国際教育系スタートアップでのインターンを通じて、東南アジアやアフリカの学校との国際交流や現地教育委員会との連携プロジェクトに携わっている。</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.3s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-7.png')"></div>
-              <div class="txt"><div class="name-ja">井上 尚多朗</div><div class="name-en">Naotaro Inoue</div><p class="desc" data-i18n="team.member.placeholder7"><strong>所属：</strong>東京大学理科二類１年<br><strong>経歴：</strong>日本代表として国際地理オリンピックに二大会連続出場し、銅メダルを受賞。その功績から、文部科学大臣表彰、文部科学大臣特別賞を受賞。国際地理に興味があり、本プロジェクトでは、社会学的観点から調査・考察・研究そしてファクトチェックを担当する。</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.3s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-8.png')"></div>
-              <div class="txt"><div class="name-ja">和田　健助</div><div class="name-en">Kensuke Wada</div><p class="desc" data-i18n="team.member.placeholder7"><strong>所属：</strong>東京大学理科一類１年<br><strong>経歴：</strong>高校時代から分野を問わず様々なことに関心があり、複数の社会貢献プログラムや国際交流プログラムに参加した経験を持つ。現在はICT技術と中小企業支援に興味を持ち勉強に励む。将来的には両面から日本経済創生に貢献することを目標にしている。本プログラムにおいてはICT教育に使用する教材の制作を担当する。</p></div>
-            </article>
+        <h2 id="team-title" class="h-section">メンバーとサポーター</h2>
+        
+        <div class="teaser-grid teaser-grid--reverse reveal">
+          <div class="txt">
+            <h3>多様なプロフェッショナルと学生たち</h3>
+            <p>東京大学やアフリカ・リーダーシップ・アカデミー（ALA）など、多様なバックグラウンドを持つ学生や教育・技術の専門家が集まり、南アフリカの教育課題に多角的な視点からアプローチしています。</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./team.html" aria-label="Teamメンバー一覧へ">More</a>
+            </div>
           </div>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/story9.png')"></div>
         </div>
-
-        <!-- Members (7 slots) -->
-        <div class="group members-group">
-          <h2 class="subhead" data-i18n="team.members">Suppoters</h2>
-          <div class="members-7">
-            <article class="member reveal">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/supporter-2.png')"></div>
-              <div class="txt"><div class="name-ja">森永 海理</div><div class="name-en">Kairi Morinaga</div><p class="desc" data-i18n="team.member.placeholder1"><strong>所属：</strong>東京大学教養学部理科一類１年<br><strong>経歴：</strong>アフリカと日本の交流機会増進を目的とした団体Zerofiri代表。様々な交流会や、海外に関するイベント、情報の発信を行う。直近では東京都杉並区の後援のもと国際文化交流イベントを複数大学の団体を直下に主催。本プロジェクトでは現地に関する情報提供・コネクションの創出を担当する。</p></div>
-            </article>
-            <article class="member reveal">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/supporter-3.png')"></div>
-              <div class="txt"><div class="name-ja">野口 智弘</div><div class="name-en">Toshihiro Noguchi</div><p class="desc" data-i18n="team.member.placeholder9"><strong>経歴：</strong>幼少期より、先端技術の社会実装に興味があり、現在は、AIエンジニア兼PjMとして、組織構築や最新技術の社会実装に挑戦中。東大松尾研発スタートアップで活動し、AIやロボティクスを軸に日本の技術を生かした世界規模の事業創出を目指している。また、将来は、アフリカ等の貧困地域における水浄水技術などの実装にも取り組みたい。本プロジェクトではICT関連の知識提供・教材開発の援助を行う。</p></div>
-            </article>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -342,6 +247,9 @@
             </a>
           </article>
         </div>
+        <div style="margin-top:28px; display:flex; justify-content:center;">
+          <a class="btn btn-primary" href="./news.html" aria-label="ニュース一覧へ">More</a>
+        </div>
       </div>
     </section>
 
@@ -351,175 +259,16 @@
       <div class="container">
         <div class="eyebrow">Support</div>
         <h2 id="support-title" class="h-section">ご支援の方法</h2>
-        <p class="section-lead">個人のご支援も、企業・団体様のご協力も歓迎しています。</p>
-
-        <!-- A. 企業・団体向け（支援の種類） -->
-        <div class="support-block org">
-          <div class="support-cards">
-            <article class="support-card reveal">
-              <div class="hd">
-                <span>人的・ネットワーク支援</span>
-                <small>People & Connections</small>
-              </div>
-              <div class="bd">
-                <p>南アフリカの学校・教育委員会、NPO、大学との橋渡しや共同プロジェクトづくりをお手伝いください。現地連携の紹介、通訳・コーディネート、実証フィールドの提供、イベントでの協力など、つながりが力になります。</p>
-              </div>
-            </article>
-
-            <article class="support-card reveal" style="transition-delay:.05s">
-              <div class="hd">
-                <span>専門的支援</span>
-                <small>Knowledge & Advice</small>
-              </div>
-              <div class="bd">
-                <p>アンプラグドICTのカリキュラム/教材開発、先生研修の設計、学習評価・データ分析、ICT/教育学、広報・法務・会計・資金調達などの知見で伴走いただける方を募集しています。単発の助言から継続メンターまで歓迎です。</p>
-              </div>
-            </article>
-
-            <article class="support-card reveal" style="transition-delay:.1s">
-              <div class="hd">
-                <span>金銭的支援</span>
-                <small>Financial Support</small>
-              </div>
-              <div class="bd">
-                <p>教材・印刷・教員研修・現地実証の費用に充てるご寄付/協賛を募集しています。企業・団体様にはロゴ掲出、活動レポート、現地/オンライン報告会へのご招待などのリターンをご用意します。</p>
-              </div>
-            </article>
+        
+        <div class="teaser-grid reveal">
+          <div class="txt">
+            <h3>共に活動を支えるパートナー</h3>
+            <p>個人でのマンスリーサポーターや、企業・団体様との協働プロジェクトなど、皆さまの温かいご支援が子どもたちの未来の教育基盤を作ります。多様な参画プランをご用意しています。</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./support.html" aria-label="ご支援プランの詳細へ">More</a>
+            </div>
           </div>
-
-          <!-- Contact us（ここで一度 CTA を挟む） -->
-          <div class="center-cta">
-            <a class="btn btn-light contact-btn"
-              href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20ご協力のご相談&body=お名前：%0D%0Aご所属：%0D%0Aご相談内容：%0D%0A">
-              Contact us（メールを開く）
-            </a>
-          </div>
-        </div>
-
-        <!-- B. 個人のご支援-->
-        <div class="support-block cf">
-          <div class="cf-grid">
-          
-            <!-- ¥3,000｜ブロンズプラン -->
-            <article class="cf-card reveal" data-plan="ブロンズ" data-amount="3000">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥3,000｜ブロンズプラン</h4>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">3,000</span><span class="unit">円</span></div>
-                <ul class="cf-list">
-                  <li>お礼メール</li>
-                  <li>限定デスクトップ/スマホ壁紙（活動写真＋Ubuntureアイコン）</li>
-                  <li>活動レポートPDF（A4/2p）</li>
-                  <li>応援オープンチャット（LINE/Discord）招待（〜2026年3月）</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">このプランで支援する</a>
-              </div>
-            </article>
-          
-            <!-- ¥5,000｜シルバープラン -->
-            <article class="cf-card reveal" data-plan="シルバー" data-amount="5000" style="transition-delay:.05s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥5,000｜シルバープラン</h4>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">5,000</span><span class="unit">円</span></div>
-                <ul class="cf-list">
-                  <li>下位プランの全て</li>
-                  <li>非公開フォトアルバムの共有（安全配慮版）</li>
-                  <li>体験ミニキットPDFデータ（家庭で遊べるアンプラグド教材）</li>
-                  <li>次回教材テーマの投票権</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">このプランで支援する</a>
-              </div>
-            </article>
-          
-            <!-- ¥10,000｜ゴールドプラン（おすすめ） -->
-            <article class="cf-card reveal" data-plan="ゴールド（おすすめ）" data-amount="10000" style="transition-delay:.1s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥10,000｜ゴールドプラン</h4>
-                <p class="cf-desc">おすすめ</p>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">10,000</span><span class="unit">円</span></div>
-                <ul class="cf-list">
-                  <li>下位プランの全て</li>
-                  <li>名入れ支援証明書（PDF）</li>
-                  <li>少人数オンライン報告会（約60分・複数日開催・質疑あり）</li>
-                  <li>公式Webサイトサポーター壁：お名前 小サイズ掲出（1年間・任意/ニックネーム可）</li>
-                  <li>実施報告書（A4 約20p）の送付</li>
-                  <li>限定活動日記（準備〜渡航中の裏話を配信／note & medium）</li>
-                  <li>子ども向け教材【全4種から2つ】をご送付</li>
-                  <li>活動記念ポストカード（5種）の送付</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">このプランで支援する</a>
-              </div>
-            </article>
-          
-            <!-- ¥30,000｜プラチナプラン ※数量限定20 -->
-            <article class="cf-card reveal" data-plan="プラチナ（限定20）" data-amount="30000" style="transition-delay:.15s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥30,000｜プラチナプラン</h4>
-                <p class="cf-desc">※数量限定20</p>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">30,000</span><span class="unit">円</span></div>
-                <ul class="cf-list">
-                  <li>下位プランの全て（お名前の小サイズ掲出は除外）</li>
-                  <li>個別オンライン報告会（60分・候補日から選択）</li>
-                  <li>年度最終報告会ご招待（2026年3月／都内・オンライン併用）</li>
-                  <li>公式Webサイトサポーター壁：お名前 中サイズ掲出（1年間）</li>
-                  <li>報告書の謝辞欄にお名前（任意・1回限り）</li>
-                  <li>詳細実施報告書（南アフリカの教育状況分析・授業計画書等も含む A4 約50pのPDFデータ）</li>
-                  <li>子ども向け教材【全4種】をご送付</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">このプランで支援する</a>
-              </div>
-            </article>
-          
-            <!-- ¥50,000｜ダイヤモンドプラン ※数量限定10 -->
-            <article class="cf-card reveal" data-plan="ダイヤモンド（限定10）" data-amount="50000" style="transition-delay:.2s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥50,000｜ダイヤモンドプラン</h4>
-                <p class="cf-desc">※数量限定10</p>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">50,000</span><span class="unit">円</span></div>
-                <ul class="cf-list">
-                  <li>下位プランの全て（お名前の小/中サイズ掲出は除外）</li>
-                  <li>教材の巻末に小サイズお名前掲載（期間限定／位置は運営指定）</li>
-                  <li>報告会内でのお名前紹介</li>
-                  <li>公式Webサイトサポーター壁：お名前 大サイズ掲出（1年間）</li>
-                  <li>オンライン出張授業 60分×1回（学校/団体向け可・日本語/英語可）</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">このプランで支援する</a>
-              </div>
-            </article>
-          
-            <!-- ¥100,000｜クラウンプラン ※数量限定5 -->
-            <article class="cf-card reveal" data-plan="クラウン（限定5）" data-amount="100000" style="transition-delay:.25s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥100,000｜クラウンプラン</h4>
-                <p class="cf-desc">※数量限定5</p>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">100,000</span><span class="unit">円</span></div>
-                <ul class="cf-list">
-                  <li>下位プランの全て（サポーター壁掲出・教材名前掲載・オンライン出張授業1回は除外）</li>
-                  <li>公式WebサイトSponsorsで小サイズ掲出（1年間）</li>
-                  <li>公式SNS（Instagram）でのお名前付きの謝意投稿</li>
-                  <li>出張授業 1回（対面）またはオンライン授業3回（各60分）<br>
-                      <small>※学校/団体向け可・日本語/英語可。対面は東京都から現地までの交通費実費をご負担ください。</small></li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">このプランで支援する</a>
-              </div>
-            </article>
-          
-          </div>
-
-          <div class="cf-actions">
-            <a class="btn cf-secondary" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">支援申込フォーム</a>
-          </div>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/world-travel-9872747_1280.jpg')"></div>
         </div>
       </div>
     </section>
@@ -700,10 +449,11 @@
 
           <!-- ナビ -->
           <nav class="foot-nav" aria-label="Footer">
-            <a href="#about" data-i18n="foot.about">About</a>
-            <a href="#project" data-i18n="foot.project">Projects</a>
-            <a href="#news" data-i18n="foot.news">News</a>
-            <a href="#support" data-i18n="foot.support">Support</a>
+            <a href="./about.html" data-i18n="foot.about">About</a>
+            <a href="./project.html" data-i18n="foot.project">Projects</a>
+            <a href="./team.html" data-i18n="foot.team">Team</a>
+            <a href="./news.html" data-i18n="foot.news">News</a>
+            <a href="./support.html" data-i18n="foot.support">Support</a>
             <a href="#top" data-i18n="foot.top">Top</a>
           </nav>
 

@@ -120,11 +120,12 @@
         </div>
         <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
-          <li role="none"><a role="menuitem" href="#about" data-i18n="nav.about">About</a></li>
-          <li role="none"><a role="menuitem" href="#project" data-i18n="nav.project">Project</a></li>
-          <li role="none"><a role="menuitem" href="#team" data-i18n="nav.team">Team</a></li>
-          <li role="none"><a role="menuitem" href="#news" data-i18n="nav.news">News</a></li>
-          <li role="none"><a role="menuitem" href="#support" data-i18n="nav.support">Support</a></li>
+          <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="./about.html" data-i18n="nav.about">About</a></li>
+          <li role="none"><a role="menuitem" href="./project.html" data-i18n="nav.project">Project</a></li>
+          <li role="none"><a role="menuitem" href="./team.html" data-i18n="nav.team">Team</a></li>
+          <li role="none"><a role="menuitem" href="./news.html" data-i18n="nav.news">News</a></li>
+          <li role="none"><a role="menuitem" href="./support.html" data-i18n="nav.support">Support</a></li>
         </ul>
       </nav>
     </header>
@@ -145,89 +146,51 @@
     <section id="about" class="about" aria-labelledby="about-title">
       <div class="container">
         <div class="eyebrow">About</div>
-        <h2 id="about-title">About Us</h2>
-
-        <!-- 1) Mission: text left / image right (keep current .ph background) -->
-        <article class="grid reveal" style="align-items:center">
-          <div>
-            <h3 style="margin:0 0 10px;">“Creating the future, together” — Ubunture</h3>
-
-            <p>Ubunture is a student organization from the University of Tokyo that expands children’s <strong>freedom to learn</strong> and their <strong>power to dream</strong> through ICT education.</p>
-
-            <p><em>Ubuntu</em> is a Zulu word meaning “I am because you are,” a philosophy of care and mutual support. We paired this with <em>Future</em> to form <strong>Ubunture</strong>, reflecting our stance of bringing diverse people together to co-create learning that truly helps in the field.</p>
-
-            <blockquote class="org-mission">
-              Through ICT, we expand children’s freedom to learn and their power to dream around the world.
-            </blockquote>
-
-            <div class="actions" style="margin-top:14px;">
-              <a class="btn btn-primary" href="../en/about.html#vision" aria-label="Read more about our mission">More</a>
+        <h2 id="about-title" class="h-section">About Us</h2>
+        
+        <!-- 1) Mission -->
+        <div class="teaser-grid reveal">
+          <div class="txt">
+            <h3>“Creating the future, together” — Ubunture</h3>
+            <p>Ubunture is a student organization from the University of Tokyo that expands children’s freedom to learn and their power to dream through ICT education.</p>
+            <p>Ubuntu is a Zulu word meaning “I am because you are,” a philosophy of care and mutual support. We paired this with Future to form Ubunture, reflecting our stance of bringing diverse people together to co-create learning that truly helps in the field.</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./about.html" aria-label="Read more about our mission">More</a>
             </div>
           </div>
-
-          <!-- Right: existing background image (uses .about .ph styles) -->
-          <div class="ph" aria-hidden="true"></div>
-        </article>
-
-        <!-- 2) Representative's Message: image left / text right (show portrait) -->
-        <article class="grid reveal" style="align-items:center; margin-top:36px;">
-          <!-- Left: portrait -->
-          <div class="ph ph-portrait" aria-hidden="true"
-               style="background-image:url('../assets/img/me.png');"></div>
-
-          <div>
-            <h3 style="margin:0 0 10px;">Message from the Representative</h3>
-            <p>
-              I grew up in a small town surrounded by mountains and sea in Ehime Prefecture, learning survival skills from my grandfather. While those days were joyful, I began to feel <strong>limited</strong> by the smallness of my world. What broadened it was the <strong>internet and computers</strong>. Through programming, I discovered the joy of <strong>turning ideas into reality</strong>.
-              <br><br>
-              One day, a friend studying in South Africa told me about the local <strong>ICT education gap</strong>—a lack of materials, electricity, and teacher training that <strong>deprives many children of learning opportunities</strong>. As ICT once changed my life, I felt compelled to <strong>bring that power to others</strong>. Together with like‑minded peers, we launched the student group <strong>Ubunture</strong>.
-              <br><br>
-              I believe many conflicts arise from <strong>not knowing the other</strong>. The ability to understand people and the world is indispensable—and it should be <strong>fun</strong>. Especially in difficult times, rather than shutting ourselves in, we can use ICT to <strong>open up the world</strong>. This project is the <strong>first step</strong> toward that dream.
-            </p>
-          </div>
-        </article>
-
-        <!-- Single consolidated CTA for About -->
-        <div class="about-cta-bottom">
-          <a class="btn btn-primary" href="../en/about.html" aria-label="Go to About page">More</a>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/about.jpg')"></div>
         </div>
 
+        <!-- 2) Representative's Message -->
+        <div class="teaser-grid teaser-grid--reverse reveal" style="margin-top: clamp(32px, 6vw, 72px);">
+          <div class="txt">
+            <h3>Message from the Representative</h3>
+            <p>Growing up in a small town, computers and the internet opened up my world. When I learned about the ICT education gaps in South Africa, I felt compelled to share that same life-changing power of technology. Together with my peers, I founded Ubunture to give the next generation the tools to expand their horizons.</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./about.html" aria-label="Read Representative message">More</a>
+            </div>
+          </div>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/me.png')"></div>
+        </div>
       </div>
     </section>
+
 
     <!-- Project -->
     <section id="project" class="project" aria-labelledby="project-title">
       <div class="container">
         <div class="eyebrow">Project</div>
         <h2 id="project-title" class="h-section">Key Activities</h2>
-        <div class="cards">
-          <!-- UNPLUGGED ICT Education -->
-          <article class="hero-card reveal">
-            <div class="overlay"><div>
-              <h3>UNPLUGGED ICT Education</h3>
-              <p>Learning without computers. Using abacuses, cards, and familiar tools, we foster algorithmic thinking and logic through unplugged ICT education.</p>
-            </div></div>
-          </article>
-          <div class="grid-2">
-            <!-- TEACHER TRAINING -->
-            <article class="mini-card reveal">
-              <div class="overlay">
-                <div>
-                  <h4>TEACHER TRAINING</h4>
-                  <p style="color:#fff;max-width:46ch;">A system that allows teachers to keep teaching. We provide training for local teachers to integrate ICT education into their own classes.</p>
-                </div>
-              </div>
-            </article>
-            <!-- GLOBAL EXCHANGE -->
-            <article class="mini-card reveal" style="transition-delay:.05s">
-              <div class="overlay">
-                <div>
-                  <h4>GLOBAL EXCHANGE</h4>
-                  <p style="color:#fff;max-width:46ch;">Connecting cultures and broadening learning. We promote international cooperation where students, children, and communities in Japan and South Africa learn from diverse perspectives through exchange.</p>
-                </div>
-              </div>
-            </article>
+        
+        <div class="teaser-grid reveal">
+          <div class="txt">
+            <h3>Unlocking Potential Without Electricity</h3>
+            <p>We run "unplugged ICT education" that works in resource-limited environments, provide sustainable teacher training, and facilitate international exchange programs connecting youth in Japan and South Africa.</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./project.html" aria-label="View projects">More</a>
+            </div>
           </div>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/project-1.jpg')"></div>
         </div>
       </div>
     </section>
@@ -236,59 +199,17 @@
     <section id="team" class="team" aria-labelledby="team-title">
       <div class="container">
         <div class="eyebrow" data-i18n="eyebrow.team">Team</div>
-
-        <!-- Members (7 slots) -->
-        <div class="group members-group">
-          <h2 class="subhead" data-i18n="team.members">Members</h2>
-          <div class="members-7">
-            <article class="member reveal">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-1.png')"></div>
-              <div class="txt"><div class="name-en">Daichi Sawachika</div><p class="desc" data-i18n="team.member.placeholder1"><strong>Affiliation:</strong> 1st year, College of Arts & Sciences (Natural Sciences I), The University of Tokyo<br><strong>Background:</strong> Developed an interest in educational inequality in high school, conducted international comparative research, and won a domestic competition for the paper. Currently engaged in activities to reduce educational disparities with NPOs and student groups in the Noto region. Also plans and runs inquiry-based learning events for children and leads a university seminar on the theory and practice of inquiry learning. Interested in ICT as well, works on robotics and math-driven problem solving using digital technology, and has achieved results in competitions in Japan and abroad—bridging science & technology with education.</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.05s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-2.png')"></div>
-              <div class="txt"><div class="name-en">Natsuki Hino</div><p class="desc" data-i18n="team.member.placeholder2"><strong>Affiliation:</strong> 2nd year, College of Arts & Sciences (Natural Sciences I), The University of Tokyo<br><strong>Background:</strong> With seven years of invasive species research up to university and multiple STEM research experiences including two peer-reviewed papers, supports high school and university students through UTokyo research programs. Strong interest in education and exchange abroad, backed by one year of volunteering in Cambridge and Sydney and several overseas programs.</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.1s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-3.png')"></div>
-              <div class="txt"><div class="name-en">Aria Mitani</div><p class="desc" data-i18n="team.member.placeholder3"><strong>Affiliation:</strong> 1st year, College of Arts & Sciences (Humanities I), The University of Tokyo<br><strong>Background:</strong> Spent ten months on exchange in Chicago in 1st year of high school; through interactions with a host family, international students—including those facing refugee and poverty issues—and local friends from diverse backgrounds, developed interests in international cooperation and politics. At university, joined a field program in the Philippines on development and poverty in urban and agricultural contexts, and works in a student group organizing conferences in Boston and Tokyo for international exchange.</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.15s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-4.png')"></div>
-              <div class="txt"><div class="name-en">Hiromi Katakura</div><p class="desc" data-i18n="team.member.placeholder4"><strong>Affiliation:</strong> 1st year, College of Arts & Sciences (Natural Sciences I), The University of Tokyo<br><strong>Background:</strong> Focused on aviation in high school, studying accident investigation and pilot training. National champion in an English oratory contest on international relations. Now a member and vice-representative of HUAP (a UTokyo club that exchanges with Harvard students), handling coordination and outreach, and serves as outreach lead at Ubunture. Currently researching pilot training centered on CBTA with support from multiple companies and writing related papers.</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.2s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-5.png')"></div>
-              <div class="txt"><div class="name-en">Manato Ichitaka</div><p class="desc" data-i18n="team.member.placeholder5"><strong>Affiliation:</strong> Integrated Sciences, Fundamentals of Materials Science Course, The University of Tokyo<br><strong>Background:</strong> Having studied at an international school and in the U.S., developed interests in diplomacy and international development through Model UN since high school. Selected as a Japan delegate and won top awards at a world tournament. Received the top prize at a mock African Union event held as a TICAD side program; conversations with South African engineers and the Ambassador cultivated a strong interest in South Africa.</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.25s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-6.png')"></div>
-              <div class="txt"><div class="name-en">Moeno Kakazu</div><p class="desc" data-i18n="team.member.placeholder6"><strong>Background:</strong> Senior undergraduate based in Tokyo. Operates a digital inquiry-learning program, designing and delivering curricula both online and offline. Interested in international development and cooperation; through an internship at an international education startup, has worked on exchanges with schools in Southeast Asia and Africa and on projects collaborating with local education boards.</p></div>
-            </article>
-            <article class="member reveal" style="transition-delay:.3s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/member-7.png')"></div>
-              <div class="txt"><div class="name-en">Naotaro Inoue</div><p class="desc" data-i18n="team.member.placeholder7"><strong>Affiliation:</strong> 1st year, Natural Sciences II, The University of Tokyo<br><strong>Background:</strong> Two-time Japan representative at the International Geography Olympiad, winning bronze medals; received awards from the Minister of Education, Culture, Sports, Science and Technology. Interested in international geography; in this project, is responsible for research, analysis, and fact-checking from a sociological perspective.</p></div>
-            </article>
+        <h2 id="team-title" class="h-section">Members & Supporters</h2>
+        
+        <div class="teaser-grid teaser-grid--reverse reveal">
+          <div class="txt">
+            <h3>Diverse Students & Professionals</h3>
+            <p>A diverse group of students and specialists from the University of Tokyo, African Leadership Academy (ALA), and other institutions are collaborating to tackle educational inequalities in South Africa.</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./team.html" aria-label="View members list">More</a>
+            </div>
           </div>
-        </div>
-
-        <!-- Supporters (3 slots) -->
-        <div class="group supporters-group">
-          <h2 class="subhead" data-i18n="team.supporters">Supporters</h2>
-          <div class="supporters-3">
-            <article class="supporter reveal">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/supporter-1.png')"></div>
-              <div class="txt"><div class="name-en">Riko Kasai</div><p class="desc" data-i18n="team.member.placeholder9"><strong>Affiliation:</strong> African Leadership Academy / The School for Ethics and Global Leadership<br><strong>Background:</strong> After representing Japan at the Future Scientists Summer Camp in middle school and spending time with students from ten countries, became interested in how social issues facing children in Africa and Asia are lived realities for friends. From August, will study at African Leadership Academy in Johannesburg as the first fully funded Asian student. A Rise Global Fellow and Mercedes-Benz Fellow, involved in education projects across five countries. Leads Ubunture collaborations with African students and local organizations.</p></div>
-            </article>
-            <article class="supporter reveal" style="transition-delay:.05s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/supporter-2.png')"></div>
-              <div class="txt"><div class="name-en">Kairi Morinaga</div><p class="desc" data-i18n="team.member.placeholder9"><strong>Affiliation:</strong> 1st year, College of Arts & Sciences (Natural Sciences I), The University of Tokyo<br><strong>Background:</strong> Representative of “Zerofiri,” a group promoting Japan–Africa exchanges. Organizes various exchange events and disseminates information about overseas opportunities; recently hosted multi-university international culture events with support from Suginami Ward, Tokyo. Provides on-the-ground insights and creates connections for this project.</p></div>
-            </article>
-            <article class="supporter reveal" style="transition-delay:.1s">
-              <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/supporter-3.png')"></div>
-              <div class="txt"><div class="name-en">Toshihiro Noguchi</div><p class="desc" data-i18n="team.member.placeholder10"><strong>Background:</strong> Interested in the social implementation of advanced technologies from an early age; currently an AI engineer and project manager working on organizational building and deploying cutting-edge tech. Active at a startup from the UTokyo Matsuo Lab, aiming to create global businesses leveraging Japan’s strengths in AI and robotics. Intends to work on technologies such as water purification in impoverished regions like parts of Africa. Supports this project by providing ICT expertise and assisting with teaching-material development.</p></div>
-            </article>
-          </div>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/story9.png')"></div>
         </div>
       </div>
     </section>
@@ -327,6 +248,9 @@
             </a>
           </article>
         </div>
+        <div style="margin-top:28px; display:flex; justify-content:center;">
+          <a class="btn btn-primary" href="./news.html" aria-label="View news updates">More</a>
+        </div>
       </div>
     </section>
 
@@ -336,175 +260,16 @@
       <div class="container">
         <div class="eyebrow">Support</div>
         <h2 id="support-title" class="h-section">Ways to Support</h2>
-        <p class="section-lead">We welcome support from both individuals and organizations.</p>
-
-        <!-- A. Organizations (types of support) -->
-        <div class="support-block org">
-          <div class="support-cards">
-            <article class="support-card reveal">
-              <div class="hd">
-                <span>People & Connections</span>
-                <small>Networking Support</small>
-              </div>
-              <div class="bd">
-                <p>Please help bridge us with schools, education departments, NPOs, and universities in South Africa. Introductions to local partners, coordination, access to pilot sites, and event collaborations are powerful forms of support.</p>
-              </div>
-            </article>
-
-            <article class="support-card reveal" style="transition-delay:.05s">
-              <div class="hd">
-                <span>Knowledge & Advice</span>
-                <small>Expert Support</small>
-              </div>
-              <div class="bd">
-                <p>We seek advisors for unplugged ICT curriculum/materials, teacher‑training design, learning assessment & data analysis, ICT/education, PR, legal, accounting, and fundraising. Both one‑off advice and ongoing mentorship are welcome.</p>
-              </div>
-            </article>
-
-            <article class="support-card reveal" style="transition-delay:.1s">
-              <div class="hd">
-                <span>Financial Support</span>
-                <small>Donations & Sponsorships</small>
-              </div>
-              <div class="bd">
-                <p>Donations and sponsorships fund materials, printing, teacher training, and field pilots. Organizations receive returns such as logo display, activity reports, and invitations to on‑site/online briefings.</p>
-              </div>
-            </article>
+        
+        <div class="teaser-grid reveal">
+          <div class="txt">
+            <h3>Become a Partner in Change</h3>
+            <p>From individual monthly supporter plans to organizational partnerships, your support helps build the educational foundation for children in South Africa. Explore our various ways of engagement.</p>
+            <div class="actions-home">
+              <a class="btn btn-primary" href="./support.html" aria-label="View support plans">More</a>
+            </div>
           </div>
-
-          <!-- Contact us CTA -->
-          <div class="center-cta">
-            <a class="btn btn-light contact-btn"
-              href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20Partnership%20Inquiry&body=Your%20name:%0D%0AOrganization:%0D%0ADetails:%0D%0A">
-              Contact us (open email)
-            </a>
-          </div>
-        </div>
-
-        <!-- B. Individuals (crowdfunding‑style plans) -->
-        <div class="support-block cf">
-          <div class="cf-grid">
-          
-            <!-- ¥3,000 | Bronze Plan -->
-            <article class="cf-card reveal" data-plan="Bronze" data-amount="3000">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥3,000 | Bronze Plan</h4>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">3,000</span><span class="unit">JPY</span></div>
-                <ul class="cf-list">
-                  <li>Thank‑you email</li>
-                  <li>Exclusive desktop/mobile wallpapers (activity photos + Ubunture icon)</li>
-                  <li>Activity report PDF (A4 / 2 pages)</li>
-                  <li>Invite to supporter open chat (LINE/Discord) — through Mar 2026</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
-              </div>
-            </article>
-          
-            <!-- ¥5,000 | Silver Plan -->
-            <article class="cf-card reveal" data-plan="Silver" data-amount="5000" style="transition-delay:.05s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥5,000 | Silver Plan</h4>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">5,000</span><span class="unit">JPY</span></div>
-                <ul class="cf-list">
-                  <li>Everything in lower plans</li>
-                  <li>Access to a private photo album (safety‑screened)</li>
-                  <li>Mini activity kit (PDF) for unplugged learning at home</li>
-                  <li>Voting right for the next teaching‑material theme</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
-              </div>
-            </article>
-          
-            <!-- ¥10,000 | Gold Plan (recommended) -->
-            <article class="cf-card reveal" data-plan="Gold (Recommended)" data-amount="10000" style="transition-delay:.1s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥10,000 | Gold Plan</h4>
-                <p class="cf-desc">Recommended</p>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">10,000</span><span class="unit">JPY</span></div>
-                <ul class="cf-list">
-                  <li>Everything in lower plans</li>
-                  <li>Personalized supporter certificate (PDF)</li>
-                  <li>Small‑group online briefing (≈60 min; multiple dates; Q&A)</li>
-                  <li>Your name on the Supporters Wall (small size, 1 year; optional / nickname OK)</li>
-                  <li>Implementation report (A4 ~20 pages)</li>
-                  <li>Limited activity journal (behind‑the‑scenes; note & medium)</li>
-                  <li>Two children’s teaching materials of your choice (from 4 types)</li>
-                  <li>Set of 5 project postcards</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
-              </div>
-            </article>
-          
-            <!-- ¥30,000 | Platinum Plan (limit 20) -->
-            <article class="cf-card reveal" data-plan="Platinum (Limit 20)" data-amount="30000" style="transition-delay:.15s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥30,000 | Platinum Plan</h4>
-                <p class="cf-desc">*Limited to 20</p>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">30,000</span><span class="unit">JPY</span></div>
-                <ul class="cf-list">
-                  <li>Everything in lower plans (except small‑size name on Supporters Wall)</li>
-                  <li>One‑on‑one online briefing (60 min; select from proposed dates)</li>
-                  <li>Invitation to the final annual briefing (Mar 2026; Tokyo + online)</li>
-                  <li>Your name on the Supporters Wall (medium size, 1 year)</li>
-                  <li>Your name in the acknowledgments of the report (optional; one‑time)</li>
-                  <li>Detailed implementation report (incl. South Africa education analysis & lesson plans; PDF ~50 pages)</li>
-                  <li>All four children’s teaching materials</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
-              </div>
-            </article>
-          
-            <!-- ¥50,000 | Diamond Plan (limit 10) -->
-            <article class="cf-card reveal" data-plan="Diamond (Limit 10)" data-amount="50000" style="transition-delay:.2s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥50,000 | Diamond Plan</h4>
-                <p class="cf-desc">*Limited to 10</p>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">50,000</span><span class="unit">JPY</span></div>
-                <ul class="cf-list">
-                  <li>Everything in lower plans (except small/medium name display)</li>
-                  <li>Your name (small) printed at the end of teaching materials (limited period; placement designated by the team)</li>
-                  <li>Name introduction during briefings</li>
-                  <li>Your name on the Supporters Wall (large size, 1 year)</li>
-                  <li>One online guest lesson (60 min; schools/organizations; Japanese/English)</li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
-              </div>
-            </article>
-          
-            <!-- ¥100,000 | Crown Plan (limit 5) -->
-            <article class="cf-card reveal" data-plan="Crown (Limit 5)" data-amount="100000" style="transition-delay:.25s">
-              <div class="cf-hd">
-                <h4 class="cf-plan">¥100,000 | Crown Plan</h4>
-                <p class="cf-desc">*Limited to 5</p>
-              </div>
-              <div class="cf-body">
-                <div class="price"><span class="amt">100,000</span><span class="unit">JPY</span></div>
-                <ul class="cf-list">
-                  <li>Everything in lower plans (excludes Supporters Wall display, name in materials, and the one online lesson)</li>
-                  <li>Small‑size display on the Sponsors page (1 year)</li>
-                  <li>Thank‑you post on official SNS (Instagram) with your name</li>
-                  <li>One in‑person guest lesson (or three online lessons, 60 min each)<br>
-                      <small>*For schools/organizations; Japanese/English. For in‑person sessions, please cover actual transportation costs from Tokyo.</small></li>
-                </ul>
-                <a class="btn btn-primary cf-cta" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support with this plan</a>
-              </div>
-            </article>
-          
-          </div>
-
-          <div class="cf-actions">
-            <a class="btn cf-secondary" href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">Support application form</a>
-          </div>
+          <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/world-travel-9872747_1280.jpg')"></div>
         </div>
       </div>
     </section>
@@ -628,10 +393,11 @@
 
           <!-- ナビ -->
           <nav class="foot-nav" aria-label="Footer">
-            <a href="#about" data-i18n="foot.about">About</a>
-            <a href="#project" data-i18n="foot.project">Projects</a>
-            <a href="#news" data-i18n="foot.news">News</a>
-            <a href="#support" data-i18n="foot.support">Support</a>
+            <a href="./about.html" data-i18n="foot.about">About</a>
+            <a href="./project.html" data-i18n="foot.project">Projects</a>
+            <a href="./team.html" data-i18n="foot.team">Team</a>
+            <a href="./news.html" data-i18n="foot.news">News</a>
+            <a href="./support.html" data-i18n="foot.support">Support</a>
             <a href="#top" data-i18n="foot.top">Top</a>
           </nav>
 

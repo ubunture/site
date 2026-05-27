@@ -704,3 +704,78 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   }
 }
 
+/* ========== Alternating Feature Grid (Home Teasers) ========== */
+.teaser-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 6vw, 56px);
+  align-items: center;
+  margin-top: clamp(24px, 4vw, 40px);
+}
+.teaser-grid .ph {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 360px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #333;
+}
+.teaser-grid .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.teaser-grid h3 {
+  font-size: clamp(20px, 3vw, 30px);
+  margin: 0 0 14px;
+}
+.teaser-grid p {
+  margin: 0 0 20px;
+}
+.about .teaser-grid p,
+.team .teaser-grid p,
+.support.stacked .teaser-grid p {
+  color: #d0d0d0;
+}
+.project .teaser-grid p {
+  color: var(--ink-weak);
+}
+.teaser-grid .actions-home {
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.teaser-grid .btn {
+  padding: 14px 28px;
+  font-weight: 800;
+  box-shadow: var(--shadow-1);
+}
+
+/* Alternate order on desktop */
+.teaser-grid--reverse .txt {
+  order: 2;
+}
+.teaser-grid--reverse .ph {
+  order: 1;
+}
+
+@media (max-width: 980px) {
+  .teaser-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  /* On mobile, force image on top for all teaser grids */
+  .teaser-grid .txt {
+    order: 2;
+  }
+  .teaser-grid .ph {
+    order: 1;
+    max-height: clamp(180px, 44vw, 280px);
+  }
+}
+
+
