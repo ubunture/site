@@ -1,10 +1,15 @@
-// ===== Mobile menu =====
+    // ===== Mobile menu =====
     const nav = document.querySelector('.nav');
     const btn = document.querySelector('.menu-btn');
     const menu = document.getElementById('menu');
     btn?.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
+      if (open) {
+        nav.style.setProperty('--ul-height', menu.scrollHeight + 'px');
+      } else {
+        nav.style.removeProperty('--ul-height');
+      }
     });
 
     // ===== Active link on scroll =====
@@ -26,7 +31,11 @@
     reve.forEach(el => rio.observe(el));
 
     // Close menu after click (mobile)
-    links.forEach(a=>a.addEventListener('click', ()=>{ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }));
+    links.forEach(a=>a.addEventListener('click', ()=>{ 
+      nav.classList.remove('open'); 
+      btn.setAttribute('aria-expanded','false'); 
+      nav.style.removeProperty('--ul-height');
+    }));
 
 (function(){
   const root = document.querySelector('#voices');
