@@ -66,8 +66,8 @@
 
   function goTo(i){
     index = Math.max(0, Math.min(total-1, i));
-    const x = -index * 100;
-    track.style.transform = `translate3d(${x}%,0,0)`;
+    const x = -index * viewport.clientWidth;
+    track.style.transform = `translate3d(${x}px,0,0)`;
     updateAria();
   }
 
@@ -88,15 +88,17 @@
   let startX=0, dx=0, dragging=false;
   const threshold = 40; // px
   function onDown(e){ dragging=true; startX = (e.touches? e.touches[0].clientX : e.clientX); dx=0; }
-  function onMove(e){ if(!dragging) return; const x=(e.touches? e.touches[0].clientX : e.clientX); dx = x-startX; track.style.transform = `translate3d(${(-index*100) + (dx/viewport.clientWidth*100)}%,0,0)`; }
+  function onMove(e){ if(!dragging) return; const x=(e.touches? e.touches[0].clientX : e.clientX); dx = x-startX; const curX = -index * viewport.clientWidth + dx; track.style.transform = `translate3d(${curX}px,0,0)`; }
   function onUp(){ if(!dragging) return; dragging=false; if(Math.abs(dx) > threshold){ dx<0 ? next() : prev(); } else { goTo(index); } }
   viewport.addEventListener('pointerdown', onDown);
   viewport.addEventListener('pointermove', onMove);
   viewport.addEventListener('pointerup', onUp);
+  viewport.addEventListener('pointercancel', onUp);
   viewport.addEventListener('pointerleave', onUp);
   viewport.addEventListener('touchstart', onDown, {passive:true});
   viewport.addEventListener('touchmove', onMove, {passive:true});
   viewport.addEventListener('touchend', onUp);
+  viewport.addEventListener('touchcancel', onUp);
 
   // Auto-advance (pause on hover/focus/hidden)
   function startAuto(){
@@ -116,4 +118,141 @@
   // Init
   goTo(0);
   startAuto();
+  window.addEventListener('resize', () => {
+    isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    goTo(index);
+  });
 })();
+
+// ===== News slider =====
+(function(){
+  const root = document.querySelector('#news-slider');
+  if(!root) return;
+  const track = root.querySelector('.news-track');
+  const slides = Array.from(root.querySelectorAll('.post'));
+  const prevBtn = root.querySelector('.news-btn.prev');
+  const nextBtn = root.querySelector('.news-btn.next');
+  const viewport = root.querySelector('.news-viewport');
+  const dotsWrap = document.querySelector('.news-dots');
+  const total = slides.length;
+  let index = 0;
+  let visibleCount = 3;
+
+  function getVisibleCount() {
+    const w = window.innerWidth;
+    if (w <= 640) return 1;
+    if (w <= 980) return 2;
+    return 3;
+  }
+
+  function setupSlider() {
+    visibleCount = getVisibleCount();
+    const maxIndex = total - visibleCount;
+    
+    // Check if slider is needed
+    if (maxIndex <= 0) {
+      root.classList.add('no-slide');
+      track.style.transform = 'none';
+      index = 0;
+      dotsWrap.innerHTML = '';
+      return;
+    }
+    
+    root.classList.remove('no-slide');
+    
+    // Rebuild dots
+    dotsWrap.innerHTML = '';
+    const dotCount = maxIndex + 1;
+    for (let i = 0; i < dotCount; i++) {
+      const dot = document.createElement('button');
+      dot.setAttribute('role','tab');
+      dot.setAttribute('aria-controls', `news-post-${i+1}`);
+      dot.id = `news-dot-${i+1}`;
+      dot.title = `${i+1} / ${dotCount}`;
+      dot.addEventListener('click', ()=> goTo(i));
+      dotsWrap.appendChild(dot);
+    }
+    
+    if (index > maxIndex) {
+      index = maxIndex;
+    }
+    goTo(index);
+  }
+
+  function updateAria(){
+    const maxIndex = total - visibleCount;
+    slides.forEach((s,i)=>{
+      s.classList.toggle('current', i===index);
+    });
+    const dots = dotsWrap.querySelectorAll('[role="tab"]');
+    dots.forEach((d,i)=> d.setAttribute('aria-selected', i===index ? 'true':'false'));
+    prevBtn.disabled = (index===0);
+    nextBtn.disabled = (index===maxIndex);
+  }
+
+  function goTo(i){
+    const maxIndex = total - visibleCount;
+    index = Math.max(0, Math.min(maxIndex, i));
+    const card = slides[0];
+    if (!card) return;
+    const gap = 26; // match CSS gap
+    const step = card.offsetWidth + gap;
+    const x = -index * step;
+    track.style.transform = `translate3d(${x}px,0,0)`;
+    updateAria();
+  }
+
+  function next(){ goTo(index+1); }
+  function prev(){ goTo(index-1); }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+
+  viewport.addEventListener('keydown', (e)=>{
+    if(e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    if(e.key === 'ArrowLeft')  { e.preventDefault(); prev(); }
+  });
+
+  // Swipe (pointer events)
+  let startX=0, dx=0, dragging=false;
+  const threshold = 40; // px
+  function onDown(e){ 
+    if (total - visibleCount <= 0) return;
+    dragging=true; 
+    startX = (e.touches? e.touches[0].clientX : e.clientX); 
+    dx=0; 
+  }
+  function onMove(e){ 
+    if(!dragging) return; 
+    const x=(e.touches? e.touches[0].clientX : e.clientX); 
+    dx = x-startX; 
+    const card = slides[0];
+    const gap = 26; // match CSS gap
+    const step = card.offsetWidth + gap;
+    const curX = -index * step + dx; 
+    track.style.transform = `translate3d(${curX}px,0,0)`; 
+  }
+  function onUp(){ 
+    if(!dragging) return; 
+    dragging=false; 
+    if(Math.abs(dx) > threshold){ 
+      dx<0 ? next() : prev(); 
+    } else { 
+      goTo(index); 
+    } 
+  }
+  viewport.addEventListener('pointerdown', onDown);
+  viewport.addEventListener('pointermove', onMove);
+  viewport.addEventListener('pointerup', onUp);
+  viewport.addEventListener('pointercancel', onUp);
+  viewport.addEventListener('pointerleave', onUp);
+  viewport.addEventListener('touchstart', onDown, {passive:true});
+  viewport.addEventListener('touchmove', onMove, {passive:true});
+  viewport.addEventListener('touchend', onUp);
+  viewport.addEventListener('touchcancel', onUp);
+
+  // Init
+  setupSlider();
+  window.addEventListener('resize', setupSlider);
+})();
+
