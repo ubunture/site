@@ -83,35 +83,48 @@
       </section>
       <section class="news">
         <div class="container">
-          <div class="news-grid">
-            <article class="post reveal">
-              <a class="post-link" href="https://note.com/ubunture/n/n6478fce12758" target="_blank" rel="noopener noreferrer">
-                <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/news-1.png')"></div>
-                <div class="txt">
-                  <div class="title">なぜ南アフリカなのか？──ヨハネスブルグから始める理由</div>
-                  <p class="snippet">南アフリカ・ヨハネスブルグでプロジェクトを行う理由を解説します。</p>
-                </div>
-              </a>
-            </article>
-            <article class="post reveal" style="transition-delay:.05s">
-              <a class="post-link" href="https://note.com/ubunture/n/nf019af524a38" target="_blank" rel="noopener noreferrer">
-                <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/news-2.png')"></div>
-                <div class="txt">
-                  <div class="title">Ubunture-「あなたがいるから、わたしがいる」-</div>
-                  <p class="snippet">Ubuntureの名前の由来、我々の理念を紹介します。</p>
-                </div>
-              </a>
-            </article>
-            <article class="post reveal" style="transition-delay:.1s">
-              <a class="post-link" href="https://note.com/ubunture/n/ne739003d04c5" target="_blank" rel="noopener noreferrer">
-                <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/news-3.png')"></div>
-                <div class="txt">
-                  <div class="title">8/9–10「下北沢盆踊り」で子ども向け工作教室を開催しました！</div>
-                  <p class="snippet">8月に開催した子供向けイベントの実施報告。たくさんの子供が来てくれました！</p>
-                </div>
-              </a>
-            </article>
+          <div class="news-slider" id="news-slider">
+            <button class="news-btn prev" aria-label="前のニュース" data-dir="-1" type="button" title="前へ">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+      
+            <div class="news-viewport" role="group" aria-roledescription="carousel" aria-label="最新情報" tabindex="0">
+              <div class="news-track" id="news-track" aria-live="polite">
+                <article class="post reveal">
+                  <a class="post-link" href="https://note.com/ubunture/n/n6478fce12758" target="_blank" rel="noopener noreferrer">
+                    <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/news-1.png')"></div>
+                    <div class="txt">
+                      <div class="title">なぜ南アフリカなのか？──ヨハネスブルグから始める理由</div>
+                      <p class="snippet">南アフリカ・ヨハネスブルグでプロジェクトを行う理由を解説します。</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post reveal" style="transition-delay:.05s">
+                  <a class="post-link" href="https://note.com/ubunture/n/nf019af524a38" target="_blank" rel="noopener noreferrer">
+                    <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/news-2.png')"></div>
+                    <div class="txt">
+                      <div class="title">Ubunture-「あなたがいるから、わたしがいる」-</div>
+                      <p class="snippet">Ubuntureの名前の由来、我々の理念を紹介します。</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post reveal" style="transition-delay:.1s">
+                  <a class="post-link" href="https://note.com/ubunture/n/ne739003d04c5" target="_blank" rel="noopener noreferrer">
+                    <div class="ph" aria-hidden="true" style="background-image:url('../assets/img/news-3.png')"></div>
+                    <div class="txt">
+                      <div class="title">8/9–10「下北沢盆踊り」で子ども向け工作教室を開催しました！</div>
+                      <p class="snippet">8月に開催した子供向けイベントの実施報告。たくさんの子供が来てくれました！</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+      
+            <button class="news-btn next" aria-label="次のニュース" data-dir="1" type="button" title="次へ">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
+          <div class="news-dots" role="tablist" aria-label="スライドナビゲーション"></div>
         </div>
       </section>
     </main>
