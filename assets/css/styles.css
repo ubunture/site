@@ -206,6 +206,7 @@ section{ padding:100px 0; scroll-margin-top:calc(var(--nav-h) + 24px); }
   .about .ph{ max-height:clamp(160px,44vw,280px); margin:6px 0; }
 }
 
+#message{ background:#262629; }
 #message article.grid{ align-items:center !important; }
 #message .ph{ padding:0 !important; min-height:0 !important; aspect-ratio:16/10; width:100%; max-height:360px; background-size:cover; background-position:center; border-radius:24px; }
 #message .ph::before, #message .ph::after{ content:none !important; display:none !important; }
@@ -229,17 +230,20 @@ section{ padding:100px 0; scroll-margin-top:calc(var(--nav-h) + 24px); }
   position: relative;
   display: flex;
   flex-direction: column;
-  height: auto !important;
+  height: 100%;
   aspect-ratio: auto !important;
   min-height: 280px;
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 980px) {
+  #message .mini-card { height: auto !important; min-height: 240px; }
+}
 @media (max-width: 600px) {
   #message .mini-card { min-height: 220px; }
 }
 @media (min-width:981px) {
-  #message .cards { display:grid !important; grid-template-columns:repeat(2, minmax(0,1fr)); gap:22px; }
+  #message .cards { display:grid !important; grid-template-columns:repeat(2, minmax(0,1fr)); grid-template-rows:repeat(2, 1fr); gap:22px; }
   #message .mini-card:nth-child(1) { background-position:top right; }
   #message .mini-card:nth-child(2) { background-position:top left; }
   #message .mini-card:nth-child(3) { background-position:bottom right; }
@@ -251,11 +255,12 @@ section{ padding:100px 0; scroll-margin-top:calc(var(--nav-h) + 24px); }
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 24px;
-  background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.70) 60%, rgba(0,0,0,.85) 100%) !important;
+  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.75) 60%, rgba(0,0,0,.88) 100%) !important;
 }
 #message .mini-card h4, #message .mini-card p { color:#fff !important; text-shadow:0 2px 12px rgba(0,0,0,.6), 0 0 1px rgba(0,0,0,.8); }
+#message .mini-card h4 { margin: 0; }
 #message .mini-card p { line-height:1.75; margin: 8px 0 0; }
 
 /* 代表メッセージ署名（About内） */
