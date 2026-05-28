@@ -19,7 +19,13 @@
       const vis = entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
       if(!vis) return;
       const id = vis.target.id;
-      links.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      const hasHashLinks = links.some(a => {
+        const href = a.getAttribute('href');
+        return href && href.startsWith('#');
+      });
+      if (hasHashLinks) {
+        links.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      }
     }, { rootMargin: '-40% 0px -55% 0px', threshold:[0,.2,.5,1]});
     sectionIds.forEach(id=>{ const el = document.getElementById(id); if(el) io.observe(el); });
 

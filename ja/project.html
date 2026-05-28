@@ -41,19 +41,9 @@
 
   <!-- Page-only styles (最小限) -->
   <style>
-    /* Hero */
-    .doc-hero{ position:relative; min-height:48svh; display:flex; align-items:center; color:#fff; overflow:hidden; }
-    .doc-hero::before{ content:""; position:absolute; inset:0; background:url('../assets/img/project-hero.jpg') center/cover no-repeat; filter:brightness(.75); }
-    .doc-hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.45)); }
-    .doc-hero .inner{ position:relative; z-index:1; }
-    .breadcrumbs{ margin-top:12px; font-size:13px; opacity:.9; }
-    .breadcrumbs a{ color:#fff; text-decoration:none; opacity:.85; }
-    .breadcrumbs span{ opacity:.85; }
-
     /* Reading blocks */
-    .details{ background:#fff; color:var(--ink); }
-    .details .section{ padding:56px 0; }
-    .lead-xl{ font-size: clamp(16px, 2.4vw, 20px); color:#333; }
+    .details{ background:#fff; color:var(--ink); padding: 0; }
+    .details .section{ padding:32px 0; }
 
     /* TOC */
     .toc{ background:#f7f7f8; border:1px solid #ececec; border-radius:16px; padding:16px; box-shadow:var(--shadow-1); }
@@ -101,7 +91,11 @@
     /* CTA band */
     .cta-band{ background:#efefef; border:1px solid #ececec; border-radius:16px; padding:22px; display:flex; align-items:center; justify-content:space-between; gap:16px; box-shadow:var(--shadow-1); }
     .cta-band p{ margin:0; color:#333; }
-    .btn-light{ background:#fff; color:#111; border:1px solid #ddd; border-radius:999px; padding:12px 18px; font-weight:800; text-decoration:none; }
+    .cta-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+    @media (max-width: 768px) {
+      .cta-band { flex-direction: column; align-items: stretch; gap: 16px; text-align: center; }
+      .cta-actions { justify-content: center; }
+    }
 
     /* Minor */
     .eyebrow{ color:#999; }
@@ -137,6 +131,7 @@
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
           <li role="none"><a role="menuitem" href="./about.html">About</a></li>
+          <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
           <li role="none"><a role="menuitem" href="./project.html" class="active">Project</a></li>
           <li role="none"><a role="menuitem" href="./team.html">Team</a></li>
           <li role="none"><a role="menuitem" href="./news.html">News</a></li>
@@ -147,7 +142,7 @@
 
     <!-- Hero -->
     <main id="main">
-      <section class="doc-hero">
+      <section class="subpage-hero hero--project">
         <div class="container inner">
           <div class="eyebrow">Project Details</div>
           <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">南アフリカでのアンプラグドICT教育</h1>
@@ -387,9 +382,9 @@
           <div class="section">
             <div class="cta-band">
               <p><strong>この取り組みを一緒に前へ。</strong> ご支援・協働のご相談はお気軽にどうぞ。</p>
-              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <div class="cta-actions">
                 <a class="btn btn-primary" href="./support.html">ご支援ページへ</a>
-                <a class="btn-light" href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20プロジェクト連携のご相談">Contact us</a>
+                <a class="btn btn-primary" href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20プロジェクト連携のご相談">Contact us</a>
               </div>
             </div>
           </div>
@@ -418,6 +413,7 @@
           </div>
           <nav class="foot-nav" aria-label="Footer">
             <a href="./about.html">About</a>
+            <a href="./message.html">Message</a>
             <a href="./project.html">Projects</a>
             <a href="./team.html">Team</a>
             <a href="./news.html">News</a>
