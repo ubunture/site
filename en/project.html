@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ubunture | Project Details — Unplugged ICT Education in South Africa</title>
-  <meta name="description" content="Details of Ubunture's unplugged ICT education in Johannesburg, South Africa. Outlining background, goals, curriculum, teacher training, evaluation, current status, budget, schedule, and FAQ.">
-  <link rel="canonical" href="https://ubunture.github.io/site/en/project.html"/>
+  <title>Ubunture | Project Details — Unplugged Digital Skills Education in South Africa</title>
+  <meta name="description"
+    content="Details of Ubunture's unplugged digital skills education in Johannesburg, South Africa. Outlining background, goals, curriculum, teacher training, evaluation, current status, budget, schedule, and FAQ.">
+  <link rel="canonical" href="https://ubunture.github.io/site/en/project.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0ea5e9" />
   <meta name="color-scheme" content="light dark" />
@@ -17,17 +19,19 @@
 
   <!-- Favicons -->
   <link rel="icon" href="https://ubunture.github.io/site/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Ubunture" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Ubunture | Project Details — Unplugged ICT Education in South Africa" />
-  <meta property="og:description" content="Outlining background, goals, curriculum, teacher training, evaluation, readiness, budget, and schedule." />
+  <meta property="og:title" content="Ubunture | Project Details — Unplugged Digital Skills Education in South Africa" />
+  <meta property="og:description"
+    content="Outlining background, goals, curriculum, teacher training, evaluation, readiness, budget, and schedule." />
   <meta property="og:url" content="https://ubunture.github.io/site/en/project.html" />
   <meta property="og:image" content="https://ubunture.github.io/site/assets/og/ubunture-og.jpg" />
-  <meta property="og:image:alt" content="Ubunture — Unplugged ICT learning" />
+  <meta property="og:image:alt" content="Ubunture — Unplugged digital skills learning" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -36,79 +40,281 @@
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css" />
 
   <!-- Page-only styles -->
   <style>
     /* Reading blocks */
-    .details{ background:#fff; color:var(--ink); padding: 0; }
-    .details .section{ padding:32px 0; }
+    .details {
+      background: #fff;
+      color: var(--ink);
+      padding: 0;
+    }
+
+    .details .section {
+      padding: 32px 0;
+    }
 
     /* TOC */
-    .toc{ background:#f7f7f8; border:1px solid #ececec; border-radius:16px; padding:16px; box-shadow:var(--shadow-1); }
-    .toc h4{ margin:0 0 8px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:#666; }
-    .toc ul{ margin:0; padding-left:18px; columns:2; column-gap:24px; }
-    .toc li{ margin:6px 0; }
-    .toc a{ color:#111; text-decoration:none; }
-    @media (max-width:720px){ .toc ul{ columns:1;} }
+    .toc {
+      background: #f7f7f8;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .toc h4 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    .toc ul {
+      margin: 0;
+      padding-left: 18px;
+      columns: 2;
+      column-gap: 24px;
+    }
+
+    .toc li {
+      margin: 6px 0;
+    }
+
+    .toc a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    @media (max-width:720px) {
+      .toc ul {
+        columns: 1;
+      }
+    }
 
     /* KPI */
-    .kpi-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:16px; }
-    .kpi{ background:#fff; border:1px solid #ececec; border-radius:16px; padding:18px; box-shadow:var(--shadow-1); }
-    .kpi .num{ font-weight:900; font-size: clamp(22px,4vw,28px); line-height:1; }
-    .kpi .label{ font-weight:800; margin-top:6px; }
-    .kpi small{ color:var(--ink-weak); }
-    @media (max-width:980px){ .kpi-grid{ grid-template-columns:1fr 1fr; } }
-    @media (max-width:520px){ .kpi-grid{ grid-template-columns:1fr; } }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .kpi {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .kpi .num {
+      font-weight: 900;
+      font-size: clamp(22px, 4vw, 28px);
+      line-height: 1;
+    }
+
+    .kpi .label {
+      font-weight: 800;
+      margin-top: 6px;
+    }
+
+    .kpi small {
+      color: var(--ink-weak);
+    }
+
+    @media (max-width:980px) {
+      .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:520px) {
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     /* Cards & lists */
-    .cardish{ background:#fff; border:1px solid #ececec; border-radius:16px; padding:18px; box-shadow:var(--shadow-1); }
-    .grid-2x{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-    .grid-3x{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    @media (max-width:980px){ .grid-2x, .grid-3x{ grid-template-columns:1fr; } }
-    .nice-list{ margin:0; padding-left:18px; }
-    .nice-list li{ margin:8px 0; }
-    .checklist{ list-style:none; padding:0; margin:0; }
-    .checklist li{ position:relative; padding-left:28px; margin:10px 0; }
-    .checklist li::before{ content:"✔"; position:absolute; left:0; top:0; transform:translateY(2px); font-weight:900; color:#0a0a0a; }
+    .cardish {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .grid-2x {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .grid-3x {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width:980px) {
+
+      .grid-2x,
+      .grid-3x {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .nice-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .nice-list li {
+      margin: 8px 0;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 28px;
+      margin: 10px 0;
+    }
+
+    .checklist li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(2px);
+      font-weight: 900;
+      color: #0a0a0a;
+    }
 
     /* Figures */
-    figure{ margin:0; }
-    .fig{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow-1); background:#ddd center/cover no-repeat; aspect-ratio:16/9; }
-    .cap{ font-size:13px; color:#666; margin-top:8px; }
+    figure {
+      margin: 0;
+    }
+
+    .fig {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-1);
+      background: #ddd center/cover no-repeat;
+      aspect-ratio: 16/9;
+    }
+
+    .cap {
+      font-size: 13px;
+      color: #666;
+      margin-top: 8px;
+    }
 
     /* Tables */
-    .budget-table{
-      width:100%; border-collapse:separate; border-spacing:0; overflow:hidden;
-      border:1px solid #ececec; border-radius:16px; box-shadow:var(--shadow-1); background:#fff;
+    .budget-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      box-shadow: var(--shadow-1);
+      background: #fff;
     }
-    .budget-table th, .budget-table td{ padding:12px 14px; border-bottom:1px solid #f0f0f0; }
-    .budget-table thead th{ background:#f7f7f8; text-align:left; font-weight:900; }
-    .budget-table tfoot th{ background:#f7f7f8; }
-    .budget-table .num{ text-align:right; font-variant-numeric: tabular-nums; }
+
+    .budget-table th,
+    .budget-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .budget-table thead th {
+      background: #f7f7f8;
+      text-align: left;
+      font-weight: 900;
+    }
+
+    .budget-table tfoot th {
+      background: #f7f7f8;
+    }
+
+    .budget-table .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
 
     /* CTA band */
-    .cta-band{ background:#efefef; border:1px solid #ececec; border-radius:16px; padding:22px; display:flex; align-items:center; justify-content:space-between; gap:16px; box-shadow:var(--shadow-1); }
-    .cta-band p{ margin:0; color:#333; }
-    .cta-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+    .cta-band {
+      background: #efefef;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: #333;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
     @media (max-width: 768px) {
-      .cta-band { flex-direction: column; align-items: stretch; gap: 16px; text-align: center; }
-      .cta-actions { justify-content: center; }
+      .cta-band {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .cta-actions {
+        justify-content: center;
+      }
     }
 
     /* Minor */
-    .eyebrow{ color:#999; }
-    .h2-sub{ margin:8px 0 0; color:#444; font-weight:600; }
-    .muted{ color:#666; }
-    .mono{ font-variant-numeric: tabular-nums; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .eyebrow {
+      color: #999;
+    }
+
+    .h2-sub {
+      margin: 8px 0 0;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .muted {
+      color: #666;
+    }
+
+    .mono {
+      font-variant-numeric: tabular-nums;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
   </style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PM9GZ20LV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date()); gtag('config', 'G-7PM9GZ20LV');
   </script>
 </head>
@@ -121,13 +327,15 @@
     <header>
       <nav class="nav" aria-label="Primary">
         <div class="brand-wrap">
-          <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
+          <a class="brand" href="./index.html"><img src="../assets/img/logo.png"
+              alt="Ubunture" /><span>Ubunture</span></a>
           <div class="lang-switch" role="group" aria-label="Language switch">
             <a class="lang-btn" href="../ja/project.html" role="button" aria-pressed="false">JP</a>
             <a class="lang-btn" href="../en/project.html" role="button" aria-pressed="true">EN</a>
           </div>
         </div>
-        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+        <button class="menu-btn" aria-expanded="false"
+          aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
           <li role="none"><a role="menuitem" href="./about.html">About</a></li>
@@ -145,8 +353,10 @@
       <section class="subpage-hero hero--project">
         <div class="container inner">
           <div class="eyebrow">Project Details</div>
-          <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">Unplugged ICT Education in South Africa</h1>
-          <p class="lead-xl">Fostering logical thinking and broadening future options through ICT learning that requires neither electricity nor computers. We aim for sustainable self-operation through student lessons and teacher training.</p>
+          <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">Unplugged Digital Skills Education in South Africa</h1>
+          <p class="lead-xl">Fostering logical thinking and broadening future options through digital education that requires
+            neither electricity nor computers. We aim for sustainable self-operation through student lessons and teacher
+            training.</p>
           <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> Project Details</div>
         </div>
       </section>
@@ -161,7 +371,7 @@
               <h4>Contents</h4>
               <ul>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#why">Why Unplugged ICT?</a></li>
+                <li><a href="#why">Why Unplugged Digital Education?</a></li>
                 <li><a href="#goals">Goals &amp; KPIs</a></li>
                 <li><a href="#activities">Activities (Students / Teachers)</a></li>
                 <li><a href="#curriculum">Curriculum Details</a></li>
@@ -179,8 +389,12 @@
           <div id="about" class="section">
             <div class="eyebrow">About</div>
             <h2>About Us</h2>
-            <p>Ubunture is a student organization originating from the University of Tokyo that aims to expand children's "freedom to learn" and "power to dream" globally through ICT education. Built on the philosophy of Ubuntu ("I am because you are") combined with Future, our name reflects our commitment to bringing diverse people together to co-create meaningful learning experiences for social impact.</p>
-            <p>In this initiative, we collaborate with local partners to deliver unplugged ICT education in Johannesburg, South Africa.</p>
+            <p>Ubunture is a student organization originating from the University of Tokyo that aims to expand
+              children's "freedom to learn" and "power to dream" globally through digital education. Built on the philosophy
+              of Ubuntu ("I am because you are") combined with Future, our name reflects our commitment to bringing
+              diverse people together to co-create meaningful learning experiences for social impact.</p>
+            <p>We collaborate with local partners to deliver unplugged digital skills education in
+              Johannesburg, South Africa.</p>
             <div class="grid-2x" style="margin-top:18px;">
               <figure>
                 <div class="fig" style="background-image:url('../assets/img/details-hero.jpg')"></div>
@@ -196,21 +410,44 @@
           <!-- 2. Why -->
           <div id="why" class="section">
             <div class="eyebrow">Why</div>
-            <h2>About This Project: "Unplugged ICT Education"</h2>
-            <p>In South Africa, ICT education is highly uneven due to a triple disparity: <strong>electricity, infrastructure, and teacher training</strong>. A double barrier of <em>connectivity</em> and <em>classroom application</em> (low internet adoption at home and lack of teacher training in ICT) leaves many children behind.</p>
-            <p>To address this, we introduce "Unplugged ICT Education" which teaches the fundamentals of computational thinking—such as decomposition, conditional logic, repetition, and verification—without needing computers or electricity, paired with teacher training workshops.</p>
-            <div id="goals" class="kpi-grid">
-              <div class="kpi"><div class="num">120</div><div class="label">Target Students</div><small>Over 4 days on-site</small></div>
-              <div class="kpi"><div class="num">40</div><div class="label">Target Teachers</div><small>ToT for self-sustainability</small></div>
-              <div class="kpi"><div class="num">4 Days</div><div class="label">Lessons &amp; Training</div><small>Validating on-site</small></div>
-              <div class="kpi"><div class="num">50%</div><div class="label">Girls Participation</div><small>Ensuring inclusivity</small></div>
+            <h2>Why Unplugged Digital Education?</h2>
+            <p>In South Africa, digital education disparities exist in a double structure: <strong>disparities in device access
+                and disparities in skills application</strong>. A double barrier of <em>connectivity</em> and
+              <em>classroom application</em> (low internet adoption at home and lack of teacher training in digital skills) leaves
+              many children behind.</p>
+            <p>To address this, we introduce "Unplugged Digital Skills Education" which teaches the fundamentals of computational
+              thinking—such as decomposition, conditional logic, repetition, and verification—without needing computers
+              or electricity, paired with teacher training workshops.</p>
+          </div>
+
+          <!-- 2.5 Goals -->
+          <div id="goals" class="section">
+            <div class="eyebrow">Goals</div>
+            <h2>Goals &amp; KPIs</h2>
+            <div class="kpi-grid">
+              <div class="kpi">
+                <div class="num">120</div>
+                <div class="label">Target Students</div><small>Over 4 days on-site</small>
+              </div>
+              <div class="kpi">
+                <div class="num">40</div>
+                <div class="label">Target Teachers</div><small>ToT for self-sustainability</small>
+              </div>
+              <div class="kpi">
+                <div class="num">4 Days</div>
+                <div class="label">Lessons &amp; Training</div><small>Validating on-site</small>
+              </div>
+              <div class="kpi">
+                <div class="num">50%</div>
+                <div class="label">Girls Participation</div><small>Ensuring inclusivity</small>
+              </div>
             </div>
           </div>
 
           <!-- 3. Activities -->
           <div id="activities" class="section">
             <div class="eyebrow">Activities</div>
-            <h2>Key Activities (Students &amp; Teachers)</h2>
+            <h2>Activities (Students / Teachers)</h2>
             <div class="grid-2x">
               <article class="cardish">
                 <h3>Student Activities (Direct Support)</h3>
@@ -227,7 +464,8 @@
                   <li>2-Part Structure: ① Unplugged classroom workshop / ② Cross-curricular integration</li>
                   <li>Observation &amp; hands-on experience of student activities + lesson design practice</li>
                   <li>Assessment, material management, and year-round planning for sustainable usage</li>
-                  <li>Goal: <strong>Ensuring continuation and self-operation without Japanese staff present</strong></li>
+                  <li>Goal: <strong>Ensuring continuation and self-operation without Japanese staff present</strong>
+                  </li>
                 </ul>
               </article>
             </div>
@@ -236,7 +474,7 @@
           <!-- 4. Curriculum -->
           <div id="curriculum" class="section">
             <div class="eyebrow">Curriculum</div>
-            <h2>Curriculum Overview (Example)</h2>
+            <h2>Curriculum Details</h2>
             <div class="grid-3x">
               <article class="cardish">
                 <h3>Module A: Abacus &amp; Algorithms</h3>
@@ -266,35 +504,48 @@
                 </ul>
               </article>
             </div>
-            <p class="muted" style="margin-top:8px;">*Curriculum will be adjusted and translated to meet local needs.</p>
+            <p class="muted" style="margin-top:8px;">*Curriculum will be adjusted and translated to meet local needs.
+            </p>
           </div>
 
           <!-- 5. Evaluation -->
           <div id="evaluation" class="section">
             <div class="eyebrow">Evaluation</div>
-            <h2>Evaluation &amp; Reporting</h2>
+            <h2>Evaluation Design</h2>
             <ul class="nice-list">
               <li><strong>Pre/Post Tests</strong> (measuring changes in logical thinking and learning motivation)</li>
               <li>Classroom observation rubrics (participation, collaboration, problem-solving processes)</li>
               <li>Teacher surveys (feasibility of adoption, motivation for continuity, areas of improvement)</li>
-              <li>Findings will be published in a <strong>Summary Report (A4, ~20 pages)</strong> and a Detailed Report (~50 pages)</li>
+              <li>Findings will be published in a <strong>Summary Report (A4, ~20 pages)</strong> and a Detailed Report
+                (~50 pages)</li>
             </ul>
           </div>
 
           <!-- 6. Readiness -->
           <div id="readiness" class="section">
             <div class="eyebrow">Readiness</div>
-            <h2>Current Progress</h2>
+            <h2>Current Readiness</h2>
             <ul class="checklist">
-              <li>Domestic trials: <strong>Kids' maker workshop at Shimokitazawa Bon Odori</strong> (over 100 children in 2 days)</li>
-              <li>Local partnerships: Organizing venues/schedules with local schools, and partnering with local university students</li>
+              <li>Domestic trials: <strong>Kids' maker workshop at Shimokitazawa Bon Odori</strong> (over 100 children
+                in 2 days)</li>
+              <li>Local partnerships: Organizing venues/schedules with local schools, and partnering with local
+                university students</li>
               <li>Materials: Refining based on expert feedback / preparing translations</li>
               <li>Operations: Division of tasks across curriculum, evaluation, and PR teams</li>
             </ul>
             <div class="grid-3x" style="margin-top:16px;">
-              <figure><div class="fig" style="background-image:url('../assets/img/readiness-1.jpg')"></div><figcaption class="cap">Soldering lights (example)</figcaption></figure>
-              <figure><div class="fig" style="background-image:url('../assets/img/readiness-2.jpg')"></div><figcaption class="cap">Workshop execution (example)</figcaption></figure>
-              <figure><div class="fig" style="background-image:url('../assets/img/readiness-3.jpg')"></div><figcaption class="cap">Material samples (example)</figcaption></figure>
+              <figure>
+                <div class="fig" style="background-image:url('../assets/img/readiness-1.jpg')"></div>
+                <figcaption class="cap">Soldering lights (example)</figcaption>
+              </figure>
+              <figure>
+                <div class="fig" style="background-image:url('../assets/img/readiness-2.jpg')"></div>
+                <figcaption class="cap">Workshop execution (example)</figcaption>
+              </figure>
+              <figure>
+                <div class="fig" style="background-image:url('../assets/img/readiness-3.jpg')"></div>
+                <figcaption class="cap">Material samples (example)</figcaption>
+              </figure>
             </div>
           </div>
 
@@ -302,24 +553,50 @@
           <div id="budget" class="section">
             <div class="eyebrow">Budget</div>
             <h2>Use of Funds</h2>
-            <p>Funds will be prioritized as follows: <strong>① Material Development &rarr; ② Local Accommodation &rarr; ③ Travel Subsidies</strong>.</p>
+            <p>Funds will be prioritized as follows: <strong>① Material Development &rarr; ② Local Accommodation &rarr;
+                ③ Travel Subsidies</strong>.</p>
             <table class="budget-table" aria-label="Budget Breakdown">
-              <thead><tr><th>Item</th><th class="num">Amount (JPY)</th></tr></thead>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th class="num">Amount (JPY)</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr><td>Travel expenses (5 members)</td><td class="num mono">861,000</td></tr>
-                <tr><td>Accommodation (6 nights / 5 members)</td><td class="num mono">100,000</td></tr>
-                <tr><td>Material development costs</td><td class="num mono">200,000</td></tr>
-                <tr><td>PR, reporting, and reward fulfillment</td><td class="num mono">120,000</td></tr>
-                <tr><td>Contingency fund</td><td class="num mono">50,000</td></tr>
+                <tr>
+                  <td>Travel expenses (5 members)</td>
+                  <td class="num mono">861,000</td>
+                </tr>
+                <tr>
+                  <td>Accommodation (6 nights / 5 members)</td>
+                  <td class="num mono">100,000</td>
+                </tr>
+                <tr>
+                  <td>Material development costs</td>
+                  <td class="num mono">200,000</td>
+                </tr>
+                <tr>
+                  <td>PR, reporting, and reward fulfillment</td>
+                  <td class="num mono">120,000</td>
+                </tr>
+                <tr>
+                  <td>Contingency fund</td>
+                  <td class="num mono">50,000</td>
+                </tr>
               </tbody>
-              <tfoot><tr><th>Total</th><th class="num mono">1,331,000</th></tr></tfoot>
+              <tfoot>
+                <tr>
+                  <th>Total</th>
+                  <th class="num mono">1,331,000</th>
+                </tr>
+              </tfoot>
             </table>
           </div>
 
           <!-- 8. Schedule -->
           <div id="schedule" class="section">
             <div class="eyebrow">Schedule</div>
-            <h2>Project Timeline</h2>
+            <h2>Schedule</h2>
             <ol class="nice-list">
               <li><strong>October 2025:</strong> Finalize teaching materials</li>
               <li><strong>November 2025:</strong> Pilot runs in Japan</li>
@@ -333,20 +610,22 @@
           <!-- 9. Risks -->
           <div id="risks" class="section">
             <div class="eyebrow">Risks</div>
-            <h2>Risk Assessment &amp; Mitigation</h2>
+            <h2>Risks &amp; Mitigation</h2>
             <div class="grid-2x">
               <article class="cardish">
                 <h3>Operations</h3>
                 <ul class="nice-list">
                   <li>Visa &amp; safety: Complying with local partner guidelines and pre-approving transport routes</li>
-                  <li>Power outages &amp; network issues: <strong>Unplugged design</strong> ensures no disruption to lessons</li>
+                  <li>Power outages &amp; network issues: <strong>Unplugged design</strong> ensures no disruption to
+                    lessons</li>
                   <li>School closures or strikes: Coordinating backup dates and locations in advance</li>
                 </ul>
               </article>
               <article class="cardish">
                 <h3>Financials &amp; Governance</h3>
                 <ul class="nice-list">
-                  <li>Receipt account is currently under the representative's personal name: <strong>Balances are audited by the group, with annual public reports</strong></li>
+                  <li>Receipt account is currently under the representative's personal name: <strong>Balances are
+                      audited by the group, with annual public reports</strong></li>
                   <li>Issuing receipts and invoices under the organization to ensure transparency</li>
                   <li>Expenses managed with authorization checks and documentation, ensuring accountability</li>
                 </ul>
@@ -357,23 +636,28 @@
           <!-- 10. FAQ -->
           <div id="faq" class="section">
             <div class="eyebrow">FAQ</div>
-            <h2>Frequently Asked Questions</h2>
+            <h2>FAQ</h2>
             <div class="grid-2x">
               <article class="cardish">
-                <h3>Q. What is Unplugged ICT?</h3>
-                <p>A. It is a learning method that teaches computational logic, steps, and conditionals using cards, paper, and physical objects instead of PCs and power outlets. We bridge to digital once these basics are set.</p>
+                <h3>Q. What is Unplugged Digital Education?</h3>
+                <p>A. It is a learning method that teaches computational logic, steps, and conditionals using cards,
+                  paper, and physical objects instead of PCs and power outlets. We bridge to digital once these basics
+                  are set.</p>
               </article>
               <article class="cardish">
                 <h3>Q. Will results be shared publicly?</h3>
-                <p>A. Yes. Pre/post test outcomes and classroom observation notes will be compiled and published in a Summary Report (20p) and Detailed Report (50p).</p>
+                <p>A. Yes. Pre/post test outcomes and classroom observation notes will be compiled and published in a
+                  Summary Report (20p) and Detailed Report (50p).</p>
               </article>
               <article class="cardish">
                 <h3>Q. Can local teachers continue on their own?</h3>
-                <p>A. Yes. The handouts, lesson plans, and rubrics are designed for local teachers to sustain the program independently.</p>
+                <p>A. Yes. The handouts, lesson plans, and rubrics are designed for local teachers to sustain the
+                  program independently.</p>
               </article>
               <article class="cardish">
                 <h3>Q. How can I support?</h3>
-                <p>A. Please visit the <a href="./support.html">Ways to Support</a> section or go straight to our <a href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">application form</a>.</p>
+                <p>A. Please visit the <a href="./support.html">Ways to Support</a> section or go straight to our <a
+                    href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">application form</a>.</p>
               </article>
             </div>
           </div>
@@ -381,10 +665,12 @@
           <!-- CTA -->
           <div class="section">
             <div class="cta-band">
-              <p><strong>Let's push this initiative forward, together.</strong> Feel free to reach out for support or partnerships.</p>
+              <p><strong>Let's push this initiative forward, together.</strong> Feel free to reach out for support or
+                partnerships.</p>
               <div class="cta-actions">
                 <a class="btn btn-primary" href="./support.html">Support Page</a>
-                <a class="btn btn-primary" href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20Project%20Partnership">Contact Us</a>
+                <a class="btn btn-primary"
+                  href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20Project%20Partnership">Contact Us</a>
               </div>
             </div>
           </div>
@@ -400,8 +686,9 @@
           <div class="cta">
             <h3>CONTACT</h3>
             <p>
-              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
-              Representative: Daichi Sawachika
+              <a href="mailto:ubunture.tokyo@gmail.com"
+                style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
+              Representative: Aria Mitani
             </p>
           </div>
         </div>
@@ -421,12 +708,18 @@
             <a href="#top">Top</a>
           </nav>
           <div class="social-links" style="display:flex; gap:14px;">
-            <a href="https://note.com/ubunture" target="_blank"><img src="../assets/img/note.webp" alt="Note" width="40" height="40" /></a>
-            <a href="https://medium.com/@ubunture.tokyo" target="_blank"><img src="../assets/img/medium.png" alt="Medium" width="40" height="40" /></a>
-            <a href="https://x.com/ubunture" target="_blank"><img src="../assets/img/x.png" alt="X" width="40" height="40" /></a>
-            <a href="https://instagram.com/ubunture" target="_blank"><img src="../assets/img/instagram.webp" alt="Instagram" width="40" height="40" /></a>
-            <a href="https://linkedin.com/company/ubunture" target="_blank"><img src="../assets/img/linkedin.png" alt="LinkedIn" width="40" height="40" /></a>
-            <a href="https://facebook.com/ubunture" target="_blank"><img src="../assets/img/facebook.webp" alt="Facebook" width="40" height="40" /></a>
+            <a href="https://note.com/ubunture" target="_blank"><img src="../assets/img/note.webp" alt="Note" width="40"
+                height="40" /></a>
+            <a href="https://medium.com/@ubunture.tokyo" target="_blank"><img src="../assets/img/medium.png"
+                alt="Medium" width="40" height="40" /></a>
+            <a href="https://x.com/ubunture" target="_blank"><img src="../assets/img/x.png" alt="X" width="40"
+                height="40" /></a>
+            <a href="https://instagram.com/ubunture" target="_blank"><img src="../assets/img/instagram.webp"
+                alt="Instagram" width="40" height="40" /></a>
+            <a href="https://linkedin.com/company/ubunture" target="_blank"><img src="../assets/img/linkedin.png"
+                alt="LinkedIn" width="40" height="40" /></a>
+            <a href="https://facebook.com/ubunture" target="_blank"><img src="../assets/img/facebook.webp"
+                alt="Facebook" width="40" height="40" /></a>
           </div>
         </div>
       </div>
@@ -435,4 +728,5 @@
   </div>
   <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

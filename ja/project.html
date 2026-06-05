@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ubunture｜プロジェクト詳細 — 南アフリカでのアンプラグドICT教育</title>
-  <meta name="description" content="Ubuntureの南アフリカ・ヨハネスブルグにおけるアンプラグドICT教育の詳細。背景・目標・カリキュラム・教員研修・評価設計・準備状況・予算・スケジュール・FAQまで網羅。">
-  <link rel="canonical" href="https://ubunture.github.io/site/ja/project.html"/>
+  <meta name="description"
+    content="Ubuntureの南アフリカ・ヨハネスブルグにおけるアンプラグドICT教育の詳細。背景・目標・カリキュラム・教員研修・評価設計・準備状況・予算・スケジュール・FAQまで網羅。">
+  <link rel="canonical" href="https://ubunture.github.io/site/ja/project.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0ea5e9" />
   <meta name="color-scheme" content="light dark" />
@@ -17,7 +19,8 @@
 
   <!-- Favicons -->
   <link rel="icon" href="https://ubunture.github.io/site/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
@@ -36,79 +39,281 @@
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css" />
 
   <!-- Page-only styles (最小限) -->
   <style>
     /* Reading blocks */
-    .details{ background:#fff; color:var(--ink); padding: 0; }
-    .details .section{ padding:32px 0; }
+    .details {
+      background: #fff;
+      color: var(--ink);
+      padding: 0;
+    }
+
+    .details .section {
+      padding: 32px 0;
+    }
 
     /* TOC */
-    .toc{ background:#f7f7f8; border:1px solid #ececec; border-radius:16px; padding:16px; box-shadow:var(--shadow-1); }
-    .toc h4{ margin:0 0 8px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:#666; }
-    .toc ul{ margin:0; padding-left:18px; columns:2; column-gap:24px; }
-    .toc li{ margin:6px 0; }
-    .toc a{ color:#111; text-decoration:none; }
-    @media (max-width:720px){ .toc ul{ columns:1;} }
+    .toc {
+      background: #f7f7f8;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .toc h4 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    .toc ul {
+      margin: 0;
+      padding-left: 18px;
+      columns: 2;
+      column-gap: 24px;
+    }
+
+    .toc li {
+      margin: 6px 0;
+    }
+
+    .toc a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    @media (max-width:720px) {
+      .toc ul {
+        columns: 1;
+      }
+    }
 
     /* KPI */
-    .kpi-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:16px; }
-    .kpi{ background:#fff; border:1px solid #ececec; border-radius:16px; padding:18px; box-shadow:var(--shadow-1); }
-    .kpi .num{ font-weight:900; font-size: clamp(22px,4vw,28px); line-height:1; }
-    .kpi .label{ font-weight:800; margin-top:6px; }
-    .kpi small{ color:var(--ink-weak); }
-    @media (max-width:980px){ .kpi-grid{ grid-template-columns:1fr 1fr; } }
-    @media (max-width:520px){ .kpi-grid{ grid-template-columns:1fr; } }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .kpi {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .kpi .num {
+      font-weight: 900;
+      font-size: clamp(22px, 4vw, 28px);
+      line-height: 1;
+    }
+
+    .kpi .label {
+      font-weight: 800;
+      margin-top: 6px;
+    }
+
+    .kpi small {
+      color: var(--ink-weak);
+    }
+
+    @media (max-width:980px) {
+      .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:520px) {
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     /* Cards & lists */
-    .cardish{ background:#fff; border:1px solid #ececec; border-radius:16px; padding:18px; box-shadow:var(--shadow-1); }
-    .grid-2x{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-    .grid-3x{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    @media (max-width:980px){ .grid-2x, .grid-3x{ grid-template-columns:1fr; } }
-    .nice-list{ margin:0; padding-left:18px; }
-    .nice-list li{ margin:8px 0; }
-    .checklist{ list-style:none; padding:0; margin:0; }
-    .checklist li{ position:relative; padding-left:28px; margin:10px 0; }
-    .checklist li::before{ content:"✔"; position:absolute; left:0; top:0; transform:translateY(2px); font-weight:900; color:#0a0a0a; }
+    .cardish {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .grid-2x {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .grid-3x {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width:980px) {
+
+      .grid-2x,
+      .grid-3x {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .nice-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .nice-list li {
+      margin: 8px 0;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 28px;
+      margin: 10px 0;
+    }
+
+    .checklist li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(2px);
+      font-weight: 900;
+      color: #0a0a0a;
+    }
 
     /* Figures */
-    figure{ margin:0; }
-    .fig{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow-1); background:#ddd center/cover no-repeat; aspect-ratio:16/9; }
-    .cap{ font-size:13px; color:#666; margin-top:8px; }
+    figure {
+      margin: 0;
+    }
+
+    .fig {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-1);
+      background: #ddd center/cover no-repeat;
+      aspect-ratio: 16/9;
+    }
+
+    .cap {
+      font-size: 13px;
+      color: #666;
+      margin-top: 8px;
+    }
 
     /* Tables */
-    .budget-table{
-      width:100%; border-collapse:separate; border-spacing:0; overflow:hidden;
-      border:1px solid #ececec; border-radius:16px; box-shadow:var(--shadow-1); background:#fff;
+    .budget-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      box-shadow: var(--shadow-1);
+      background: #fff;
     }
-    .budget-table th, .budget-table td{ padding:12px 14px; border-bottom:1px solid #f0f0f0; }
-    .budget-table thead th{ background:#f7f7f8; text-align:left; font-weight:900; }
-    .budget-table tfoot th{ background:#f7f7f8; }
-    .budget-table .num{ text-align:right; font-variant-numeric: tabular-nums; }
+
+    .budget-table th,
+    .budget-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .budget-table thead th {
+      background: #f7f7f8;
+      text-align: left;
+      font-weight: 900;
+    }
+
+    .budget-table tfoot th {
+      background: #f7f7f8;
+    }
+
+    .budget-table .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
 
     /* CTA band */
-    .cta-band{ background:#efefef; border:1px solid #ececec; border-radius:16px; padding:22px; display:flex; align-items:center; justify-content:space-between; gap:16px; box-shadow:var(--shadow-1); }
-    .cta-band p{ margin:0; color:#333; }
-    .cta-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+    .cta-band {
+      background: #efefef;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: #333;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
     @media (max-width: 768px) {
-      .cta-band { flex-direction: column; align-items: stretch; gap: 16px; text-align: center; }
-      .cta-actions { justify-content: center; }
+      .cta-band {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .cta-actions {
+        justify-content: center;
+      }
     }
 
     /* Minor */
-    .eyebrow{ color:#999; }
-    .h2-sub{ margin:8px 0 0; color:#444; font-weight:600; }
-    .muted{ color:#666; }
-    .mono{ font-variant-numeric: tabular-nums; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .eyebrow {
+      color: #999;
+    }
+
+    .h2-sub {
+      margin: 8px 0 0;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .muted {
+      color: #666;
+    }
+
+    .mono {
+      font-variant-numeric: tabular-nums;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
   </style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PM9GZ20LV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date()); gtag('config', 'G-7PM9GZ20LV');
   </script>
 </head>
@@ -121,13 +326,15 @@
     <header>
       <nav class="nav" aria-label="Primary">
         <div class="brand-wrap">
-          <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
+          <a class="brand" href="./index.html"><img src="../assets/img/logo.png"
+              alt="Ubunture" /><span>Ubunture</span></a>
           <div class="lang-switch" role="group" aria-label="Language switch">
             <a class="lang-btn" href="../ja/project.html" role="button" aria-pressed="true">JP</a>
             <a class="lang-btn" href="../en/project.html" role="button" aria-pressed="false">EN</a>
           </div>
         </div>
-        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+        <button class="menu-btn" aria-expanded="false"
+          aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
           <li role="none"><a role="menuitem" href="./about.html">About</a></li>
@@ -179,8 +386,10 @@
           <div id="about" class="section">
             <div class="eyebrow">About</div>
             <h2>私たちについて</h2>
-            <p>Ubuntureは、ICT教育を通じて「学びの自由」と「夢を見る力」を世界中の子どもたちに広げる東京大学発の学生団体です。Ubuntu（「あなたがいるから私がいる」）の理念にFuture（未来）を重ね、多様な人が「持ち寄って」現場に役立つ学びを共創する姿勢を名前に込めました。</p>
-            <p>今回、現地の連携パートナーと協力しながら、南アフリカ・ヨハネスブルグでアンプラグドICT教育を届けます。</p>
+            <p>
+              Ubuntureは、ICT教育を通じて「学びの自由」と「夢を見る力」を世界中の子どもたちに広げる東京大学発の学生団体です。Ubuntu（「あなたがいるから私がいる」）の理念にFuture（未来）を重ね、多様な人が「持ち寄って」現場に役立つ学びを共創する姿勢を名前に込めました。
+            </p>
+            <p>現地の連携パートナーと協力しながら、南アフリカ・ヨハネスブルグでアンプラグドICT教育を届けます。</p>
             <div class="grid-2x" style="margin-top:18px;">
               <figure>
                 <div class="fig" style="background-image:url('../assets/img/details-hero.jpg')"></div>
@@ -196,21 +405,41 @@
           <!-- 2. Why -->
           <div id="why" class="section">
             <div class="eyebrow">Why</div>
-            <h2>今回のプロジェクト『アンプラグドICT教育』について</h2>
-            <p>南アフリカでは、<strong>電力・設備・教員研修</strong>の三重格差によりICT教育が都市内でも偏在しています。自宅固定回線の普及や教員のICT研修受講率の低さなど、<em>接続できるか</em>と<em>授業で活かせるか</em>の二重の壁が子どもを置き去りにしています。</p>
+            <h2>なぜアンプラグドICTか</h2>
+            <p>
+              南アフリカでは、<strong>設備導入の格差・設備活用の格差</strong>の二重構造からなるICT教育格差が存在しています。自宅固定回線の普及率の低さや、教員のICT研修受講率の低さなど、<em>接続できるか</em>と<em>授業で活かせるか</em>の二重の壁が子どもを置き去りにしています。
+            </p>
             <p>そこで私たちは、コンピュータや電力を用いない「アンプラグドICT教育」で、手順化・条件分岐・反復・検証といったコンピュテーショナル・シンキングの基礎を、体験から学べる授業と教員研修をセットで実施します。</p>
-            <div id="goals" class="kpi-grid">
-              <div class="kpi"><div class="num">120</div><div class="label">対象児童</div><small>現地4日間で実施</small></div>
-              <div class="kpi"><div class="num">40</div><div class="label">対象教員</div><small>ToTで自走化</small></div>
-              <div class="kpi"><div class="num">4日間</div><div class="label">授業＋研修</div><small>学校現場で検証</small></div>
-              <div class="kpi"><div class="num">50%</div><div class="label">女子参加率目標</div><small>包摂性を担保</small></div>
+          </div>
+
+          <!-- 2.5 Goals -->
+          <div id="goals" class="section">
+            <div class="eyebrow">Goals</div>
+            <h2>目標とKPI</h2>
+            <div class="kpi-grid">
+              <div class="kpi">
+                <div class="num">120</div>
+                <div class="label">対象児童</div><small>現地4日間で実施</small>
+              </div>
+              <div class="kpi">
+                <div class="num">40</div>
+                <div class="label">対象教員</div><small>ToTで自走化</small>
+              </div>
+              <div class="kpi">
+                <div class="num">4日間</div>
+                <div class="label">授業＋研修</div><small>学校現場で検証</small>
+              </div>
+              <div class="kpi">
+                <div class="num">50%</div>
+                <div class="label">女子参加率目標</div><small>包摂性を担保</small>
+              </div>
             </div>
           </div>
 
           <!-- 3. Activities -->
           <div id="activities" class="section">
             <div class="eyebrow">Activities</div>
-            <h2>活動内容（生徒／教員の両面から）</h2>
+            <h2>活動内容（生徒/教員）</h2>
             <div class="grid-2x">
               <article class="cardish">
                 <h3>生徒への活動（直接支援）</h3>
@@ -236,7 +465,7 @@
           <!-- 4. Curriculum -->
           <div id="curriculum" class="section">
             <div class="eyebrow">Curriculum</div>
-            <h2>カリキュラム詳細（例）</h2>
+            <h2>カリキュラム詳細</h2>
             <div class="grid-3x">
               <article class="cardish">
                 <h3>Module A：そろばん×アルゴリズム</h3>
@@ -272,7 +501,7 @@
           <!-- 5. Evaluation -->
           <div id="evaluation" class="section">
             <div class="eyebrow">Evaluation</div>
-            <h2>評価設計と公開</h2>
+            <h2>評価設計</h2>
             <ul class="nice-list">
               <li><strong>事前・事後テスト</strong>（論理的思考／学習意欲の簡易尺度）</li>
               <li>授業観察ルーブリック（参加・協働・課題解決過程）</li>
@@ -292,9 +521,18 @@
               <li>体制：教材班／評価班／広報班で役割分担と進捗管理</li>
             </ul>
             <div class="grid-3x" style="margin-top:16px;">
-              <figure><div class="fig" style="background-image:url('../assets/img/readiness-1.jpg')"></div><figcaption class="cap">はんだごてでライト準備（例）</figcaption></figure>
-              <figure><div class="fig" style="background-image:url('../assets/img/readiness-2.jpg')"></div><figcaption class="cap">当日の様子（例）</figcaption></figure>
-              <figure><div class="fig" style="background-image:url('../assets/img/readiness-3.jpg')"></div><figcaption class="cap">教材サンプル（例）</figcaption></figure>
+              <figure>
+                <div class="fig" style="background-image:url('../assets/img/readiness-1.jpg')"></div>
+                <figcaption class="cap">はんだごてでライト準備（例）</figcaption>
+              </figure>
+              <figure>
+                <div class="fig" style="background-image:url('../assets/img/readiness-2.jpg')"></div>
+                <figcaption class="cap">当日の様子（例）</figcaption>
+              </figure>
+              <figure>
+                <div class="fig" style="background-image:url('../assets/img/readiness-3.jpg')"></div>
+                <figcaption class="cap">教材サンプル（例）</figcaption>
+              </figure>
             </div>
           </div>
 
@@ -304,15 +542,40 @@
             <h2>資金の使い道</h2>
             <p>得られた資金は<strong>①教材開発費 → ②現地滞在費 → ③渡航費補助</strong>の優先度で使用します。</p>
             <table class="budget-table" aria-label="予算内訳">
-              <thead><tr><th>項目</th><th class="num">金額（円）</th></tr></thead>
+              <thead>
+                <tr>
+                  <th>項目</th>
+                  <th class="num">金額（円）</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr><td>渡航費（5人）</td><td class="num mono">861,000</td></tr>
-                <tr><td>宿泊費（6泊/5人）</td><td class="num mono">100,000</td></tr>
-                <tr><td>教材制作費</td><td class="num mono">200,000</td></tr>
-                <tr><td>報告会・広報費（リターン含む）</td><td class="num mono">120,000</td></tr>
-                <tr><td>予備費</td><td class="num mono">50,000</td></tr>
+                <tr>
+                  <td>渡航費（5人）</td>
+                  <td class="num mono">861,000</td>
+                </tr>
+                <tr>
+                  <td>宿泊費（6泊/5人）</td>
+                  <td class="num mono">100,000</td>
+                </tr>
+                <tr>
+                  <td>教材制作費</td>
+                  <td class="num mono">200,000</td>
+                </tr>
+                <tr>
+                  <td>報告会・広報費（リターン含む）</td>
+                  <td class="num mono">120,000</td>
+                </tr>
+                <tr>
+                  <td>予備費</td>
+                  <td class="num mono">50,000</td>
+                </tr>
               </tbody>
-              <tfoot><tr><th>合計</th><th class="num mono">1,331,000</th></tr></tfoot>
+              <tfoot>
+                <tr>
+                  <th>合計</th>
+                  <th class="num mono">1,331,000</th>
+                </tr>
+              </tfoot>
             </table>
           </div>
 
@@ -333,7 +596,7 @@
           <!-- 9. Risks -->
           <div id="risks" class="section">
             <div class="eyebrow">Risks</div>
-            <h2>想定リスクと対応</h2>
+            <h2>リスクと対応</h2>
             <div class="grid-2x">
               <article class="cardish">
                 <h3>実務・運営</h3>
@@ -357,7 +620,7 @@
           <!-- 10. FAQ -->
           <div id="faq" class="section">
             <div class="eyebrow">FAQ</div>
-            <h2>よくあるご質問</h2>
+            <h2>FAQ</h2>
             <div class="grid-2x">
               <article class="cardish">
                 <h3>Q. アンプラグドICTとは？</h3>
@@ -373,7 +636,8 @@
               </article>
               <article class="cardish">
                 <h3>Q. 支援方法は？</h3>
-                <p>A. <a href="./support.html">ご支援の方法</a>をご覧ください。<a href="https://forms.gle/4w3hvR8yRHandVeV7" target="_blank" rel="noopener">申込フォーム</a>からも受付しています。</p>
+                <p>A. <a href="./support.html">ご支援の方法</a>をご覧ください。<a href="https://forms.gle/4w3hvR8yRHandVeV7"
+                    target="_blank" rel="noopener">申込フォーム</a>からも受付しています。</p>
               </article>
             </div>
           </div>
@@ -384,7 +648,8 @@
               <p><strong>この取り組みを一緒に前へ。</strong> ご支援・協働のご相談はお気軽にどうぞ。</p>
               <div class="cta-actions">
                 <a class="btn btn-primary" href="./support.html">ご支援ページへ</a>
-                <a class="btn btn-primary" href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20プロジェクト連携のご相談">Contact us</a>
+                <a class="btn btn-primary"
+                  href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20プロジェクト連携のご相談">Contact us</a>
               </div>
             </div>
           </div>
@@ -400,8 +665,9 @@
           <div class="cta">
             <h3>CONTACT</h3>
             <p>
-              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
-              代表：澤近大地
+              <a href="mailto:ubunture.tokyo@gmail.com"
+                style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
+              代表：三谷愛利亜
             </p>
           </div>
         </div>
@@ -421,12 +687,18 @@
             <a href="#top">Top</a>
           </nav>
           <div class="social-links" style="display:flex; gap:14px;">
-            <a href="https://note.com/ubunture" target="_blank"><img src="../assets/img/note.webp" alt="Note" width="40" height="40" /></a>
-            <a href="https://medium.com/@ubunture.tokyo" target="_blank"><img src="../assets/img/medium.png" alt="Medium" width="40" height="40" /></a>
-            <a href="https://x.com/ubunture" target="_blank"><img src="../assets/img/x.png" alt="X" width="40" height="40" /></a>
-            <a href="https://instagram.com/ubunture" target="_blank"><img src="../assets/img/instagram.webp" alt="Instagram" width="40" height="40" /></a>
-            <a href="https://linkedin.com/company/ubunture" target="_blank"><img src="../assets/img/linkedin.png" alt="LinkedIn" width="40" height="40" /></a>
-            <a href="https://facebook.com/ubunture" target="_blank"><img src="../assets/img/facebook.webp" alt="Facebook" width="40" height="40" /></a>
+            <a href="https://note.com/ubunture" target="_blank"><img src="../assets/img/note.webp" alt="Note" width="40"
+                height="40" /></a>
+            <a href="https://medium.com/@ubunture.tokyo" target="_blank"><img src="../assets/img/medium.png"
+                alt="Medium" width="40" height="40" /></a>
+            <a href="https://x.com/ubunture" target="_blank"><img src="../assets/img/x.png" alt="X" width="40"
+                height="40" /></a>
+            <a href="https://instagram.com/ubunture" target="_blank"><img src="../assets/img/instagram.webp"
+                alt="Instagram" width="40" height="40" /></a>
+            <a href="https://linkedin.com/company/ubunture" target="_blank"><img src="../assets/img/linkedin.png"
+                alt="LinkedIn" width="40" height="40" /></a>
+            <a href="https://facebook.com/ubunture" target="_blank"><img src="../assets/img/facebook.webp"
+                alt="Facebook" width="40" height="40" /></a>
           </div>
         </div>
       </div>
@@ -435,4 +707,5 @@
   </div>
   <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

@@ -2,13 +2,55 @@
     const nav = document.querySelector('.nav');
     const btn = document.querySelector('.menu-btn');
     const menu = document.getElementById('menu');
+
+    function updateMenuState() {
+      if (!nav || !menu) return;
+      const open = nav.classList.contains('open');
+      if (open) {
+        const clientH = menu.clientHeight;
+        const scrollH = menu.scrollHeight;
+        nav.style.setProperty('--ul-height', clientH + 'px');
+        
+        // Lock scroll only when menu is open and its contents overflow the screen/container height
+        // Added a 5px buffer to prevent subpixel layout calculations from locking the scroll on desktop/fit states
+        if (scrollH > clientH + 5) {
+          document.documentElement.classList.add('nav-lock-scroll');
+          document.body.classList.add('nav-lock-scroll');
+        } else {
+          document.documentElement.classList.remove('nav-lock-scroll');
+          document.body.classList.remove('nav-lock-scroll');
+        }
+      } else {
+        nav.style.removeProperty('--ul-height');
+        document.documentElement.classList.remove('nav-lock-scroll');
+        document.body.classList.remove('nav-lock-scroll');
+      }
+    }
+
     btn?.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
-      if (open) {
-        nav.style.setProperty('--ul-height', menu.scrollHeight + 'px');
+      updateMenuState();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 880) {
+        if (nav && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          btn?.setAttribute('aria-expanded', 'false');
+          updateMenuState();
+        }
       } else {
-        nav.style.removeProperty('--ul-height');
+        if (nav && nav.classList.contains('open')) {
+          updateMenuState();
+        }
+      }
+    });
+
+    // Handle Back/Forward cache (BFCache) page restores
+    window.addEventListener('pageshow', () => {
+      if (nav && !nav.classList.contains('open')) {
+        updateMenuState();
       }
     });
 
@@ -40,7 +82,7 @@
     links.forEach(a=>a.addEventListener('click', ()=>{ 
       nav.classList.remove('open'); 
       btn.setAttribute('aria-expanded','false'); 
-      nav.style.removeProperty('--ul-height');
+      updateMenuState();
     }));
 
 (function(){
