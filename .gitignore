@@ -1,0 +1,11 @@
+# OS-specific files
+.DS_Store
+.DS_Store?
+**/._*
+**/.DS_Store
+
+# Editor settings
+.vscode/
+
+# Scratch/temp directories
+scratch/
