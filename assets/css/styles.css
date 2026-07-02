@@ -783,7 +783,20 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
 .values-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; }
 .value-card{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:28px 24px; transition:background .25s, transform .25s; }
 .value-card:hover{ background:rgba(255,255,255,.08); transform:translateY(-3px); }
-.value-card .v-icon{ font-size:28px; margin:0 0 12px; }
+.value-card .v-icon{
+  display:inline-grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  margin:0 0 14px;
+  border-radius:10px;
+  border:1px solid rgba(52,211,153,.35);
+  background:rgba(52,211,153,.10);
+  color:#34d399;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
 .value-card h3{ color:#fff; font-size:clamp(15px,1.4vw,18px); margin:0 0 8px; }
 .value-card p{ color:#9ca3af; font-size:clamp(13px,1.1vw,15px); line-height:1.8; margin:0; }
 
@@ -1026,7 +1039,6 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   line-height: 1.6;
   color: var(--muted-fg, #6b7280);
 }
-```css
 /* ========== Sponsors Section ========== */
 .sponsors{
   background: var(--bg-light);
@@ -1168,6 +1180,26 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   max-width: 100%;
 }
 
+.sponsors .logo-grid.logo-partner{
+  --cell-w: 460px;
+}
+
+.sponsors .logo-grid.logo-partner li{
+  aspect-ratio: 11 / 5;
+  padding: 20px 24px;
+  background:#fff;
+}
+
+.sponsors .logo-grid.logo-partner img{
+  max-width: 96%;
+  max-height: 170px;
+}
+
+.sponsors .logo-grid img.sponsor-logo-aaic{
+  filter: none;
+  opacity: 1;
+}
+
 /* 5) “1枚だけの行” が変に右に寄る事故を防止 */
 .sponsors .logo-grid{
   justify-content: center !important;
@@ -1183,6 +1215,9 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
   .sponsors .logo-grid.logo-md,
   .sponsors .logo-grid.logo-sm{
     --cell-w: min(320px, 90vw); /* 1〜2列で気持ちよく */
+  }
+  .sponsors .logo-grid.logo-partner{
+    --cell-w: min(420px, 90vw);
   }
 }
 
@@ -1289,4 +1324,3 @@ footer{ background:#0f0f10; color:#bdbdbd; padding:80px 0 40px; }
     margin-inline: auto;
   }
 }
-
