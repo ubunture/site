@@ -30,6 +30,7 @@
     btn?.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
+      if (!open) document.querySelectorAll('.has-dropdown.open').forEach(li => li.classList.remove('open'));
       updateMenuState();
     });
 
@@ -40,6 +41,7 @@
           btn?.setAttribute('aria-expanded', 'false');
           updateMenuState();
         }
+        document.querySelectorAll('.has-dropdown.open').forEach(li => li.classList.remove('open'));
       } else {
         if (nav && nav.classList.contains('open')) {
           updateMenuState();
@@ -78,12 +80,49 @@
     }, { rootMargin:'0px 0px -10% 0px', threshold:.15 });
     reve.forEach(el => rio.observe(el));
 
-    // Close menu after click (mobile)
-    links.forEach(a=>a.addEventListener('click', ()=>{ 
-      nav.classList.remove('open'); 
-      btn.setAttribute('aria-expanded','false'); 
+    // Close menu after click (mobile) — skip dropdown toggles, handled separately below
+    links.filter(a => !a.classList.contains('dropdown-toggle')).forEach(a=>a.addEventListener('click', ()=>{
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
       updateMenuState();
     }));
+
+    // ===== Mobile dropdown toggles (About / Team / Contact) =====
+    const dropdowns = Array.from(document.querySelectorAll('.has-dropdown'));
+    dropdowns.forEach(li => {
+      const toggle = li.querySelector(':scope > .dropdown-toggle');
+      if (!toggle) return;
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth > 880) return; // desktop: hover handles it, let the link navigate
+        if (!li.classList.contains('open')) {
+          e.preventDefault();
+          dropdowns.forEach(other => {
+            if (other !== li) {
+              other.classList.remove('open');
+              other.querySelector(':scope > .dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+            }
+          });
+          li.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+          updateMenuState();
+        } else {
+          // Already open: let this tap navigate, and close the mobile nav panel
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // The submenu's height animates via a CSS max-height transition, so the
+      // white background pill (sized from --ul-height) must be recalculated
+      // again once that transition finishes — otherwise it's sized for the
+      // pre-expansion height and the submenu spills outside it.
+      const submenu = li.querySelector(':scope > .dropdown-menu');
+      submenu?.addEventListener('transitionend', (e) => {
+        if (e.propertyName === 'max-height' && nav.classList.contains('open')) {
+          updateMenuState();
+        }
+      });
+    });
 
 (function(){
   const root = document.querySelector('#voices');
@@ -311,5 +350,173 @@
   // Init
   setupSlider();
   window.addEventListener('resize', setupSlider);
+})();
+
+// ===== Hero background rotator =====
+(function(){
+  const root = document.querySelector('.hero-bg');
+  if(!root) return;
+  const layers = Array.from(root.querySelectorAll('.layer'));
+  if(layers.length < 2) return;
+  const isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(isReduced) return;
+  let index = layers.findIndex(l => l.classList.contains('is-active'));
+  if(index < 0) index = 0;
+  setInterval(() => {
+    layers[index].classList.remove('is-active');
+    index = (index + 1) % layers.length;
+    layers[index].classList.add('is-active');
+  }, 5500);
+})();
+
+// ===== Generic rotating-photo teaser (e.g. home Team section avatars) =====
+(function(){
+  const roots = Array.from(document.querySelectorAll('.avatar-rotator'));
+  if(!roots.length) return;
+  const isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  roots.forEach(root => {
+    const layers = Array.from(root.querySelectorAll('.layer'));
+    if(layers.length < 2) return;
+    if(isReduced) return;
+    let index = layers.findIndex(l => l.classList.contains('is-active'));
+    if(index < 0) index = 0;
+    setInterval(() => {
+      layers[index].classList.remove('is-active');
+      index = (index + 1) % layers.length;
+      layers[index].classList.add('is-active');
+    }, 2200);
+  });
+})();
+
+// ===== Member slider (Team / Member page) =====
+(function(){
+  const root = document.querySelector('#member-slider');
+  if(!root) return;
+  const track = root.querySelector('.member-track');
+  const slides = Array.from(root.querySelectorAll('.member-plate'));
+  const prevBtn = root.querySelector('.member-btn.prev');
+  const nextBtn = root.querySelector('.member-btn.next');
+  const viewport = root.querySelector('.member-viewport');
+  const dotsWrap = document.querySelector('.member-dots');
+  const total = slides.length;
+  let index = 0;
+  let visibleCount = 1;
+  let autoTimer = null;
+  let isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // This slider always shows one member card at a time, on every screen size.
+  function getVisibleCount(){
+    return 1;
+  }
+
+  function setupSlider(){
+    visibleCount = getVisibleCount();
+    const maxIndex = total - visibleCount;
+
+    if (maxIndex <= 0) {
+      root.classList.add('no-slide');
+      track.style.transform = 'none';
+      index = 0;
+      dotsWrap.innerHTML = '';
+      return;
+    }
+
+    root.classList.remove('no-slide');
+    dotsWrap.innerHTML = '';
+    const dotCount = maxIndex + 1;
+    for (let i = 0; i < dotCount; i++) {
+      const dot = document.createElement('button');
+      dot.setAttribute('role','tab');
+      dot.setAttribute('aria-controls', `member-plate-${i+1}`);
+      dot.id = `member-dot-${i+1}`;
+      dot.title = `${i+1} / ${dotCount}`;
+      dot.addEventListener('click', ()=> { goTo(i); });
+      dotsWrap.appendChild(dot);
+    }
+
+    if (index > maxIndex) index = maxIndex;
+    goTo(index);
+  }
+
+  function updateAria(){
+    const maxIndex = total - visibleCount;
+    slides.forEach((s,i)=>{ s.classList.toggle('current', i===index); });
+    const dots = dotsWrap.querySelectorAll('[role="tab"]');
+    dots.forEach((d,i)=> d.setAttribute('aria-selected', i===index ? 'true':'false'));
+    prevBtn.disabled = (index===0);
+    nextBtn.disabled = (index===maxIndex);
+  }
+
+  function goTo(i){
+    const maxIndex = total - visibleCount;
+    index = Math.max(0, Math.min(maxIndex, i));
+    const card = slides[0];
+    if (!card) return;
+    const gap = 0;
+    const step = card.offsetWidth + gap;
+    track.style.transform = `translate3d(${-index * step}px,0,0)`;
+    updateAria();
+  }
+
+  function next(){ const maxIndex = total - visibleCount; goTo(index < maxIndex ? index+1 : 0); }
+  function prev(){ const maxIndex = total - visibleCount; goTo(index > 0 ? index-1 : maxIndex); }
+
+  prevBtn.addEventListener('click', ()=>{ prev(); });
+  nextBtn.addEventListener('click', ()=>{ next(); });
+
+  viewport.addEventListener('keydown', (e)=>{
+    if(e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    if(e.key === 'ArrowLeft')  { e.preventDefault(); prev(); }
+  });
+
+  let startX=0, dx=0, dragging=false;
+  const threshold = 40;
+  function onDown(e){
+    if (total - visibleCount <= 0) return;
+    dragging=true; startX = (e.touches? e.touches[0].clientX : e.clientX); dx=0;
+  }
+  function onMove(e){
+    if(!dragging) return;
+    const x=(e.touches? e.touches[0].clientX : e.clientX);
+    dx = x-startX;
+    const card = slides[0];
+    const gap = 0;
+    const step = card.offsetWidth + gap;
+    track.style.transform = `translate3d(${-index * step + dx}px,0,0)`;
+  }
+  function onUp(){
+    if(!dragging) return;
+    dragging=false;
+    if(Math.abs(dx) > threshold){ dx<0 ? next() : prev(); } else { goTo(index); }
+  }
+  viewport.addEventListener('pointerdown', onDown);
+  viewport.addEventListener('pointermove', onMove);
+  viewport.addEventListener('pointerup', onUp);
+  viewport.addEventListener('pointercancel', onUp);
+  viewport.addEventListener('pointerleave', onUp);
+  viewport.addEventListener('touchstart', onDown, {passive:true});
+  viewport.addEventListener('touchmove', onMove, {passive:true});
+  viewport.addEventListener('touchend', onUp);
+  viewport.addEventListener('touchcancel', onUp);
+
+  // Auto-advance (pause on hover/focus/hidden)
+  function startAuto(){
+    if(isReduced) return;
+    stopAuto();
+    autoTimer = setInterval(()=>{ next(); }, 5000);
+  }
+  function stopAuto(){ if(autoTimer){ clearInterval(autoTimer); autoTimer=null; } }
+  root.addEventListener('mouseenter', stopAuto);
+  root.addEventListener('mouseleave', startAuto);
+  root.addEventListener('focusin', stopAuto);
+  root.addEventListener('focusout', startAuto);
+  document.addEventListener('visibilitychange', ()=> document.hidden ? stopAuto() : startAuto());
+
+  setupSlider();
+  startAuto();
+  window.addEventListener('resize', () => {
+    isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setupSlider();
+  });
 })();
 

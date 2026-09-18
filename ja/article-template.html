@@ -1,41 +1,52 @@
+<!--
+  記事テンプレート（サイト内で記事を書くためのひな形）
+  ============================================
+  使い方:
+  1. このファイルをコピーして、`ja/article-YYYYMMDD-スラッグ.html` のような名前で保存する
+     （例: ja/article-20261001-pretoria-visit.html）。
+  2. <title>・meta description・canonical・OGP・見出し・本文・公開日・画像を書き換える。
+     「差し替え」「REPLACE」とコメントしてある箇所が変更対象。
+  3. 画像は assets/img/ に置き、パスを差し替える。
+  4. 書き終えたら ja/news.html のニュース一覧（NEWS_ITEMS_START〜ENDより下）に
+     カードを1つ追加し、このファイルへリンクする。英語版を書く場合は
+     en/article-template.html も同様に複製する。
+  5. ヘッダー／フッターを直したいときは、このファイル単体ではなく
+     scripts/sync-header-footer.mjs を編集して `node scripts/sync-header-footer.mjs`
+     を実行すると全ページに反映される（このテンプレートは対象外なので、
+     複製後の記事ページに合わせて手動で調整すること）。
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Ubunture UTokyo</title>
-  <meta name="description"
-    content="About Ubunture UTokyo — read the Representative's Message, our Mission, Vision & Value, and our History." />
-  <link rel="canonical" href="https://ubunture.github.io/site/en/about.html" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <title>【記事タイトルに差し替え】 | Ubunture</title>
+  <meta name="description" content="【記事の要約（120字程度）に差し替え】" />
+  <link rel="canonical" href="https://ubunture.github.io/site/ja/article-template.html" />
+  <meta name="robots" content="noindex,nofollow" /> <!-- REPLACE with index,follow,max-image-preview:large when duplicating for a real article -->
   <meta name="theme-color" content="#0ea5e9" />
   <meta name="color-scheme" content="light dark" />
 
-  <!-- Language alternates -->
-  <link rel="alternate" hreflang="ja" href="https://ubunture.github.io/site/ja/about.html">
-  <link rel="alternate" hreflang="en" href="https://ubunture.github.io/site/en/about.html">
-  <link rel="alternate" hreflang="x-default" href="https://ubunture.github.io/site/ja/about.html">
+  <!-- Language alternates（英語版記事があれば差し替え、無ければこの2行は削除可） -->
+  <link rel="alternate" hreflang="ja" href="https://ubunture.github.io/site/ja/article-template.html">
+  <link rel="alternate" hreflang="en" href="https://ubunture.github.io/site/en/article-template.html">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="https://ubunture.github.io/site/assets/favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32"
-    href="https://ubunture.github.io/site/assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16"
-    href="https://ubunture.github.io/site/assets/favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180"
-    href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ubunture.github.io/site/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ubunture.github.io/site/assets/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
   <link rel="icon" href="https://ubunture.github.io/site/favicon.ico">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ubunture UTokyo" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="About | Ubunture UTokyo" />
-  <meta property="og:description"
-    content="Read the Representative's Message, our Mission, Vision & Value, and our History." />
-  <meta property="og:url" content="https://ubunture.github.io/site/en/about.html" />
-  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/hero1.jpg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ubunture" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:title" content="【記事タイトルに差し替え】 | Ubunture" />
+  <meta property="og:description" content="【記事の要約に差し替え】" />
+  <meta property="og:url" content="https://ubunture.github.io/site/ja/article-template.html" />
+  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/REPLACE-ME.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -67,19 +78,19 @@
         <div class="brand-wrap">
           <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
           <div class="lang-switch" role="group" aria-label="Language switch">
-            <a class="lang-btn" href="../ja/about.html" role="button" aria-pressed="false">JP</a>
-            <a class="lang-btn" href="../en/about.html" role="button" aria-pressed="true">EN</a>
+            <a class="lang-btn" href="../ja/article-template.html" role="button" aria-pressed="true">JP</a>
+            <a class="lang-btn" href="../en/article-template.html" role="button" aria-pressed="false">EN</a>
           </div>
         </div>
         <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
           <li role="none" class="has-dropdown">
-            <a role="menuitem" href="./about.html" class="dropdown-toggle active" aria-haspopup="true">About<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <a role="menuitem" href="./about.html" class="dropdown-toggle" aria-haspopup="true">About<span class="dropdown-caret" aria-hidden="true"></span></a>
             <ul class="dropdown-menu" role="menu" aria-label="About">
               <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
-              <li role="none"><a role="menuitem" href="./name.html">Origin of Ubunture</a></li>
-              <li role="none"><a role="menuitem" href="./mission.html">Mission, Vision & Value</a></li>
+              <li role="none"><a role="menuitem" href="./name.html">名前の由来</a></li>
+              <li role="none"><a role="menuitem" href="./mission.html">Mission・Vision・Value</a></li>
               <li role="none"><a role="menuitem" href="./history.html">History</a></li>
             </ul>
           </li>
@@ -91,7 +102,7 @@
               <li role="none"><a role="menuitem" href="./recruit.html">Recruit</a></li>
             </ul>
           </li>
-          <li role="none"><a role="menuitem" href="./news.html">News</a></li>
+          <li role="none"><a role="menuitem" href="./news.html" class="active">News</a></li>
           <li role="none" class="has-dropdown">
             <a role="menuitem" href="./contact.html" class="dropdown-toggle" aria-haspopup="true">Contact<span class="dropdown-caret" aria-hidden="true"></span></a>
             <ul class="dropdown-menu" role="menu" aria-label="Contact">
@@ -106,51 +117,46 @@
     <!-- Main Content -->
     <main id="main">
       <!-- Subpage Hero -->
-      <section class="subpage-hero hero--about subpage-hero--plain" id="top" aria-label="About">
+      <section class="subpage-hero hero--news" id="top" aria-label="News">
         <div class="container inner">
-          <div class="eyebrow">About</div>
-          <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">About Ubunture UTokyo</h1>
-          <p class="lead-xl">A student organization where University of Tokyo students and South African university
-            students collaborate to address educational inequality through digital education.</p>
-          <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> About</div>
+          <div class="eyebrow">News</div>
+          <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">【記事タイトルに差し替え】</h1>
+          <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> <a href="./news.html">News</a> <span> / </span> 記事</div>
         </div>
       </section>
 
-      <section aria-labelledby="about-choice-title" style="padding-top:clamp(24px,3vw,32px)">
+      <!-- Article -->
+      <section id="article" class="about" style="padding-top:clamp(24px,3vw,32px)">
         <div class="container">
-          <div class="eyebrow">About</div>
-          <h2 id="about-choice-title">Learn More About Us</h2>
-          <p class="section-lead">Ubunture UTokyo is a student organization from the University of Tokyo that drives an international collaboration project with South Africa. University of Tokyo and South African university students collaborate as equal partners, tackling South Africa's education gap by developing and running digital education programs that expand what's possible for children. Together, we also build exchange between students of both countries, strengthening the bilateral relationship through the next generation.</p>
+          <div class="article-meta">
+            <span class="article-date">2026年1月1日</span>
+            <span class="article-byline">Ubunture</span>
+          </div>
 
-          <div class="about-choice-grid">
-            <a class="about-choice-card reveal" href="./message.html">
-              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/me.png')"></div>
-              <div class="body">
-                <div class="eyebrow">Message</div>
-                <h3>Representative's Message</h3>
-              </div>
-            </a>
-            <a class="about-choice-card reveal" style="transition-delay:.05s" href="./name.html">
-              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/about.jpg')"></div>
-              <div class="body">
-                <div class="eyebrow">Name</div>
-                <h3>Origin of Ubunture</h3>
-              </div>
-            </a>
-            <a class="about-choice-card reveal" style="transition-delay:.1s" href="./mission.html">
-              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/story9.png')"></div>
-              <div class="body">
-                <div class="eyebrow">Mission, Vision & Value</div>
-                <h3>Mission</h3>
-              </div>
-            </a>
-            <a class="about-choice-card reveal" style="transition-delay:.15s" href="./history.html">
-              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/project-2.jpg')"></div>
-              <div class="body">
-                <div class="eyebrow">History</div>
-                <h3>History</h3>
-              </div>
-            </a>
+          <!-- アイキャッチ画像（差し替え） -->
+          <div class="article-hero" aria-hidden="true" style="background-image:url('../assets/img/REPLACE-ME.jpg')"></div>
+
+          <div class="article-body">
+            <p>ここにリード文（記事の要約・導入）を書きます。何が起きたのか、なぜ読者にとって意味があるのかを2〜3文で。</p>
+
+            <h2>見出し1</h2>
+            <p>本文です。段落ごとに &lt;p&gt; タグで囲みます。長い記事でも読みやすいよう、本文の幅は自動的に読みやすい文字数に収まるようになっています。</p>
+
+            <figure class="article-figure">
+              <img src="../assets/img/REPLACE-ME.jpg" alt="画像の説明（差し替え）">
+              <figcaption>画像のキャプション（差し替え、不要なら figure ごと削除可）</figcaption>
+            </figure>
+
+            <h2>見出し2</h2>
+            <p>続きの本文です。必要な数だけ &lt;h2&gt; と &lt;p&gt; を繰り返してください。</p>
+
+            <blockquote>引用やメンバーのコメントなどを目立たせたいときはこの blockquote を使います。</blockquote>
+
+            <p>まとめの段落。必要であれば note.com や関連ページへのリンクをここに置きます。</p>
+          </div>
+
+          <div class="center-cta" style="margin-top:clamp(32px,5vw,48px)">
+            <a class="btn btn-primary" href="./news.html">ニュース一覧に戻る</a>
           </div>
         </div>
       </section>
@@ -164,7 +170,7 @@
             <h3>CONTACT</h3>
             <p>
               <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
-              Representative: Daichi Sawachika
+              代表：澤近大地
             </p>
           </div>
         </div>
@@ -172,7 +178,7 @@
         <div class="foot-bottom">
           <div style="display:flex; align-items:center; gap:10px; color:#d0d0d0;">
             <img src="../assets/img/logo.png" alt="Ubunture logo" width="22" height="22" />
-            Ubunture UTokyo © 2026
+            Ubunture © 2026
           </div>
 
           <nav class="foot-nav" aria-label="Footer">

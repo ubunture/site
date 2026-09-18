@@ -1,41 +1,53 @@
+<!--
+  Article template (for writing news posts directly on this site)
+  ============================================
+  How to use:
+  1. Copy this file and save it as `en/article-YYYYMMDD-slug.html`
+     (e.g. en/article-20261001-pretoria-visit.html).
+  2. Replace the <title>, meta description, canonical, OGP tags, headings,
+     body text, publish date and images. Anything marked "REPLACE" needs editing.
+  3. Put images in assets/img/ and update the paths.
+  4. Once written, add one card linking to this page in the news list on
+     en/news.html (below NEWS_ITEMS_START/END). Duplicate ja/article-template.html
+     the same way for a Japanese version.
+  5. To change the shared header/footer, don't edit this file directly —
+     edit scripts/sync-header-footer.mjs and run
+     `node scripts/sync-header-footer.mjs` to update every page (this template
+     is intentionally excluded from that script, so adjust it by hand after
+     duplicating).
+-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Ubunture UTokyo</title>
-  <meta name="description"
-    content="About Ubunture UTokyo — read the Representative's Message, our Mission, Vision & Value, and our History." />
-  <link rel="canonical" href="https://ubunture.github.io/site/en/about.html" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <title>【REPLACE: Article Title】 | Ubunture UTokyo</title>
+  <meta name="description" content="【REPLACE: ~150 character summary】" />
+  <link rel="canonical" href="https://ubunture.github.io/site/en/article-template.html" />
+  <meta name="robots" content="noindex,nofollow" /> <!-- REPLACE with index,follow,max-image-preview:large when duplicating for a real article -->
   <meta name="theme-color" content="#0ea5e9" />
   <meta name="color-scheme" content="light dark" />
 
-  <!-- Language alternates -->
-  <link rel="alternate" hreflang="ja" href="https://ubunture.github.io/site/ja/about.html">
-  <link rel="alternate" hreflang="en" href="https://ubunture.github.io/site/en/about.html">
-  <link rel="alternate" hreflang="x-default" href="https://ubunture.github.io/site/ja/about.html">
+  <!-- Language alternates (point to the Japanese version if one exists, otherwise remove these two lines) -->
+  <link rel="alternate" hreflang="ja" href="https://ubunture.github.io/site/ja/article-template.html">
+  <link rel="alternate" hreflang="en" href="https://ubunture.github.io/site/en/article-template.html">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="https://ubunture.github.io/site/assets/favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32"
-    href="https://ubunture.github.io/site/assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16"
-    href="https://ubunture.github.io/site/assets/favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180"
-    href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ubunture.github.io/site/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ubunture.github.io/site/assets/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
   <link rel="icon" href="https://ubunture.github.io/site/favicon.ico">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Ubunture UTokyo" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="About | Ubunture UTokyo" />
-  <meta property="og:description"
-    content="Read the Representative's Message, our Mission, Vision & Value, and our History." />
-  <meta property="og:url" content="https://ubunture.github.io/site/en/about.html" />
-  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/hero1.jpg" />
+  <meta property="og:title" content="【REPLACE: Article Title】 | Ubunture UTokyo" />
+  <meta property="og:description" content="【REPLACE: summary】" />
+  <meta property="og:url" content="https://ubunture.github.io/site/en/article-template.html" />
+  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/REPLACE-ME.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -67,15 +79,15 @@
         <div class="brand-wrap">
           <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
           <div class="lang-switch" role="group" aria-label="Language switch">
-            <a class="lang-btn" href="../ja/about.html" role="button" aria-pressed="false">JP</a>
-            <a class="lang-btn" href="../en/about.html" role="button" aria-pressed="true">EN</a>
+            <a class="lang-btn" href="../ja/article-template.html" role="button" aria-pressed="false">JP</a>
+            <a class="lang-btn" href="../en/article-template.html" role="button" aria-pressed="true">EN</a>
           </div>
         </div>
         <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
           <li role="none" class="has-dropdown">
-            <a role="menuitem" href="./about.html" class="dropdown-toggle active" aria-haspopup="true">About<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <a role="menuitem" href="./about.html" class="dropdown-toggle" aria-haspopup="true">About<span class="dropdown-caret" aria-hidden="true"></span></a>
             <ul class="dropdown-menu" role="menu" aria-label="About">
               <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
               <li role="none"><a role="menuitem" href="./name.html">Origin of Ubunture</a></li>
@@ -91,7 +103,7 @@
               <li role="none"><a role="menuitem" href="./recruit.html">Recruit</a></li>
             </ul>
           </li>
-          <li role="none"><a role="menuitem" href="./news.html">News</a></li>
+          <li role="none"><a role="menuitem" href="./news.html" class="active">News</a></li>
           <li role="none" class="has-dropdown">
             <a role="menuitem" href="./contact.html" class="dropdown-toggle" aria-haspopup="true">Contact<span class="dropdown-caret" aria-hidden="true"></span></a>
             <ul class="dropdown-menu" role="menu" aria-label="Contact">
@@ -106,51 +118,46 @@
     <!-- Main Content -->
     <main id="main">
       <!-- Subpage Hero -->
-      <section class="subpage-hero hero--about subpage-hero--plain" id="top" aria-label="About">
+      <section class="subpage-hero hero--news" id="top" aria-label="News">
         <div class="container inner">
-          <div class="eyebrow">About</div>
-          <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">About Ubunture UTokyo</h1>
-          <p class="lead-xl">A student organization where University of Tokyo students and South African university
-            students collaborate to address educational inequality through digital education.</p>
-          <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> About</div>
+          <div class="eyebrow">News</div>
+          <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">【REPLACE: Article Title】</h1>
+          <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> <a href="./news.html">News</a> <span> / </span> Article</div>
         </div>
       </section>
 
-      <section aria-labelledby="about-choice-title" style="padding-top:clamp(24px,3vw,32px)">
+      <!-- Article -->
+      <section id="article" class="about" style="padding-top:clamp(24px,3vw,32px)">
         <div class="container">
-          <div class="eyebrow">About</div>
-          <h2 id="about-choice-title">Learn More About Us</h2>
-          <p class="section-lead">Ubunture UTokyo is a student organization from the University of Tokyo that drives an international collaboration project with South Africa. University of Tokyo and South African university students collaborate as equal partners, tackling South Africa's education gap by developing and running digital education programs that expand what's possible for children. Together, we also build exchange between students of both countries, strengthening the bilateral relationship through the next generation.</p>
+          <div class="article-meta">
+            <span class="article-date">January 1, 2026</span>
+            <span class="article-byline">Ubunture UTokyo</span>
+          </div>
 
-          <div class="about-choice-grid">
-            <a class="about-choice-card reveal" href="./message.html">
-              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/me.png')"></div>
-              <div class="body">
-                <div class="eyebrow">Message</div>
-                <h3>Representative's Message</h3>
-              </div>
-            </a>
-            <a class="about-choice-card reveal" style="transition-delay:.05s" href="./name.html">
-              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/about.jpg')"></div>
-              <div class="body">
-                <div class="eyebrow">Name</div>
-                <h3>Origin of Ubunture</h3>
-              </div>
-            </a>
-            <a class="about-choice-card reveal" style="transition-delay:.1s" href="./mission.html">
-              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/story9.png')"></div>
-              <div class="body">
-                <div class="eyebrow">Mission, Vision & Value</div>
-                <h3>Mission</h3>
-              </div>
-            </a>
-            <a class="about-choice-card reveal" style="transition-delay:.15s" href="./history.html">
-              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/project-2.jpg')"></div>
-              <div class="body">
-                <div class="eyebrow">History</div>
-                <h3>History</h3>
-              </div>
-            </a>
+          <!-- Featured image (replace) -->
+          <div class="article-hero" aria-hidden="true" style="background-image:url('../assets/img/REPLACE-ME.jpg')"></div>
+
+          <div class="article-body">
+            <p>Write your lead paragraph here — a 2–3 sentence summary of what happened and why it matters to readers.</p>
+
+            <h2>Heading 1</h2>
+            <p>Body text goes here, one paragraph per &lt;p&gt; tag. The body column is capped at a comfortable reading width automatically, even on wide screens.</p>
+
+            <figure class="article-figure">
+              <img src="../assets/img/REPLACE-ME.jpg" alt="Image description (replace)">
+              <figcaption>Image caption (replace, or delete the whole figure if not needed)</figcaption>
+            </figure>
+
+            <h2>Heading 2</h2>
+            <p>More body text. Repeat &lt;h2&gt; and &lt;p&gt; as many times as you need.</p>
+
+            <blockquote>Use this blockquote to highlight a quote or a member's comment.</blockquote>
+
+            <p>Closing paragraph. Link to note.com or related pages here if useful.</p>
+          </div>
+
+          <div class="center-cta" style="margin-top:clamp(32px,5vw,48px)">
+            <a class="btn btn-primary" href="./news.html">Back to News</a>
           </div>
         </div>
       </section>

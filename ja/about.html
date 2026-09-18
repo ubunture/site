@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>団体理念 | Ubunture — 共に未来をつくる</title>
-  <meta name="description" content="私たちUbuntureは、ICT教育を通じて「学びの自由」と「夢を見る力」を世界中の子供たちに広げる活動を行う東京大学発の学生団体です。" />
+  <title>About | Ubunture</title>
+  <meta name="description"
+    content="Ubuntureについて——代表メッセージ、Mission・Vision・Value、沿革をご紹介します。" />
   <link rel="canonical" href="https://ubunture.github.io/site/ja/about.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0ea5e9" />
@@ -30,10 +31,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ubunture" />
   <meta property="og:locale" content="ja_JP" />
-  <meta property="og:title" content="団体理念 | Ubunture — 共に未来をつくる" />
-  <meta property="og:description" content="ICT教育を通じて「学びの自由」と「夢を見る力」を広げる学生団体Ubuntureの団体理念とビジョン。" />
+  <meta property="og:title" content="About | Ubunture" />
+  <meta property="og:description" content="代表メッセージ、Mission・Vision・Value、沿革をご紹介します。" />
   <meta property="og:url" content="https://ubunture.github.io/site/ja/about.html" />
-  <meta property="og:image" content="https://ubunture.github.io/site/assets/og/ubunture-og.jpg" />
+  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/hero1.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -63,26 +64,40 @@
     <header>
       <nav class="nav" aria-label="Primary">
         <div class="brand-wrap">
-          <a class="brand" href="./index.html">
-            <img src="../assets/img/logo.png" alt="Ubunture" />
-            <span>Ubunture</span>
-          </a>
+          <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
           <div class="lang-switch" role="group" aria-label="Language switch">
             <a class="lang-btn" href="../ja/about.html" role="button" aria-pressed="true">JP</a>
             <a class="lang-btn" href="../en/about.html" role="button" aria-pressed="false">EN</a>
           </div>
         </div>
-        <button class="menu-btn" aria-expanded="false"
-          aria-controls="menu"><span></span><span></span><span></span></button>
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
-          <li role="none"><a role="menuitem" href="./about.html" class="active">About</a></li>
-          <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
-          <li role="none"><a role="menuitem" href="./history.html">History</a></li>
-          <!-- <li role="none"><a role="menuitem" href="./project.html">Project</a></li> -->
-          <li role="none"><a role="menuitem" href="./team.html">Team</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./about.html" class="dropdown-toggle active" aria-haspopup="true">About<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="About">
+              <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
+              <li role="none"><a role="menuitem" href="./name.html">名前の由来</a></li>
+              <li role="none"><a role="menuitem" href="./mission.html">Mission・Vision・Value</a></li>
+              <li role="none"><a role="menuitem" href="./history.html">History</a></li>
+            </ul>
+          </li>
+          <li role="none"><a role="menuitem" href="./our-activity.html">Our Activity</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./team.html" class="dropdown-toggle" aria-haspopup="true">Team<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="Team">
+              <li role="none"><a role="menuitem" href="./team.html">Member</a></li>
+              <li role="none"><a role="menuitem" href="./recruit.html">Recruit</a></li>
+            </ul>
+          </li>
           <li role="none"><a role="menuitem" href="./news.html">News</a></li>
-          <li role="none"><a role="menuitem" href="./support.html">Support</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./contact.html" class="dropdown-toggle" aria-haspopup="true">Contact<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="Contact">
+              <li role="none"><a role="menuitem" href="./contact.html">Contact us</a></li>
+              <li role="none"><a role="menuitem" href="./support.html">Support</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
@@ -90,113 +105,52 @@
     <!-- Main Content -->
     <main id="main">
       <!-- Subpage Hero -->
-      <section class="subpage-hero hero--about" id="top" aria-label="About">
+      <section class="subpage-hero hero--about subpage-hero--plain" id="top" aria-label="About">
         <div class="container inner">
           <div class="eyebrow">About</div>
           <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">Ubuntureについて</h1>
-          <p class="lead-xl">東京大学の学生と南アフリカの大学生が協働し、ICT教育を通じて南アフリカの教育格差に向き合う学生団体です。</p>
-          <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> Ubuntureについて</div>
+          <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> About</div>
         </div>
       </section>
 
-      <!-- 名前の由来 -->
-      <section id="org" class="about org" aria-labelledby="org-title" style="padding-top:clamp(24px,3vw,32px)">
+      <section aria-labelledby="about-choice-title" style="padding-top:clamp(24px,3vw,32px)">
         <div class="container">
-          <div class="eyebrow">Name</div>
-          <h2 id="org-title">名前の由来</h2>
+          <div class="eyebrow">About</div>
+          <p class="section-lead">Ubuntureは東京大学の学生による南アフリカとの国際協働プロジェクトを推進する団体です。東京大学と南アフリカの大学生が対等な立場で協働し、ICT教育の開発・実践を通じて南アフリカの教育格差に取り組み、子どもたちの可能性と未来を広げます。加えて、両国の大学生の交流を通じ、若者たちを通じた二国間の関係強化に努めます。</p>
 
-          <div class="grid" style="align-items:center">
-            <div>
-              <p>団体名は、南アフリカを含むアフリカ南部で重視されてきた思想「<strong>Ubuntu（ウブントゥ）</strong>」と「<strong>Future（未来）</strong>」を組み合わせたものです。
-              </p>
-
-              <p>
-                Ubuntuは「あなたがいるから私がいる」という言葉に示されるように、人は他者との関係性の中で生き、互いに支え合うことで自分自身も形づくられるという考え方を含んでいます。Ubuntureはこの思想を出発点に、誰かが一方的に支援するのではなく、異なる背景を持つ人々が学び合いながら未来をつくる姿勢を大切にします。
-              </p>
-
-              <blockquote class="org-mission">
-                他者との関係の中で未来をひらく。子どもたちがICTを通じて学びの選択肢を広げられる社会を目指します。
-              </blockquote>
-            </div>
-
-            <figure class="ph" aria-hidden="true" style="background-image:url('../assets/img/about.jpg')"></figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- Mission -->
-      <section id="mission" aria-labelledby="mission-title">
-        <div class="container">
-          <div class="eyebrow">Mission</div>
-          <h2 id="mission-title">ミッション</h2>
-          <p class="mission-statement">未来をひらくICT教育を、すべての子どもに。</p>
-          <p>
-            本団体は、ICT機器の有無、教員体制、言語、家庭環境に左右されにくいICT教育のあり方を探究し、南アフリカの子どもたちが自身の未来の可能性にアクセスできる機会を広げます。そのために、新しいICTの教材・授業を開発し、現地の教育現場とともに実践し、改善していきます。
-          </p>
-          <p>
-            ICT教育を単にパソコンやインターネットの使い方を教えるものとしてではなく、論理的思考能力を総合的に育て活用できるような教育として捉えています。手順化・条件分岐・反復・問題分解・論理的説明・試行錯誤といった考え方に、子どもたちが「自分も理解できる・使える」と感じながら触れることを目指します。
-          </p>
-        </div>
-      </section>
-
-      <!-- Vision -->
-      <section id="vision" aria-labelledby="vision-title">
-        <div class="container">
-          <div class="eyebrow">Vision</div>
-          <h2 id="vision-title">ビジョン</h2>
-          <p class="vision-statement">学生同士の対等な協働を通じて、国際教育協力の新しいかたちをつくる。</p>
-          <p>東京大学の学生と南アフリカの学生が、南アフリカの子どもたちに向けたICT教育プログラムを共につくることで、大学生を主体とした新しい国際教育協力の枠組みを創出します。</p>
-          <p>
-            南アフリカの学生や教育現場が持つ地域への理解・教育制度への知見・子どもたちへの距離の近さと、東京大学の学生が持つ学際的な知識とプロジェクト運営力を組み合わせることで、海外団体による一方向的な支援ではなく、<strong>対等な立場から現地の視点を取り入れた双方向的な協働</strong>を実現します。また、関わる大学生自身も、国際協力・教育・社会課題への向き合い方を学び合います。
-          </p>
-        </div>
-      </section>
-
-      <!-- Values -->
-      <section id="values" aria-labelledby="values-title">
-        <div class="container">
-          <div class="eyebrow">Values</div>
-          <h2 id="values-title">大切にしていること</h2>
-          <div class="values-grid">
-            <div class="value-card reveal">
-              <div class="v-icon" aria-hidden="true">01</div>
-              <h3>新しさ</h3>
-              <p>既存の国際協力やICT教育のあり方にとらわれず、機器に依存しないICT教育、学生主体の国際協働、現地と共につくる教材開発など、新しい教育支援の形を探究します。</p>
-            </div>
-            <div class="value-card reveal" style="transition-delay:.05s">
-              <div class="v-icon" aria-hidden="true">02</div>
-              <h3>現地協働</h3>
-              <p>現地の学生・教員・教育機関を単なる協力先としてではなく、共に考え、共に実践し、共に改善するパートナーとして尊重します。</p>
-            </div>
-            <div class="value-card reveal" style="transition-delay:.1s">
-              <div class="v-icon" aria-hidden="true">03</div>
-              <h3>小さく試し、改善する</h3>
-              <p>課題を分析するだけで終わらず、実際に教材を作り、授業を行い、現場から学び、改善を重ねます。小さくても行動し続ける姿勢を大切にします。</p>
-            </div>
-            <div class="value-card reveal" style="transition-delay:.15s">
-              <div class="v-icon" aria-hidden="true">04</div>
-              <h3>応答性</h3>
-              <p>現地の子どもたち・教員・学生からの反応やフィードバックに向き合い、活動内容を柔軟に変えていきます。一度決めた計画に固執せず、現場の声に応答しながら改善します。</p>
-            </div>
-            <div class="value-card reveal" style="transition-delay:.2s">
-              <div class="v-icon" aria-hidden="true">05</div>
-              <h3>子ども起点</h3>
-              <p>活動の中心には、南アフリカの子どもたちの学びと未来を置きます。子どもたち自身の将来の選択肢が広がり、より幸せに生きられることを最も重視します。</p>
-            </div>
-          </div>
-
-          <!-- CTA -->
-          <div class="center-cta" style="margin-top:clamp(40px,6vw,72px)">
-            <a class="btn btn-primary"
-              href="mailto:ubunture.tokyo@gmail.com?subject=%5BUbunture%5D%20お問い合わせ%20%2F%20協働のご相談&body=お名前：%0D%0Aご所属：%0D%0A内容：%0D%0A">
-              お問い合わせ（メールを開く）
+          <div class="about-choice-grid">
+            <a class="about-choice-card reveal" href="./message.html">
+              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/me.png')"></div>
+              <div class="body">
+                <div class="eyebrow">Message</div>
+                <h3>代表メッセージ</h3>
+              </div>
             </a>
-            <a class="btn btn-primary" href="./message.html">私たちの想いを読む</a>
+            <a class="about-choice-card reveal" style="transition-delay:.05s" href="./name.html">
+              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/about.jpg')"></div>
+              <div class="body">
+                <div class="eyebrow">Name</div>
+                <h3>名前の由来</h3>
+              </div>
+            </a>
+            <a class="about-choice-card reveal" style="transition-delay:.1s" href="./mission.html">
+              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/story9.png')"></div>
+              <div class="body">
+                <div class="eyebrow">Mission・Vision・Value</div>
+                <h3>Mission</h3>
+              </div>
+            </a>
+            <a class="about-choice-card reveal" style="transition-delay:.15s" href="./history.html">
+              <div class="fig" aria-hidden="true" style="background-image:url('../assets/img/project-2.jpg')"></div>
+              <div class="body">
+                <div class="eyebrow">History</div>
+                <h3>沿革</h3>
+              </div>
+            </a>
           </div>
         </div>
       </section>
     </main>
-
 
     <!-- Footer -->
     <footer>
@@ -205,9 +159,8 @@
           <div class="cta">
             <h3>CONTACT</h3>
             <p>
-              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">
-                ubunture.tokyo@gmail.com
-              </a>
+              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
+              代表：澤近大地
             </p>
           </div>
         </div>
@@ -220,13 +173,10 @@
 
           <nav class="foot-nav" aria-label="Footer">
             <a href="./about.html">About</a>
-            <a href="./message.html">Message</a>
-            <a href="./history.html">History</a>
-            <!-- <a href="./project.html">Projects</a> -->
+            <a href="./our-activity.html">Our Activity</a>
             <a href="./team.html">Team</a>
             <a href="./news.html">News</a>
-            <a href="./support.html">Support</a>
-            <a href="#top">Top</a>
+            <a href="./contact.html">Contact</a>
           </nav>
 
           <div class="social-links" style="display:flex; gap:14px;">
@@ -237,7 +187,7 @@
               <img src="../assets/img/medium.png" alt="Medium" width="40" height="40" loading="lazy" />
             </a>
             <a href="https://x.com/ubunture" target="_blank" rel="noopener">
-              <img src="../assets/img/x.png" alt="X" width="40" height="40" loading="lazy" />
+              <img src="../assets/img/x.png" alt="X (formerly Twitter)" width="40" height="40" loading="lazy" />
             </a>
             <a href="https://instagram.com/ubunture" target="_blank" rel="noopener">
               <img src="../assets/img/instagram.webp" alt="Instagram" width="40" height="40" loading="lazy" />
@@ -252,6 +202,7 @@
         </div>
       </div>
     </footer>
+
   </div>
   <script src="../assets/js/main.js"></script>
 </body>

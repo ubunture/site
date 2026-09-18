@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>沿革・現地コーディネーター | Ubunture — 想いと活動の歩み</title>
-  <meta name="description" content="Ubuntureのこれまでの歩み（沿革）と、南アフリカ・ヨハネスブルグ現地コーディネーター笠井凜心の紹介。私たちの活動の軌跡と現地での体制をお伝えします。" />
+  <title>沿革 | Ubunture — 想いと活動の歩み</title>
+  <meta name="description" content="Ubuntureのこれまでの歩み（沿革）と、南アフリカ・ヨハネスブルグ現地コーディネーター笠井凜心の紹介。私たちの活動の軌跡をお伝えします。" />
   <link class="canonical" href="https://ubunture.github.io/site/ja/history.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0ea5e9" />
@@ -30,10 +30,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ubunture" />
   <meta property="og:locale" content="ja_JP" />
-  <meta property="og:title" content="沿革・現地コーディネーター | Ubunture — 想いと活動の歩み" />
-  <meta property="og:description" content="学生団体Ubuntureの歩みと、ヨハネスブルグ現地コーディネーター笠井凜心の紹介。" />
+  <meta property="og:title" content="沿革 | Ubunture — 想いと活動の歩み" />
+  <meta property="og:description" content="学生団体Ubuntureのこれまでの歩みと、ヨハネスブルグ現地コーディネーター笠井凜心の紹介。" />
   <meta property="og:url" content="https://ubunture.github.io/site/ja/history.html" />
-  <meta property="og:image" content="https://ubunture.github.io/site/assets/og/ubunture-og.jpg" />
+  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/hero1.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -75,9 +75,9 @@
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      background: #0ea5e9;
-      border: 3px solid #111;
-      box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.25);
+      background: var(--brand);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 2px rgba(43, 93, 64, 0.28);
       z-index: 2;
     }
     .history-timeline .block::after {
@@ -87,62 +87,27 @@
       top: 17px;
       bottom: calc(-1 * clamp(32px, 6vw, 56px) - 17px);
       width: 4px;
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(0, 0, 0, 0.12);
       z-index: 1;
     }
     .history-timeline .block:last-child::after {
       bottom: -80px;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-    }
-    .past-members-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-      gap: 12px;
-      margin-top: 14px;
-      margin-bottom: 24px;
-    }
-    .past-member-card {
-      background: #262629;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: var(--shadow-1);
-      display: flex;
-      flex-direction: column;
-    }
-    .past-member-card .ph {
-      width: 100%;
-      aspect-ratio: 1/1;
-      background-size: cover;
-      background-position: center;
-      background-color: #555;
-    }
-    .past-member-card .name {
-      padding: 6px 4px;
-      font-size: 11px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.2;
-    }
-    .past-member-card .name-en {
-      font-size: 9px;
-      opacity: 0.75;
-      margin-top: 1px;
-      display: block;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0) 100%);
     }
     .coordinator-frame {
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 12px;
-      padding: clamp(16px, 3vw, 24px);
+      border: 0;
+      border-top: 1px solid var(--line);
+      background: none;
+      border-radius: 0;
+      padding: clamp(16px, 3vw, 24px) 0 0;
       margin-top: 18px;
-      box-shadow: var(--shadow-1);
+      box-shadow: none;
     }
     .coordinator-frame h4 {
       margin-top: 0;
       margin-bottom: 12px;
       font-size: 14px;
-      color: #0ea5e9;
+      color: var(--brand);
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -169,12 +134,12 @@
       border-radius: 50%;
       background-size: cover;
       background-position: center;
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      border: 2px solid var(--line);
     }
     .coordinator-frame .co-profile .name {
       font-size: 16px;
       font-weight: 800;
-      color: #fff;
+      color: var(--ink);
       margin: 0 0 4px;
     }
     .coordinator-frame .co-profile .name small {
@@ -185,17 +150,17 @@
     }
     .coordinator-frame .co-profile .title {
       font-size: 12px;
-      color: #bdbdbd;
+      color: var(--ink-weak);
       margin-bottom: 8px;
       font-weight: 600;
     }
     .coordinator-frame .co-profile .bio {
       font-size: 13px;
       line-height: 1.6;
-      color: #d1d5db;
+      color: var(--ink-body);
     }
     .coordinator-frame .co-voice {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid var(--line);
       padding-top: 14px;
       margin-top: 14px;
       display: grid;
@@ -218,14 +183,14 @@
       border-radius: 8px;
       background-size: cover;
       background-position: center;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--line);
     }
     .coordinator-frame .co-voice blockquote {
       margin: 0;
       padding: 0;
       font-size: 13px;
       line-height: 1.6;
-      color: #d1d5db;
+      color: var(--ink-body);
       font-style: italic;
     }
   </style>
@@ -248,26 +213,40 @@
     <header>
       <nav class="nav" aria-label="Primary">
         <div class="brand-wrap">
-          <a class="brand" href="./index.html">
-            <img src="../assets/img/logo.png" alt="Ubunture" />
-            <span>Ubunture</span>
-          </a>
+          <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
           <div class="lang-switch" role="group" aria-label="Language switch">
             <a class="lang-btn" href="../ja/history.html" role="button" aria-pressed="true">JP</a>
             <a class="lang-btn" href="../en/history.html" role="button" aria-pressed="false">EN</a>
           </div>
         </div>
-        <button class="menu-btn" aria-expanded="false"
-          aria-controls="menu"><span></span><span></span><span></span></button>
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
-          <li role="none"><a role="menuitem" href="./about.html">About</a></li>
-          <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
-          <li role="none"><a role="menuitem" href="./history.html" class="active">History</a></li>
-          <!-- <li role="none"><a role="menuitem" href="./project.html">Project</a></li> -->
-          <li role="none"><a role="menuitem" href="./team.html">Team</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./about.html" class="dropdown-toggle active" aria-haspopup="true">About<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="About">
+              <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
+              <li role="none"><a role="menuitem" href="./name.html">名前の由来</a></li>
+              <li role="none"><a role="menuitem" href="./mission.html">Mission・Vision・Value</a></li>
+              <li role="none"><a role="menuitem" href="./history.html" class="active">History</a></li>
+            </ul>
+          </li>
+          <li role="none"><a role="menuitem" href="./our-activity.html">Our Activity</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./team.html" class="dropdown-toggle" aria-haspopup="true">Team<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="Team">
+              <li role="none"><a role="menuitem" href="./team.html">Member</a></li>
+              <li role="none"><a role="menuitem" href="./recruit.html">Recruit</a></li>
+            </ul>
+          </li>
           <li role="none"><a role="menuitem" href="./news.html">News</a></li>
-          <li role="none"><a role="menuitem" href="./support.html">Support</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./contact.html" class="dropdown-toggle" aria-haspopup="true">Contact<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="Contact">
+              <li role="none"><a role="menuitem" href="./contact.html">Contact us</a></li>
+              <li role="none"><a role="menuitem" href="./support.html">Support</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
@@ -296,7 +275,7 @@
               <ul>
                 <li>学生団体「Ubunture」設立。</li>
               </ul>
-              <h4 style="font-size: 14px; margin: 16px 0 8px; color: #bdbdbd; font-weight: 800;">当時のメンバー</h4>
+              <h4 style="font-size: 14px; margin: 16px 0 8px; color: var(--ink-weak); font-weight: 800;">当時のメンバー</h4>
               <div class="past-members-grid">
                 <div class="past-member-card">
                   <div class="ph" style="background-image:url('../assets/img/member-1.png')"></div>
@@ -340,7 +319,10 @@
             <article class="block">
               <h3>2025年 12月</h3>
               <ul>
-                <li>南アフリカ・ヨハネスブルグへの第1回渡航および現地校での実証授業を実施。</li>
+                <li>南アフリカ（ヨハネスブルグ・ケープタウン）への第1回渡航を実施。</li>
+                <li><strong>試験授業実践：</strong>2校でICT教材を用いた授業を実践し、授業前後で子どもたちのテスト結果の向上を確認。</li>
+                <li><strong>大学訪問：</strong>プレトリア大学・ステレンボシュ大学など2校を訪問し、大学生との協働可能性を確認。現地大学との連携を構築。</li>
+                <li><strong>現地視察：</strong>スラム街を視察し、電気・水道インフラが未整備な実態を確認。</li>
               </ul>
 
               <div class="coordinator-frame">
@@ -369,12 +351,20 @@
             <article class="block">
               <h3>2026年 4月</h3>
               <ul>
-                <li>新体制へ移行し、三谷愛利亜が代表に就任。創設者の澤近大地と共に、アンプラグドICT教育プログラム本格導入に向け活動を展開。</li>
+                <li>新体制へ移行し、三谷愛利亜が代表に就任。創設者の澤近大地と共に、国際協働型ICT教育プログラムの本格開発に向け活動を展開。</li>
+              </ul>
+            </article>
+
+            <article class="block">
+              <h3>現在</h3>
+              <ul>
+                <li>創設者の澤近大地が代表に就任し、運営体制を刷新。現在は会員13名で活動しています。</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
+
     </main>
 
     <!-- Footer -->
@@ -384,10 +374,8 @@
           <div class="cta">
             <h3>CONTACT</h3>
             <p>
-              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">
-                ubunture.tokyo@gmail.com
-              </a><br />
-              代表：三谷愛利亜
+              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
+              代表：澤近大地
             </p>
           </div>
         </div>
@@ -400,13 +388,10 @@
 
           <nav class="foot-nav" aria-label="Footer">
             <a href="./about.html">About</a>
-            <a href="./message.html">Message</a>
-            <a href="./history.html">History</a>
-            <!-- <a href="./project.html">Projects</a> -->
+            <a href="./our-activity.html">Our Activity</a>
             <a href="./team.html">Team</a>
             <a href="./news.html">News</a>
-            <a href="./support.html">Support</a>
-            <a href="#top">Top</a>
+            <a href="./contact.html">Contact</a>
           </nav>
 
           <div class="social-links" style="display:flex; gap:14px;">
@@ -417,7 +402,7 @@
               <img src="../assets/img/medium.png" alt="Medium" width="40" height="40" loading="lazy" />
             </a>
             <a href="https://x.com/ubunture" target="_blank" rel="noopener">
-              <img src="../assets/img/x.png" alt="X" width="40" height="40" loading="lazy" />
+              <img src="../assets/img/x.png" alt="X (formerly Twitter)" width="40" height="40" loading="lazy" />
             </a>
             <a href="https://instagram.com/ubunture" target="_blank" rel="noopener">
               <img src="../assets/img/instagram.webp" alt="Instagram" width="40" height="40" loading="lazy" />

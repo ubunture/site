@@ -1,0 +1,40 @@
+name: Update news from note.com RSS
+
+on:
+  schedule:
+    - cron: "0 21 * * *"   # 06:00 JST daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "update-news"
+  cancel-in-progress: false
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch latest note.com posts and update news cards
+        run: node scripts/update-news.mjs
+
+      - name: Commit changes if any
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ja/index.html ja/news.html
+          git commit -m "chore: update latest news from note.com RSS"
+          git push

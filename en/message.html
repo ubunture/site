@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Our Thoughts | Ubunture UTokyo</title>
   <meta name="description"
-    content="The thoughts and visions of Ubunture UTokyo Representative Aria Mitani and Founder Daichi Sawachika." />
+    content="The thoughts and vision of Ubunture UTokyo Representative & Founder Daichi Sawachika." />
   <link class="canonical" href="https://ubunture.github.io/site/en/message.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0ea5e9" />
@@ -33,9 +33,9 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Our Thoughts | Ubunture UTokyo" />
   <meta property="og:description"
-    content="A message from Ubunture UTokyo Representative Aria Mitani and Founder Daichi Sawachika." />
+    content="A message from Ubunture UTokyo Representative & Founder Daichi Sawachika." />
   <meta property="og:url" content="https://ubunture.github.io/site/en/message.html" />
-  <meta property="og:image" content="https://ubunture.github.io/site/assets/og/ubunture-og.jpg" />
+  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/hero1.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -65,26 +65,40 @@
     <header>
       <nav class="nav" aria-label="Primary">
         <div class="brand-wrap">
-          <a class="brand" href="./index.html">
-            <img src="../assets/img/logo.png" alt="Ubunture" />
-            <span>Ubunture</span>
-          </a>
+          <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
           <div class="lang-switch" role="group" aria-label="Language switch">
             <a class="lang-btn" href="../ja/message.html" role="button" aria-pressed="false">JP</a>
             <a class="lang-btn" href="../en/message.html" role="button" aria-pressed="true">EN</a>
           </div>
         </div>
-        <button class="menu-btn" aria-expanded="false"
-          aria-controls="menu"><span></span><span></span><span></span></button>
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
-          <li role="none"><a role="menuitem" href="./about.html">About</a></li>
-          <li role="none"><a role="menuitem" href="./message.html" class="active">Message</a></li>
-          <li role="none"><a role="menuitem" href="./history.html">History</a></li>
-          <!-- <li role="none"><a role="menuitem" href="./project.html">Project</a></li> -->
-          <li role="none"><a role="menuitem" href="./team.html">Team</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./about.html" class="dropdown-toggle active" aria-haspopup="true">About<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="About">
+              <li role="none"><a role="menuitem" href="./message.html" class="active">Message</a></li>
+              <li role="none"><a role="menuitem" href="./name.html">Origin of Ubunture</a></li>
+              <li role="none"><a role="menuitem" href="./mission.html">Mission, Vision & Value</a></li>
+              <li role="none"><a role="menuitem" href="./history.html">History</a></li>
+            </ul>
+          </li>
+          <li role="none"><a role="menuitem" href="./our-activity.html">Our Activity</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./team.html" class="dropdown-toggle" aria-haspopup="true">Team<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="Team">
+              <li role="none"><a role="menuitem" href="./team.html">Member</a></li>
+              <li role="none"><a role="menuitem" href="./recruit.html">Recruit</a></li>
+            </ul>
+          </li>
           <li role="none"><a role="menuitem" href="./news.html">News</a></li>
-          <li role="none"><a role="menuitem" href="./support.html">Support</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./contact.html" class="dropdown-toggle" aria-haspopup="true">Contact<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="Contact">
+              <li role="none"><a role="menuitem" href="./contact.html">Contact us</a></li>
+              <li role="none"><a role="menuitem" href="./support.html">Support</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
@@ -92,7 +106,7 @@
     <!-- Main Content -->
     <main id="main">
       <!-- Subpage Hero -->
-      <section class="subpage-hero hero--message" id="top" aria-label="Our Thoughts">
+      <section class="subpage-hero hero--message subpage-hero--plain" id="top" aria-label="Our Thoughts">
         <div class="container inner">
           <div class="eyebrow">Message</div>
           <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">Our Thoughts</h1>
@@ -105,42 +119,25 @@
 
       <!-- Representative Message -->
       <section id="representative" class="about profile" aria-labelledby="rep-title"
-        style="padding-top:clamp(24px,3vw,32px); padding-bottom:clamp(24px,3vw,32px);">
+        style="padding-top:clamp(24px,3vw,32px);">
         <div class="container" style="margin-bottom: clamp(24px, 4vw, 40px);">
-          <div class="eyebrow">Representative</div>
-          <h2 class="h-section" style="margin-top: 6px;">Representative</h2>
-        </div>
-        <div class="container head">
-          <figure class="photo" aria-hidden="true">
-            <img src="../assets/img/my%20photo%20-%20Aria%20MITANI.jpg" alt="Portrait of Aria Mitani">
-          </figure>
+          <div class="eyebrow">Representative Message</div>
+          <h2 class="h-section" id="rep-title" style="margin-top: 6px;">Representative's Message</h2>
 
-          <div class="txt">
-            <div class="eyebrow">Profile</div>
-            <h3 id="rep-title" class="name">
-              Aria Mitani <small class="en">三谷 愛利亜</small>
-            </h3>
-            <p class="lead">2nd year, College of Arts & Sciences (Humanities I), The University of Tokyo /
-              Representative, Ubunture UTokyo</p>
-            <p class="desc"
-              style="margin-top: 15px; color: #eaeaea; line-height: 1.7; font-size: clamp(15px,2vw,16px);">
-              Has collaborated with students from Japan and abroad through a field program in the Philippines focusing
-              on urban and agricultural development and poverty, and by organizing student conferences in Boston and
-              Tokyo. Active in Ubunture UTokyo since its launch last year, exploring approaches to educational cooperation
-              through fundraising, curriculum design, and field visits. Aims to promote international educational
-              cooperation that expands children's possibilities by connecting people across countries and backgrounds.
-            </p>
+          <div class="rep-msg-lead">
+            <figure class="rep-msg-photo" aria-hidden="true">
+              <img src="../assets/img/me.png" alt="Daichi Sawachika">
+            </figure>
+            <p class="rep-msg-affil">2nd year, College of Arts &amp; Sciences (Natural Sciences I), The University of Tokyo</p>
           </div>
+
+          <p style="color:var(--ink-body); font-size:clamp(15px,1.6vw,17px); line-height:1.9;">Starting in October 2026, Ubunture UTokyo adopts a new mission: "Youth are Our Future."<br>Until now, the primary focus of our work has been children aged 18 and under. Of course, educating children will remain at the core of what Ubunture UTokyo does. At the same time, looking back on our activities, we realized that what we are trying to create is not only learning for children — it also includes the growth of the young people who engage with children, discover challenges, and work to build the future together with people from different backgrounds.<br>This realization grew out of our fieldwork in South Africa during the 2025 academic year. Working on the ground, we felt that we, as Japanese alone, could never fully understand the circumstances local children face, and that occasional visits alone have real limits when it comes to sustained engagement. At the same time, we were warmly welcomed by many people at the South African universities we visited. That experience showed us that universities hold real potential as places to understand local challenges, engage with them continuously, and create new value.<br>So starting in 2026, we are moving forward with a new partnership model: University of Tokyo students and South African university students collaborating as equal partners to address challenges on the ground. Bringing together the on-the-ground perspective of South African students and the academic knowledge of the University of Tokyo, we think through challenges together, learn together, and build solutions together. This is not the one-directional "from Japan to South Africa" model of our past activities — it is international collaboration in which young people from both countries learn, think, and build the future together.<br>Around these university students are professors, companies, embassies, and public institutions, among others, supporting us from many different positions. With children's learning at the center, university students gather around them, and universities, companies, and public institutions become involved as well. We are now working to build a larger framework for international collaboration that starts from engaging directly with children. This framework does more than change children's educational environment — for the young people who take part, it can also become an opportunity to develop agency and a global perspective, through the experience of working with people of different cultures and values, discovering challenges themselves, and taking action.<br>As global instability grows and the importance of cross-border collaboration increases, we believe it is essential to rethink our relationship with the Global South beyond a simple framework of "those who support" and "those who are supported." Within that, South Africa is one of the key hubs for economics, education, and research on the African continent.<br>That is why we believe it is deeply meaningful for university students from Japan and South Africa to face challenges together, learn together, and grow together. And as universities, companies, government, and many others become involved in that process, new collaboration and new value are created. This is precisely why we have adopted the mission "Youth are Our Future."<br>Of course, our first and unchanging goal remains the growth of children and closing the education gap. To realize that, starting from children's education, we will keep expanding this work into an effort where young people, universities, companies, and government all build the future together. Ubunture UTokyo hopes to be the presence that creates those connections. We will keep leading this work, together with our friends around the world, to create new frameworks and new value.</p>
+          <p class="sigline">Representative: Daichi Sawachika</p>
         </div>
-      </section>
 
-
-      <!-- Founder Message -->
-      <section id="founder" class="about profile" aria-labelledby="founder-title"
-        style="padding-top:clamp(40px,6vw,60px); border-top:1px solid rgba(255,255,255,0.1);">
-        <div class="container" style="margin-bottom: clamp(24px, 4vw, 40px);">
-          <div class="eyebrow">Founder Message</div>
-          <h2 class="h-section" id="founder-title" style="margin-top: 6px;">Founder's Message</h2>
+        <div class="container" style="margin-bottom: clamp(16px, 3vw, 24px);">
+          <div class="eyebrow">Profile</div>
+          <h2 class="h-section" style="margin-top: 6px;">Profile</h2>
         </div>
         <div class="container head">
           <figure class="photo" aria-hidden="true">
@@ -148,11 +145,10 @@
           </figure>
 
           <div class="txt">
-            <div class="eyebrow">Profile</div>
             <h3 id="profile-title" class="name">
               Daichi Sawachika <small class="en">澤近 大地</small>
             </h3>
-            <p class="lead">The University of Tokyo, College of Arts &amp; Sciences (Science I) / Founder, Ubunture UTokyo</p>
+            <p class="lead">The University of Tokyo, College of Arts &amp; Sciences (Science I) / Representative & Founder, Ubunture UTokyo</p>
 
             <div class="timeline">
               <article class="block">
@@ -200,8 +196,12 @@
         </div>
       </section>
 
-      <!-- Representative Message -->
+      <!-- Why We Started Ubunture -->
       <section id="message" class="about stacked">
+        <div class="container" style="margin-bottom: clamp(24px, 4vw, 40px);">
+          <div class="eyebrow">Our Story</div>
+          <h2 class="h-section">Why We Started Ubunture</h2>
+        </div>
         <div class="container">
 
           <!-- Story 1 -->
@@ -392,7 +392,7 @@
                 intelligence for understanding others—is my life’s goal. This project is the first step toward that
                 dream.
               </p>
-              <p class="sigline">Ubunture UTokyo Founder: Daichi Sawachika</p>
+              <p class="sigline">Ubunture UTokyo Representative & Founder: Daichi Sawachika</p>
             </div>
             <figure class="ph" aria-hidden="true" style="background-image:url('../assets/img/story10.jpg')"></figure>
           </article>
@@ -414,12 +414,10 @@
       <div class="container">
         <div class="foot-grid">
           <div class="cta">
-            <h3 data-i18n="footer.contact">CONTACT</h3>
+            <h3>CONTACT</h3>
             <p>
-              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">
-                ubunture.tokyo@gmail.com
-              </a><br />
-              Representative: Aria Mitani
+              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
+              Representative: Daichi Sawachika
             </p>
           </div>
         </div>
@@ -432,13 +430,10 @@
 
           <nav class="foot-nav" aria-label="Footer">
             <a href="./about.html">About</a>
-            <a href="./message.html">Message</a>
-            <a href="./history.html">History</a>
-            <!-- <a href="./project.html">Projects</a> -->
+            <a href="./our-activity.html">Our Activity</a>
             <a href="./team.html">Team</a>
             <a href="./news.html">News</a>
-            <a href="./support.html">Support</a>
-            <a href="#top">Top</a>
+            <a href="./contact.html">Contact</a>
           </nav>
 
           <div class="social-links" style="display:flex; gap:14px;">

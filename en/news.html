@@ -30,7 +30,7 @@
   <meta property="og:description"
     content="Stay updated with our progress, workshops, and milestones in South Africa and Japan." />
   <meta property="og:url" content="https://ubunture.github.io/site/en/news.html" />
-  <meta property="og:image" content="https://ubunture.github.io/site/assets/og/ubunture-og.jpg" />
+  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/hero1.jpg" />
 
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,24 +57,40 @@
     <header>
       <nav class="nav" aria-label="Primary">
         <div class="brand-wrap">
-          <a class="brand" href="./index.html"><img src="../assets/img/logo.png"
-              alt="Ubunture" /><span>Ubunture</span></a>
+          <a class="brand" href="./index.html"><img src="../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
           <div class="lang-switch" role="group" aria-label="Language switch">
             <a class="lang-btn" href="../ja/news.html" role="button" aria-pressed="false">JP</a>
             <a class="lang-btn" href="../en/news.html" role="button" aria-pressed="true">EN</a>
           </div>
         </div>
-        <button class="menu-btn" aria-expanded="false"
-          aria-controls="menu"><span></span><span></span><span></span></button>
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
         <ul id="menu" role="menubar">
           <li role="none"><a role="menuitem" href="./index.html">Home</a></li>
-          <li role="none"><a role="menuitem" href="./about.html">About</a></li>
-          <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
-          <li role="none"><a role="menuitem" href="./history.html">History</a></li>
-          <!-- <li role="none"><a role="menuitem" href="./project.html">Project</a></li> -->
-          <li role="none"><a role="menuitem" href="./team.html">Team</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./about.html" class="dropdown-toggle" aria-haspopup="true">About<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="About">
+              <li role="none"><a role="menuitem" href="./message.html">Message</a></li>
+              <li role="none"><a role="menuitem" href="./name.html">Origin of Ubunture</a></li>
+              <li role="none"><a role="menuitem" href="./mission.html">Mission, Vision & Value</a></li>
+              <li role="none"><a role="menuitem" href="./history.html">History</a></li>
+            </ul>
+          </li>
+          <li role="none"><a role="menuitem" href="./our-activity.html">Our Activity</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./team.html" class="dropdown-toggle" aria-haspopup="true">Team<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="Team">
+              <li role="none"><a role="menuitem" href="./team.html">Member</a></li>
+              <li role="none"><a role="menuitem" href="./recruit.html">Recruit</a></li>
+            </ul>
+          </li>
           <li role="none"><a role="menuitem" href="./news.html" class="active">News</a></li>
-          <li role="none"><a role="menuitem" href="./support.html">Support</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="./contact.html" class="dropdown-toggle" aria-haspopup="true">Contact<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="Contact">
+              <li role="none"><a role="menuitem" href="./contact.html">Contact us</a></li>
+              <li role="none"><a role="menuitem" href="./support.html">Support</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
@@ -91,8 +107,14 @@
           <div class="breadcrumbs"><a href="./index.html">Home</a> <span> / </span> News</div>
         </div>
       </section>
+      <!--
+        To write an article directly on this site, duplicate en/article-template.html.
+        Once it's written, add one card with the same .post structure near the
+        note.com-sourced cards below, linking to the duplicated article file.
+      -->
       <section class="news">
         <div class="container">
+          <p class="section-lead" style="margin-bottom:20px;">We share our latest activity reports on note. <a href="https://note.com/ubunture" target="_blank" rel="noopener" style="color:var(--brand); font-weight:800;">Follow us on note.com →</a></p>
           <div class="news-slider" id="news-slider">
             <button class="news-btn prev" aria-label="Previous news" data-dir="-1" type="button" title="Previous">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -104,6 +126,7 @@
             <div class="news-viewport" role="group" aria-roledescription="carousel" aria-label="Latest News"
               tabindex="0">
               <div class="news-track" id="news-track" aria-live="polite">
+                <!-- NEWS_ITEMS_START (auto-updated from note.com RSS — see .github/workflows/update-news.yml) -->
                 <article class="post reveal">
                   <a class="post-link"
                     href="https://medium.com/@ubunture.tokyo/why-south-africa-why-we-start-in-johannesburg-437ee8cd8a44"
@@ -140,6 +163,7 @@
                     </div>
                   </a>
                 </article>
+                <!-- NEWS_ITEMS_END -->
               </div>
             </div>
 
@@ -162,9 +186,8 @@
           <div class="cta">
             <h3>CONTACT</h3>
             <p>
-              <a href="mailto:ubunture.tokyo@gmail.com"
-                style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
-              Representative: Aria Mitani
+              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
+              Representative: Daichi Sawachika
             </p>
           </div>
         </div>
@@ -174,29 +197,34 @@
             <img src="../assets/img/logo.png" alt="Ubunture logo" width="22" height="22" />
             Ubunture UTokyo © 2026
           </div>
+
           <nav class="foot-nav" aria-label="Footer">
             <a href="./about.html">About</a>
-            <a href="./message.html">Message</a>
-            <a href="./history.html">History</a>
-            <!-- <a href="./project.html">Projects</a> -->
+            <a href="./our-activity.html">Our Activity</a>
             <a href="./team.html">Team</a>
             <a href="./news.html">News</a>
-            <a href="./support.html">Support</a>
-            <a href="#top">Top</a>
+            <a href="./contact.html">Contact</a>
           </nav>
+
           <div class="social-links" style="display:flex; gap:14px;">
-            <a href="https://note.com/ubunture" target="_blank"><img src="../assets/img/note.webp" alt="Note" width="40"
-                height="40" /></a>
-            <a href="https://medium.com/@ubunture.tokyo" target="_blank"><img src="../assets/img/medium.png"
-                alt="Medium" width="40" height="40" /></a>
-            <a href="https://x.com/ubunture" target="_blank"><img src="../assets/img/x.png" alt="X" width="40"
-                height="40" /></a>
-            <a href="https://instagram.com/ubunture" target="_blank"><img src="../assets/img/instagram.webp"
-                alt="Instagram" width="40" height="40" /></a>
-            <a href="https://linkedin.com/company/ubunture" target="_blank"><img src="../assets/img/linkedin.png"
-                alt="LinkedIn" width="40" height="40" /></a>
-            <a href="https://facebook.com/ubunture" target="_blank"><img src="../assets/img/facebook.webp"
-                alt="Facebook" width="40" height="40" /></a>
+            <a href="https://note.com/ubunture" target="_blank" rel="noopener">
+              <img src="../assets/img/note.webp" alt="Note" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://medium.com/@ubunture.tokyo" target="_blank" rel="noopener">
+              <img src="../assets/img/medium.png" alt="Medium" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://x.com/ubunture" target="_blank" rel="noopener">
+              <img src="../assets/img/x.png" alt="X (formerly Twitter)" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://instagram.com/ubunture" target="_blank" rel="noopener">
+              <img src="../assets/img/instagram.webp" alt="Instagram" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://linkedin.com/company/ubunture" target="_blank" rel="noopener">
+              <img src="../assets/img/linkedin.png" alt="LinkedIn" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://facebook.com/ubunture" target="_blank" rel="noopener">
+              <img src="../assets/img/facebook.webp" alt="Facebook" width="40" height="40" loading="lazy" />
+            </a>
           </div>
         </div>
       </div>
