@@ -109,7 +109,7 @@ header{ position:sticky; top:max(12px, env(safe-area-inset-top)); z-index:50; di
 .has-dropdown > .dropdown-toggle{ display:inline-flex; align-items:center; }
 .dropdown-toggle.no-link{ cursor:default; }
 .dropdown-caret{
-  display:inline-block; width:8px; height:8px; margin-top:-3px; margin-left:12px;
+  display:inline-block; width:8px; height:8px; margin-top:-3px; margin-left:14px;
   border-right:2.5px solid currentColor; border-bottom:2.5px solid currentColor;
   transform:rotate(45deg); transition:transform .2s ease;
 }

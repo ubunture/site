@@ -18,6 +18,8 @@ const ROOT = path.resolve(__dirname, "..");
 // Site structure. Keys are paths relative to ja/ and en/ (both languages share
 // the same tree). `top` = primary nav item, `sub` = dropdown item (also the label
 // key). `h1` optionally overrides the hero heading per language.
+const ASSET_VERSION = "3";
+
 const PAGES = {
   "index.html": { top: "home" },
   "about/index.html": { top: "about" },
@@ -236,6 +238,8 @@ async function processFile(lang, file) {
   html = r.html; changed = changed || r.changed;
 
   html = applyMeta(html, lang, file);
+  // bump ASSET_VERSION when CSS/JS change so browsers don't serve stale copies
+  html = html.replace(/(assets\/(?:css\/styles\.css|js\/main\.js))(\?v=[\w.]+)?"/g, `$1?v=${ASSET_VERSION}"`);
 
   if (changed) {
     await writeFile(target, html, "utf8");
