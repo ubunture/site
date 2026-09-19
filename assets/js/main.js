@@ -6,25 +6,9 @@
     function updateMenuState() {
       if (!nav || !menu) return;
       const open = nav.classList.contains('open');
-      if (open) {
-        const clientH = menu.clientHeight;
-        const scrollH = menu.scrollHeight;
-        nav.style.setProperty('--ul-height', clientH + 'px');
-        
-        // Lock scroll only when menu is open and its contents overflow the screen/container height
-        // Added a 5px buffer to prevent subpixel layout calculations from locking the scroll on desktop/fit states
-        if (scrollH > clientH + 5) {
-          document.documentElement.classList.add('nav-lock-scroll');
-          document.body.classList.add('nav-lock-scroll');
-        } else {
-          document.documentElement.classList.remove('nav-lock-scroll');
-          document.body.classList.remove('nav-lock-scroll');
-        }
-      } else {
-        nav.style.removeProperty('--ul-height');
-        document.documentElement.classList.remove('nav-lock-scroll');
-        document.body.classList.remove('nav-lock-scroll');
-      }
+      // Full-screen menu: lock page scroll while it is open (the menu scrolls itself)
+      document.documentElement.classList.toggle('nav-lock-scroll', open);
+      document.body.classList.toggle('nav-lock-scroll', open);
     }
 
     btn?.addEventListener('click', () => {
@@ -94,7 +78,8 @@
       if (!toggle) return;
       toggle.addEventListener('click', (e) => {
         if (window.innerWidth > 880) return; // desktop: hover handles it, let the link navigate
-        if (!li.classList.contains('open')) {
+        if (!li.classList.contains('open') || toggle.classList.contains('no-link')) {
+          if (li.classList.contains('open')) { li.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); updateMenuState(); e.preventDefault(); return; }
           e.preventDefault();
           dropdowns.forEach(other => {
             if (other !== li) {
@@ -109,17 +94,6 @@
           // Already open: let this tap navigate, and close the mobile nav panel
           nav.classList.remove('open');
           btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      // The submenu's height animates via a CSS max-height transition, so the
-      // white background pill (sized from --ul-height) must be recalculated
-      // again once that transition finishes — otherwise it's sized for the
-      // pre-expansion height and the submenu spills outside it.
-      const submenu = li.querySelector(':scope > .dropdown-menu');
-      submenu?.addEventListener('transitionend', (e) => {
-        if (e.propertyName === 'max-height' && nav.classList.contains('open')) {
-          updateMenuState();
         }
       });
     });

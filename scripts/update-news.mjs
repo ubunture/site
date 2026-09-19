@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Fetches the latest posts from the Ubunture note.com RSS feed and rewrites the
-// news cards on ja/index.html and ja/news.html between the NEWS_ITEMS_START /
+// news cards on ja/index.html and ja/news/index.html between the NEWS_ITEMS_START /
 // NEWS_ITEMS_END markers. Run via `node scripts/update-news.mjs` (Node 18+, no deps).
 //
 // English pages are intentionally left untouched — note.com content is Japanese,
@@ -15,7 +15,7 @@ const ROOT = path.resolve(__dirname, "..");
 
 const RSS_URL = "https://note.com/ubunture/rss";
 const ITEM_COUNT = 3;
-const TARGET_FILES = ["ja/index.html", "ja/news.html"];
+const TARGET_FILES = ["ja/index.html", "ja/news/index.html"];
 const START_MARKER = "<!-- NEWS_ITEMS_START (auto-updated from note.com RSS — see .github/workflows/update-news.yml) -->";
 const END_MARKER = "<!-- NEWS_ITEMS_END -->";
 

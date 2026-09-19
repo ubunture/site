@@ -1,0 +1,225 @@
+<!--
+  記事テンプレート（サイト内で記事を書くためのひな形）
+  ============================================
+  使い方:
+  1. このファイルをコピーして、`ja/article-YYYYMMDD-スラッグ.html` のような名前で保存する
+     （例: ja/article-20261001-pretoria-visit.html）。
+  2. <title>・meta description・canonical・OGP・見出し・本文・公開日・画像を書き換える。
+     「差し替え」「REPLACE」とコメントしてある箇所が変更対象。
+  3. 画像は assets/img/ に置き、パスを差し替える。
+  4. 書き終えたら ja/news.html のニュース一覧（NEWS_ITEMS_START〜ENDより下）に
+     カードを1つ追加し、このファイルへリンクする。英語版を書く場合は
+     en/article-template.html も同様に複製する。
+  5. ヘッダー／フッターを直したいときは、このファイル単体ではなく
+     scripts/sync-header-footer.mjs を編集して `node scripts/sync-header-footer.mjs`
+     を実行すると全ページに反映される（このテンプレートは対象外なので、
+     複製後の記事ページに合わせて手動で調整すること）。
+-->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【記事タイトルに差し替え】 | Ubunture</title>
+  <meta name="description" content="【記事の要約（120字程度）に差し替え】" />
+  <link rel="canonical" href="https://ubunture.github.io/site/ja/news/article-template.html" />
+  <meta name="robots" content="noindex,nofollow" /> <!-- REPLACE with index,follow,max-image-preview:large when duplicating for a real article -->
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Language alternates（英語版記事があれば差し替え、無ければこの2行は削除可） -->
+  <link rel="alternate" hreflang="ja" href="https://ubunture.github.io/site/ja/news/article-template.html">
+  <link rel="alternate" hreflang="en" href="https://ubunture.github.io/site/en/news/article-template.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="https://ubunture.github.io/site/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ubunture.github.io/site/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ubunture.github.io/site/assets/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ubunture.github.io/site/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" href="https://ubunture.github.io/site/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ubunture" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:title" content="【記事タイトルに差し替え】 | Ubunture" />
+  <meta property="og:description" content="【記事の要約に差し替え】" />
+  <meta property="og:url" content="https://ubunture.github.io/site/ja/news/article-template.html" />
+  <meta property="og:image" content="https://ubunture.github.io/site/assets/img/REPLACE-ME.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PM9GZ20LV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7PM9GZ20LV');
+  </script>
+</head>
+
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <div class="site">
+
+    <!-- Header -->
+    <header>
+      <nav class="nav" aria-label="Primary">
+        <div class="brand-wrap">
+          <a class="brand" href="../index.html"><img src="../../assets/img/logo.png" alt="Ubunture" /><span>Ubunture</span></a>
+          <div class="lang-switch" role="group" aria-label="Language switch">
+            <a class="lang-btn" href="../../ja/news/article-template.html" role="button" aria-pressed="true">JP</a>
+            <a class="lang-btn" href="../../en/news/article-template.html" role="button" aria-pressed="false">EN</a>
+          </div>
+        </div>
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+        <ul id="menu" role="menubar">
+          <li role="none"><a role="menuitem" href="../index.html">Home</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="../about/index.html" class="dropdown-toggle" aria-haspopup="true">概要<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="概要">
+              <li role="none"><a role="menuitem" href="../about/message.html">代表メッセージ</a></li>
+              <li role="none"><a role="menuitem" href="../about/name.html">名前の由来</a></li>
+              <li role="none"><a role="menuitem" href="../about/mission-vision-value.html">ミッション・ビジョン・バリュー</a></li>
+              <li role="none"><a role="menuitem" href="../about/history.html">沿革</a></li>
+            </ul>
+          </li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="../activity/index.html" class="dropdown-toggle" aria-haspopup="true">我々の活動<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="我々の活動">
+              <li role="none"><a role="menuitem" href="../activity/index.html">活動紹介</a></li>
+              <li role="none"><a role="menuitem" href="../activity/documents.html">団体資料</a></li>
+            </ul>
+          </li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" href="../team/index.html" class="dropdown-toggle" aria-haspopup="true">チーム<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="チーム">
+              <li role="none"><a role="menuitem" href="../team/members.html">メンバー</a></li>
+              <li role="none"><a role="menuitem" href="../team/recruit.html">興味のある学生へ</a></li>
+            </ul>
+          </li>
+          <li role="none"><a role="menuitem" href="./index.html" class="active">最新情報</a></li>
+          <li role="none" class="has-dropdown">
+            <a role="menuitem" tabindex="0" class="dropdown-toggle no-link" aria-haspopup="true">お問い合わせ<span class="dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-label="お問い合わせ">
+              <li role="none"><a role="menuitem" href="../contact/contact-us.html">連絡先</a></li>
+              <li role="none"><a role="menuitem" href="../contact/support.html">ご支援について</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+      <!-- Subpage Hero -->
+      <section class="subpage-hero hero--news" id="top" aria-label="最新情報">
+        <div class="container inner">
+          <div class="eyebrow">最新情報</div>
+          <h1 class="h-section" style="color:#fff; margin:6px 0 10px;">【記事タイトルに差し替え】</h1>
+          <div class="breadcrumbs"><a href="../index.html">Home</a> <span> / </span> 最新情報</div>
+        </div>
+      </section>
+
+      <!-- Article -->
+      <section id="article" class="about" style="padding-top:clamp(24px,3vw,32px)">
+        <div class="container">
+          <div class="article-meta">
+            <span class="article-date">2026年1月1日</span>
+            <span class="article-byline">Ubunture</span>
+          </div>
+
+          <!-- アイキャッチ画像（差し替え） -->
+          <div class="article-hero" aria-hidden="true" style="background-image:url('../../assets/img/REPLACE-ME.jpg')"></div>
+
+          <div class="article-body">
+            <p>ここにリード文（記事の要約・導入）を書きます。何が起きたのか、なぜ読者にとって意味があるのかを2〜3文で。</p>
+
+            <h2>見出し1</h2>
+            <p>本文です。段落ごとに &lt;p&gt; タグで囲みます。長い記事でも読みやすいよう、本文の幅は自動的に読みやすい文字数に収まるようになっています。</p>
+
+            <figure class="article-figure">
+              <img src="../../assets/img/REPLACE-ME.jpg" alt="画像の説明（差し替え）">
+              <figcaption>画像のキャプション（差し替え、不要なら figure ごと削除可）</figcaption>
+            </figure>
+
+            <h2>見出し2</h2>
+            <p>続きの本文です。必要な数だけ &lt;h2&gt; と &lt;p&gt; を繰り返してください。</p>
+
+            <blockquote>引用やメンバーのコメントなどを目立たせたいときはこの blockquote を使います。</blockquote>
+
+            <p>まとめの段落。必要であれば note.com や関連ページへのリンクをここに置きます。</p>
+          </div>
+
+          <div class="center-cta" style="margin-top:clamp(32px,5vw,48px)">
+            <a class="btn btn-primary" href="./index.html">ニュース一覧に戻る</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div class="cta">
+            <h3>CONTACT</h3>
+            <p>
+              <a href="mailto:ubunture.tokyo@gmail.com" style="color:#fff; text-decoration:none;">ubunture.tokyo@gmail.com</a><br />
+              代表：澤近大地
+            </p>
+          </div>
+        </div>
+
+        <div class="foot-bottom">
+          <div style="display:flex; align-items:center; gap:10px; color:#d0d0d0;">
+            <img src="../../assets/img/logo.png" alt="Ubunture logo" width="22" height="22" />
+            Ubunture © 2026
+          </div>
+
+          <nav class="foot-nav" aria-label="Footer">
+            <a href="../about/index.html">概要</a>
+            <a href="../activity/index.html">我々の活動</a>
+            <a href="../team/index.html">チーム</a>
+            <a href="./index.html">最新情報</a>
+            <a href="../contact/contact-us.html">お問い合わせ</a>
+          </nav>
+
+          <div class="social-links" style="display:flex; gap:14px;">
+            <a href="https://note.com/ubunture" target="_blank" rel="noopener">
+              <img src="../../assets/img/note.webp" alt="Note" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://medium.com/@ubunture.tokyo" target="_blank" rel="noopener">
+              <img src="../../assets/img/medium.png" alt="Medium" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://x.com/ubunture" target="_blank" rel="noopener">
+              <img src="../../assets/img/x.png" alt="X (formerly Twitter)" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://instagram.com/ubunture" target="_blank" rel="noopener">
+              <img src="../../assets/img/instagram.webp" alt="Instagram" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://linkedin.com/company/ubunture" target="_blank" rel="noopener">
+              <img src="../../assets/img/linkedin.png" alt="LinkedIn" width="40" height="40" loading="lazy" />
+            </a>
+            <a href="https://facebook.com/ubunture" target="_blank" rel="noopener">
+              <img src="../../assets/img/facebook.webp" alt="Facebook" width="40" height="40" loading="lazy" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>

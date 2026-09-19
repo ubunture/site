@@ -35,6 +35,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ja/index.html ja/news.html
+          git add ja/index.html ja/news/index.html
           git commit -m "chore: update latest news from note.com RSS"
           git push

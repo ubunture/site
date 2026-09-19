@@ -106,9 +106,10 @@ header{ position:sticky; top:max(12px, env(safe-area-inset-top)); z-index:50; di
 
 /* ---- Dropdown (About / Team) ---- */
 .has-dropdown{ position:relative; }
-.has-dropdown > .dropdown-toggle{ display:inline-flex; align-items:center; gap:5px; }
+.has-dropdown > .dropdown-toggle{ display:inline-flex; align-items:center; }
+.dropdown-toggle.no-link{ cursor:default; }
 .dropdown-caret{
-  display:inline-block; width:8px; height:8px; margin-top:-3px;
+  display:inline-block; width:8px; height:8px; margin-top:-3px; margin-left:12px;
   border-right:2.5px solid currentColor; border-bottom:2.5px solid currentColor;
   transform:rotate(45deg); transition:transform .2s ease;
 }
@@ -138,11 +139,8 @@ header{ position:sticky; top:max(12px, env(safe-area-inset-top)); z-index:50; di
   .dropdown-toggle::after{ content:none !important; }
   .dropdown-caret{ transition:transform .2s ease; }
   .has-dropdown.open > .dropdown-toggle .dropdown-caret{ transform:rotate(225deg); margin-top:2px; }
-  .dropdown-menu{
-    max-height:0; overflow:hidden; padding:0; margin-top:2px;
-    transition:max-height .25s ease;
-  }
-  .has-dropdown.open > .dropdown-menu{ max-height:320px; padding:0 0 10px; }
+  .dropdown-menu{ display:none; padding:0 0 10px; margin-top:2px; }
+  .has-dropdown.open > .dropdown-menu{ display:flex; }
   .dropdown-menu a{ padding:10px 20px !important; font-size:15px !important; opacity:.8; }
 }
 .menu-btn{ display:none; border:0; background:transparent; padding:8px; cursor:pointer; transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -171,43 +169,26 @@ header{ position:sticky; top:max(12px, env(safe-area-inset-top)); z-index:50; di
     border-color: transparent !important;
     box-shadow: none !important;
   }
-  .nav.open{ border-radius: 12px; }
-
+  /* Closed: frosted white bar so the logo stays readable over hero images */
   .nav::before{
-    bottom: calc(-1px - var(--ul-height, 0px));
-    background: rgba(255,255,255,.92);
-    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-    border: 1px solid rgba(0,0,0,.06);
-    border-radius: 12px;
-    clip-path: none !important;
-    transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+    background:rgba(255,255,255,.92);
+    -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+    border:1px solid rgba(0,0,0,.06); border-radius:12px;
   }
-  .nav.open::before{
-    box-shadow: var(--shadow-2);
-  }
+  .nav.open::before{ display:none; }
+  .brand-wrap, .menu-btn{ position:relative; z-index:110; }
 
+  /* Open menu: full-screen white panel below the header bar */
   .nav #menu{
-    display:flex; flex-direction:column; gap:6px; padding:12px 6px;
-    position:absolute; top:100%; left:0; right:0;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    clip-path: none !important;
+    display:flex; flex-direction:column; gap:4px;
+    position:fixed; inset:0; z-index:100;
+    padding:calc(var(--nav-h) + max(12px, env(safe-area-inset-top)) + 12px) 12px 32px;
+    background:#fff !important;
     opacity:0; pointer-events:none; visibility:hidden;
-    transform:translateY(-8px);
-    transition:opacity 0.2s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.2s;
-    z-index:100;
-    max-height: calc(100svh - var(--nav-h) - 48px);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    transition:opacity .15s ease, visibility .15s;
+    overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;
   }
-  .nav.open #menu{
-    opacity:1; pointer-events:auto; visibility:visible;
-    transform:translateY(0);
-  }
+  .nav.open #menu{ opacity:1; pointer-events:auto; visibility:visible; }
   .menu-btn{ display:block; }
 
   /* Mobile menu full width clickable area */
