@@ -397,13 +397,15 @@ section{ padding:100px 0; scroll-margin-top:calc(var(--nav-h) + 24px); }
   position:relative; display:grid; grid-template-columns:auto 1fr auto;
   align-items:center; gap:clamp(14px,3vw,28px); margin-top:26px;
 }
-.member-viewport{ overflow:hidden; outline:none; touch-action:pan-y; }
-.member-track{ display:flex; will-change:transform; transition:transform .5s ease; }
+/* Height is set in px by JS (main.js) to match only the active slide, so a
+   short bio doesn't inherit blank space from the track's tallest neighbor. */
+.member-viewport{ overflow:hidden; outline:none; touch-action:pan-y; transition:height .35s ease; }
+.member-track{ display:flex; align-items:flex-start; will-change:transform; transition:transform .5s ease; }
 .member-track .member-plate{
   flex:0 0 100%; box-sizing:border-box;
   background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg);
   overflow:hidden; box-shadow:var(--shadow-1);
-  display:grid; grid-template-columns:minmax(200px,320px) 1fr;
+  display:grid; grid-template-columns:minmax(200px,320px) minmax(0,1fr);
 }
 .member-plate .ph{ background:var(--bg-tint) center/contain no-repeat; height:100%; min-height:280px; }
 .member-plate .txt{ padding:clamp(20px,3vw,32px); display:flex; flex-direction:column; justify-content:center; }
@@ -430,13 +432,15 @@ section{ padding:100px 0; scroll-margin-top:calc(var(--nav-h) + 24px); }
 @media (max-width:640px){
   .member-slider{ grid-template-columns:1fr; padding-bottom:54px; }
   .member-viewport{ margin-bottom:12px; }
-  .member-btn{ position:absolute; bottom:-36px; top:auto; transform:none; }
+  /* Buttons sit centered inside the slider's own bottom padding, well clear
+     of the dots (a separate element below, with its own margin-top). */
+  .member-btn{ position:absolute; bottom:7px; top:auto; transform:none; }
   .member-btn.prev{ left:calc(50% - 70px); }
   .member-btn.next{ right:calc(50% - 70px); }
-  .member-track .member-plate{ grid-template-columns:1fr; }
-  .member-plate .ph{ aspect-ratio:4/3; min-height:0; }
+  .member-track .member-plate{ grid-template-columns:minmax(0,1fr); }
+  .member-plate .ph{ aspect-ratio:4/3; height:auto; min-height:0; width:100%; }
 }
-@media (prefers-reduced-motion: reduce){ .member-track{ transition:none; } }
+@media (prefers-reduced-motion: reduce){ .member-track, .member-viewport{ transition:none; } }
 
 /* ========== Past Members grid (Member / History pages) ========== */
 .past-members-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(80px,1fr)); gap:12px; margin-top:14px; margin-bottom:24px; }

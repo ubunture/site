@@ -392,6 +392,7 @@
       track.style.transform = 'none';
       index = 0;
       dotsWrap.innerHTML = '';
+      syncHeight();
       return;
     }
 
@@ -421,6 +422,17 @@
     nextBtn.disabled = (index===maxIndex);
   }
 
+  // The track stretches every slide to match its tallest sibling (default
+  // flex cross-axis sizing), which left a lot of blank space below short
+  // bios. .member-track now opts out of that stretch (align-items:flex-start
+  // in CSS), and this measures only the active slide so the viewport can be
+  // sized to it instead of to whichever member has the longest bio.
+  function syncHeight(){
+    const card = slides[index];
+    if (!card) return;
+    viewport.style.height = card.offsetHeight + 'px';
+  }
+
   function goTo(i){
     const maxIndex = total - visibleCount;
     index = Math.max(0, Math.min(maxIndex, i));
@@ -430,6 +442,7 @@
     const step = card.offsetWidth + gap;
     track.style.transform = `translate3d(${-index * step}px,0,0)`;
     updateAria();
+    syncHeight();
   }
 
   function next(){ const maxIndex = total - visibleCount; goTo(index < maxIndex ? index+1 : 0); }

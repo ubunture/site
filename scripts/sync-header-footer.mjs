@@ -18,7 +18,7 @@ const ROOT = path.resolve(__dirname, "..");
 // Site structure. Keys are paths relative to ja/ and en/ (both languages share
 // the same tree). `top` = primary nav item, `sub` = dropdown item (also the label
 // key). `h1` optionally overrides the hero heading per language.
-const ASSET_VERSION = "3";
+const ASSET_VERSION = "4";
 
 const PAGES = {
   "index.html": { top: "home" },
